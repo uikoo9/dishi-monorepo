@@ -1,0 +1,23 @@
+{
+  "name": "dishi",
+  "version": "0.9.3",
+  "description": "dishi todo",
+  "keywords": [
+    "dishi",
+    "todo"
+  ],
+  "author": "uikoo9 <uikoo9@qq.com>",
+  "main": "index.js",
+  "scripts": {},
+  "bin": {
+    "dishi": "./bin/dishi.js"
+  },
+  "dependencies": {
+    "dishi-service": "^0.3.3",
+    "qiao-ajax": "^2.6.6",
+    "qiao-cli": "^0.3.2",
+    "qiao-config": "^0.3.4",
+    "qiao-console": "^0.1.1",
+    "qiao-service": "^0.0.6"
+  }
+}
