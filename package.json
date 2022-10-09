@@ -1,7 +1,8 @@
 {
-  "name": "root",
-  "private": true,
-  "devDependencies": {
-    "lerna": "^5.0.0"
-  }
+    "name": "root",
+    "private": true,
+    "scripts": {
+        "clean": "lerna clean -y",
+        "init": "lerna bootstrap --ignore-prepublish --hoist"
+    }
 }

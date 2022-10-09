@@ -2,5 +2,17 @@
     "name": "dishi-web",
     "private": true,
     "version": "0.0.1",
-    "scripts": {}
+    "sideEffects": [
+        "**/*.scss"
+    ],
+    "scripts": {
+        "dev": "qwebpack dev ./webpack/qiao-webpack.dev.js",
+        "build": "qwebpack build ./webpack/qiao-webpack.prod.js",
+        "upload": "qcos fo ./config.json ../dishi-server/static 21_dishi_ls/static"
+    },
+    "dependencies": {
+        "qiao-ui": "^1.4.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
 }
