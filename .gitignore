@@ -9,5 +9,6 @@ files_out
 node_modules
 
 config.json
+static
 
 lerna-debug.log

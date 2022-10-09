@@ -2,5 +2,7 @@
   "name": "dishi-server",
   "private": true,
   "version": "0.0.1",
-  "scripts": {}
+  "dependencies": {
+    "qiao-z": "^0.1.2"
+  }
 }
