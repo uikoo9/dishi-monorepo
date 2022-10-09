@@ -1,29 +1,9 @@
 {
   "name": "dishi-server",
+  "private": true,
   "version": "0.0.0",
-  "description": "> TODO: description",
-  "author": "uikoo9 <uikoo9@qq.com>",
-  "homepage": "https://github.com/uikoo9/dishi-monorepo#readme",
-  "license": "ISC",
-  "main": "lib/dishi-server.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uikoo9/dishi-monorepo.git"
-  },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/uikoo9/dishi-monorepo/issues"
   },
   "dependencies": {
-    "qiao-server": "^0.4.4"
   }
 }
