@@ -1,26 +1,49 @@
+@use "./base";
+
 html,
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
+    @include base.width();
 }
 
 #root {
-    width: 100%;
+    @include base.width();
 }
 
 .container {
     width: 1400px;
-    margin: 0 auto;
+    @include base.marginAuto();
 
-    .dishi-list{
+    .dishi-container{
         width: 1400px;
-        height: 400px;
-        background-color: red;
+        min-height: 900px;
+        padding: 50px 0;
+        border-bottom: base.$borderDotted;
+
+        .dishi-input{
+            width: 400px;
+            height: auto;
+            @include base.marginAuto();
+        }
+        .dishi-list{
+            width: 400px;
+            @include base.marginAuto();
+
+            .dishi-item{
+                width: calc(100% - 20px);
+                height: 50px;
+                line-height: 50px;
+                padding: 0 10px;
+                border-bottom: base.$borderDotted;
+                @include base.cursor();
+            }
+            .dishi-item:hover{
+                background-color: rgba($color: #000000, $alpha: 0.1);
+            }
+        }
     }
     .dishi-other{
-        width: 400px;
-        height: auto;
-        margin: 0 auto;
+        width: 1400px;
     }
 }

@@ -1,15 +1,17 @@
+@use "./base";
+
 html,
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
+    @include base.width();
 }
 
 #root {
-    width: 100%;
+    @include base.width();
 }
 
 .container {
     width: 16rem;
-    margin: 0 auto;
+    @include base.marginAuto();
 }

@@ -31,7 +31,9 @@ const DishiIndexPCView = () => {
                 navs={Constant.navs}
             />
 
-            <DishiListPC />
+            <DishiListPC 
+                otherList={Constant.otherList}
+            />
 
             <DishiOtherPC 
                 otherList={Constant.otherList}
