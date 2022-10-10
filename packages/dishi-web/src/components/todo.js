@@ -22,9 +22,12 @@ export const delTodo = (key) => {
  * @returns 
  */
 export const getTodos = () => {
-    const res = [];
-
+    // check
     const todos = ls('todos');
+    if(!todos) return [];
+
+    // res
+    const res = [];
     for (const [key, value] of Object.entries(todos)) {
         res.push({
             key: key,
