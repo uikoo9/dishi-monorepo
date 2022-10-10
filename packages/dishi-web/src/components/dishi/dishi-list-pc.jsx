@@ -26,11 +26,11 @@ export const DishiListPC = () => {
     }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
     return (
-        <>
+        <div className="dishi-list">
             <InfoList
                 blank={true}
                 infoList={dishiList}
             />
-        </>
+        </div>
     );
 };

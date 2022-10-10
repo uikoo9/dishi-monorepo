@@ -12,4 +12,15 @@ body {
 .container {
     width: 1400px;
     margin: 0 auto;
+
+    .dishi-list{
+        width: 1400px;
+        height: 400px;
+        background-color: red;
+    }
+    .dishi-other{
+        width: 400px;
+        height: auto;
+        margin: 0 auto;
+    }
 }
