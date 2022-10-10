@@ -1,5 +1,10 @@
 @use "./base";
 
+$width: 1400px;
+$itemWidth: 400px;
+$itemHeight: 50px;
+$minHeight: 1000px;
+
 html,
 body {
     margin: 0;
@@ -12,38 +17,43 @@ body {
 }
 
 .container {
-    width: 1400px;
+    width: $width;
     @include base.marginAuto();
 
-    .dishi-container{
-        width: 1400px;
-        min-height: 900px;
-        padding: 50px 0;
-        border-bottom: base.$borderDotted;
+}
 
-        .dishi-input{
-            width: 400px;
-            height: auto;
-            @include base.marginAuto();
-        }
-        .dishi-list{
-            width: 400px;
-            @include base.marginAuto();
+.dishi-other{
+    width: $width;
+}
 
-            .dishi-item{
-                width: calc(100% - 20px);
-                height: 50px;
-                line-height: 50px;
-                padding: 0 10px;
-                border-bottom: base.$borderDotted;
-                @include base.cursor();
-            }
-            .dishi-item:hover{
-                background-color: rgba($color: #000000, $alpha: 0.1);
-            }
-        }
+.dishi-container{
+    width: $width;
+    min-height: $minHeight;
+    padding: 50px 0;
+    border-bottom: base.$borderDotted;
+
+    .dishi-input{
+        width: $itemWidth;
+        height: auto;
+        @include base.marginAuto();
     }
-    .dishi-other{
-        width: 1400px;
+    .dishi-list{
+        width: $itemWidth;
+        max-height: calc($minHeight - 51px);
+        @include base.marginAuto();
+
+        overflow-y: auto;
+
+        .dishi-item{
+            width: calc(100% - 20px);
+            height: $itemHeight;
+            line-height: $itemHeight;
+            padding: 0 10px;
+            border-bottom: base.$borderDotted;
+            @include base.cursor();
+        }
+        .dishi-item:hover{
+            background-color: rgba($color: #000000, $alpha: 0.1);
+        }
     }
 }
