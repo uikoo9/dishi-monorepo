@@ -1,5 +1,5 @@
 // qiao
-var qiao = require('../_qiao.js');;
+var qiao = require('../_qiao.js');
 
 /**
  * index

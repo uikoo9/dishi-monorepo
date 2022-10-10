@@ -10,7 +10,7 @@ import { addTodo, delTodo, getTodos } from '../todo.js';
 /**
  * dishi list pc
  */
-export const DishiListPC = (props) => {
+export const DishiListPC = () => {
     console.log('components/dishi/dishi-list-pc: render');
 
     // state

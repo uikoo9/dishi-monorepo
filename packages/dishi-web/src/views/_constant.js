@@ -5,6 +5,9 @@ export default {
         name: 'Donate',
         url: 'https://insistime.com/donate'
     }, {
+        name: 'Dishi',
+        url: 'https://dishi.insistime.com/'
+    }, {
         name: 'Code',
         url: 'https://code.insistime.com/'
     }, {
