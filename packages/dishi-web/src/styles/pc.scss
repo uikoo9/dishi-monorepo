@@ -19,7 +19,6 @@ body {
 .container {
     width: $width;
     @include base.marginAuto();
-
 }
 
 .dishi-other{

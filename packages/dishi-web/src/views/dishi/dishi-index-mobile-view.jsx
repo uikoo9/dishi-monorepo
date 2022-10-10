@@ -9,7 +9,7 @@ import '@styles/mobile.scss';
 import { MobileHeader, MobileFooter } from 'qiao-ui';
 
 // dishi
-import { DishiListMobile } from '@components/dishi';
+import { DishiListMobile, DishiOtherMobile } from '@components/dishi';
 
 // util
 import { infoLog } from '@utils/log.js';
@@ -32,6 +32,10 @@ const DishiIndexMobileView = () => {
             />
 
             <DishiListMobile />
+
+            <DishiOtherMobile
+                otherList={Constant.otherList}
+            />
 
             <MobileFooter
                 companyUrl={Constant.companyUrl}
