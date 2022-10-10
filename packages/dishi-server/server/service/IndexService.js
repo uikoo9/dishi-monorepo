@@ -1,8 +1,5 @@
 // qiao
-var qiao = require('../_qiao.js');
-
-// config
-var config = require('../config.json');
+var qiao = require('../_qiao.js');;
 
 /**
  * index
