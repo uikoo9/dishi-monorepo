@@ -3,13 +3,13 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 // css
-import '@styles/mobile.scss';
+import '@styles/pc.scss';
 
 // ui
-import { MobileHeader, MobileFooter } from 'qiao-ui';
+import { Header, Footer } from 'qiao-ui';
 
-// blog
-import { BlogTypesMobile } from '@components/blog';
+// dishi
+import { DishiListPC } from '@components/dishi';
 
 // util
 import { infoLog } from '@utils/log.js';
@@ -18,22 +18,22 @@ import { infoLog } from '@utils/log.js';
 import Constant from '../_constant.js';
 
 /**
- * blog index mobile view
+ * dishi index pc view
  */
-const BlogIndexMobileView = () => {
-    infoLog('blog-web/blog-index-mobile-view: render');
+const DishiIndexPCView = () => {
+    infoLog('dishi-web/dishi-index-pc-view: render');
 
     return (
         <div className='container'>
-            <MobileHeader
+            <Header
                 logo={Constant.logo}
                 logoUrl={Constant.logoUrl}
                 navs={Constant.navs}
             />
 
-            <BlogTypesMobile />
+            <DishiListPC />
 
-            <MobileFooter
+            <Footer
                 companyUrl={Constant.companyUrl}
                 companyName={Constant.companyName}
                 beianUrl={Constant.beianUrl}
@@ -45,4 +45,4 @@ const BlogIndexMobileView = () => {
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-root.render(<BlogIndexMobileView />);
+root.render(<DishiIndexPCView />);
