@@ -11,7 +11,7 @@
         "upload": "qcos fo ./config.json ../dishi-server/static 21_dishi_ls/static"
     },
     "dependencies": {
-        "qiao-ui": "^1.4.3",
+        "qiao-ui": "^1.4.4",
         "qiao.ls.js": "^1.1.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
