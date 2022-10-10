@@ -14,7 +14,7 @@ export const DishiListPC = (props) => {
     console.log('components/dishi/dishi-list-pc: render');
 
     // state
-    const [todo, setTodo] = useState([]);
+    const [todo, setTodo] = useState('');
     const [todos, setTodos] = useState([]);
 
     // effect
@@ -34,6 +34,8 @@ export const DishiListPC = (props) => {
                     onChange={(e) => setTodo(e.target.value)}
                     onKeyPress={(e) => {
                         if (e.nativeEvent.keyCode === 13){
+                            setTodo('');
+
                             addTodo(`${Date.now()}-${todo}`, todo);
 
                             setTodos(getTodos());
