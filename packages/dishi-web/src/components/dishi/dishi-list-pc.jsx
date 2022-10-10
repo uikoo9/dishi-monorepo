@@ -36,7 +36,7 @@ export const DishiListPC = (props) => {
                         if (e.nativeEvent.keyCode === 13){
                             setTodo('');
 
-                            addTodo(`${Date.now()}-${todo}`, todo);
+                            addTodo(Date.now(), todo);
 
                             setTodos(getTodos());
                         }
