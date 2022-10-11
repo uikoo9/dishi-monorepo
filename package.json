@@ -12,8 +12,8 @@
     },
     "devDependencies": {
         "eslint": "^8.25.0",
-        "eslint-plugin-react": "^7.31.9",
+        "eslint-plugin-react": "^7.31.10",
         "eslint-plugin-react-hooks": "^4.6.0",
-        "qiao-lerna": "^0.5.1"
+        "qiao-lerna": "^0.5.2"
     }
 }

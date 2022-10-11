@@ -18,6 +18,6 @@
     },
     "devDependencies": {
         "qiao-cos": "^1.0.3",
-        "qiao-webpack": "^1.1.2"
+        "qiao-webpack": "^1.1.4"
     }
 }
