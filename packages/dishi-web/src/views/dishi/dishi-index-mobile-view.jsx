@@ -25,12 +25,6 @@ const DishiIndexMobileView = () => {
 
     return (
         <div className='container'>
-            <MobileHeader
-                logo={Constant.logo}
-                logoUrl={Constant.logoUrl}
-                navs={Constant.navs}
-            />
-
             <DishiContainer />
 
             <MobileFooter

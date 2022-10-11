@@ -1,6 +1,7 @@
 @use "./base";
 
 $width: 16rem;
+$titleHeight: 3rem;
 $itemWidth: 16rem;
 $itemHeight: 1.5rem;
 $minHeight: 16rem;
@@ -21,8 +22,15 @@ body {
     @include base.marginAuto();
 }
 
-.dishi-other{
-    width: $width;
+.article-title{
+    @include base.width();
+
+    height: $titleHeight;
+    line-height: $titleHeight;
+    border-bottom: base.$borderDotted;
+
+    @include base.font($size: 24px, $align: center);
+    font-weight: 600;
 }
 
 .dishi-container{
@@ -40,10 +48,7 @@ body {
     }
     .dishi-list{
         width: $itemWidth;
-        max-height: calc($minHeight - 51px);
         @include base.marginAuto();
-
-        overflow-y: auto;
 
         .dishi-item{
             width: calc(100% - 20px);

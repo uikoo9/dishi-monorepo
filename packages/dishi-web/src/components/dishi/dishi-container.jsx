@@ -25,14 +25,17 @@ export const DishiContainer = () => {
     }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
     return (
-        <div className="dishi-container">
-            <DishiInput
-                setTodos={setTodos}
-            />
-            <DishiList
-                todos={todos}
-                setTodos={setTodos}
-            />
-        </div>
+        <>
+            <div className="dishi-title">滴石</div>
+            <div className="dishi-container">
+                <DishiInput
+                    setTodos={setTodos}
+                />
+                <DishiList
+                    todos={todos}
+                    setTodos={setTodos}
+                />
+            </div>
+        </>
     );
 };
