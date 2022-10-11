@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 // ui
+import { Donate } from 'qiao-ui';
 import { DishiInput } from './dishi-input.jsx';
 import { DishiList } from './dishi-list.jsx';
 
@@ -36,6 +37,10 @@ export const DishiContainer = () => {
                     setTodos={setTodos}
                 />
             </div>
+            <Donate
+                type={'donate'}
+                tip={'觉得不错，请作者喝杯茶~'}
+            />
         </>
     );
 };
