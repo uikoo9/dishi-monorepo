@@ -21,10 +21,6 @@ body {
     @include base.marginAuto();
 }
 
-.dishi-other{
-    width: $width;
-}
-
 .dishi-container{
     width: $width;
     min-height: $minHeight;

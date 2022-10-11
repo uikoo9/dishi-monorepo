@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 
 // ui
-import { Input } from 'qiao-ui';
+import { DishiInput } from './dishi-input.jsx'
 
 // dishi
-import { addTodo, delTodo, getTodos } from '../todo.js';
+import { delTodo, getTodos } from '../todo.js';
 
 /**
  * dishi list mobile
@@ -14,7 +14,6 @@ export const DishiListMobile = () => {
     console.log('components/dishi/dishi-list-mobile: render');
 
     // state
-    const [todo, setTodo] = useState('');
     const [todos, setTodos] = useState([]);
 
     // effect
@@ -26,23 +25,9 @@ export const DishiListMobile = () => {
 
     return (
         <div className="dishi-container">
-            <div className="dishi-input">
-                <Input
-                    type="text"
-                    placeholder={'todo...'}
-                    value={todo}
-                    onChange={(e) => setTodo(e.target.value)}
-                    onKeyPress={(e) => {
-                        if (e.nativeEvent.keyCode === 13) {
-                            setTodo('');
-
-                            addTodo(Date.now(), todo);
-
-                            setTodos(getTodos());
-                        }
-                    }}
-                />
-            </div>
+            <DishiInput 
+                setTodos = { setTodos }
+            />
             <div className="dishi-list">
                 {
                     todos && todos.map((item) => {

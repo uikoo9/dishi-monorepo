@@ -9,7 +9,7 @@ import '@styles/pc.scss';
 import { Header, Footer } from 'qiao-ui';
 
 // dishi
-import { DishiListPC, DishiOtherPC } from '@components/dishi';
+import { DishiListPC } from '@components/dishi';
 
 // util
 import { infoLog } from '@utils/log.js';
@@ -32,10 +32,6 @@ const DishiIndexPCView = () => {
             />
 
             <DishiListPC />
-
-            <DishiOtherPC 
-                otherList={Constant.otherList}
-            />
 
             <Footer
                 companyUrl={Constant.companyUrl}
