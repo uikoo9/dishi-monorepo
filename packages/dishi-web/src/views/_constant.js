@@ -3,6 +3,7 @@ export default {
     logoUrl: 'https://dishi.insistime.com/',
     navs: [{
         name: 'Github',
+        blank: true,
         url: 'https://github.com/uikoo9/dishi-monorepo'
     },],
 
