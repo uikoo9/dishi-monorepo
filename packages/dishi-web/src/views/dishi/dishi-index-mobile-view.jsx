@@ -6,7 +6,7 @@ import { createRoot } from 'react-dom/client';
 import '@styles/mobile.scss';
 
 // ui
-import { MobileHeader, MobileFooter } from 'qiao-ui';
+import { MobileFooter } from 'qiao-ui';
 
 // dishi
 import { DishiContainer } from '@components/dishi/dishi-container.jsx';
@@ -25,6 +25,8 @@ const DishiIndexMobileView = () => {
 
     return (
         <div className='container'>
+            <div className="dishi-title">滴石todo</div>
+            
             <DishiContainer />
 
             <MobileFooter

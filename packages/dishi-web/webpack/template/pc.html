@@ -12,9 +12,9 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
     <!-- for search-->
-    {{if title}}
-    <meta name="keywords" content="{{title}}" />
-    <meta name="description" content="{{title}}" />
+    {{if desc}}
+    <meta name="keywords" content="{{desc}}" />
+    <meta name="description" content="{{desc}}" />
     {{else}}
     <meta name="keywords" content="insistime.com" />
     <meta name="description" content="insistime.com" />
@@ -37,11 +37,7 @@
     <meta name="apple-mobile-web-app-title" content="insistime.com" />
     <link rel="apple-touch-icon-precomposed" href="https://static.insistime.com/00_insistime/logo_144_144.png" />
 
-    {{if title}}
-    <title>{{title}}</title>
-    {{else}}
-    <title>dishi - insistime.com - 北京坚时科技有限公司</title>
-    {{/if}}
+    <title>滴石 - insistime.com - 北京坚时科技有限公司</title>
 
     <script>
         var _hmt = _hmt || [];
@@ -61,7 +57,6 @@
 </head>
 
 <body>
-    {{if data}} <input type="hidden" id="serverData" value="{{data}}"> {{/if}}
     <div id="root"></div>
 </body>
 

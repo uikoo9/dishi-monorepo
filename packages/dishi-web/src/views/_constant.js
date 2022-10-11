@@ -1,18 +1,9 @@
 export default {
-    logo: 'insistime.com',
-    logoUrl: 'https://insistime.com/',
+    logo: '滴石',
+    logoUrl: 'https://dishi.insistime.com/',
     navs: [{
-        name: 'Donate',
-        url: 'https://insistime.com/donate'
-    }, {
-        name: 'Dishi',
-        url: 'https://dishi.insistime.com/'
-    }, {
-        name: 'Code',
-        url: 'https://code.insistime.com/'
-    }, {
-        name: 'Blog',
-        url: 'https://blog.insistime.com/'
+        name: 'Github',
+        url: 'https://github.com/uikoo9/dishi-monorepo'
     },],
 
     companyName: 'insistime.com',

@@ -27,7 +27,6 @@ export const DishiContainer = () => {
 
     return (
         <>
-            <div className="dishi-title">滴石</div>
             <div className="dishi-container">
                 <DishiInput
                     setTodos={setTodos}

@@ -22,7 +22,7 @@ body {
     @include base.marginAuto();
 }
 
-.article-title{
+.dishi-title{
     @include base.width();
 
     height: $titleHeight;

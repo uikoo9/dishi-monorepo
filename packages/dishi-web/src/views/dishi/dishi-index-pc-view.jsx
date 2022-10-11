@@ -25,6 +25,12 @@ const DishiIndexPCView = () => {
 
     return (
         <div className='container'>
+            <Header
+                logo={Constant.logo}
+                logoUrl={Constant.logoUrl}
+                navs={Constant.navs}
+            />
+            
             <DishiContainer />
 
             <Footer
