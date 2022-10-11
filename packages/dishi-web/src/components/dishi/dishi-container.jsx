@@ -7,7 +7,7 @@ import { DishiInput } from './dishi-input.jsx';
 import { DishiList } from './dishi-list.jsx';
 
 // dishi
-import { getTodos } from '../todo.js';
+import { getTodos, getDones } from '../todo.js';
 
 /**
  * dishi container
@@ -17,12 +17,14 @@ export const DishiContainer = () => {
 
     // state
     const [todos, setTodos] = useState([]);
+    const [dones, setDones] = useState([]);
 
     // effect
     useEffect(() => {
         console.log('components/dishi/dishi-container: useEffect');
 
         setTodos(getTodos());
+        setDones(getDones());
     }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
     return (
@@ -34,6 +36,8 @@ export const DishiContainer = () => {
                 <DishiList
                     todos={todos}
                     setTodos={setTodos}
+                    dones={dones}
+                    setDones={setDones}
                 />
             </div>
             <Donate
