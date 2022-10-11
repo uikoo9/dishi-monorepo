@@ -9,7 +9,7 @@ import '@styles/mobile.scss';
 import { MobileHeader, MobileFooter } from 'qiao-ui';
 
 // dishi
-import { DishiListMobile } from '@components/dishi';
+import { DishiContainer } from '@components/dishi/dishi-container.jsx';
 
 // util
 import { infoLog } from '@utils/log.js';
@@ -31,7 +31,7 @@ const DishiIndexMobileView = () => {
                 navs={Constant.navs}
             />
 
-            <DishiListMobile />
+            <DishiContainer />
 
             <MobileFooter
                 companyUrl={Constant.companyUrl}
