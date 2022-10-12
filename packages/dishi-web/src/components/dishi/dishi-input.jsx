@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { Input } from 'qiao-ui';
 
 // dishi
-import { addTodo, getTodos } from './todo.js';
+// import { addTodo, getTodos } from './todo.js';
 
 /**
  * dishi input

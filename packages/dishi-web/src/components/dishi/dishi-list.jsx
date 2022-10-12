@@ -2,7 +2,7 @@
 import React from 'react';
 
 // dishi
-import { delTodo, getTodos, getDones } from './todo.js';
+// import { delTodo, getTodos, getDones } from './todo.js';
 
 /**
  * dishi list
