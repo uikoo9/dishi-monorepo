@@ -8,7 +8,7 @@ import { delTodo, getTodos, getDones } from './todo.js';
  * dishi list
  */
 export const DishiList = (props) => {
-    console.log('components/dishi/dishi-list: render');
+    console.log('components/localstorage/dishi-list: render');
 
     return (
         <div className="dishi-list">

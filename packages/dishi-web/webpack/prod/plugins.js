@@ -40,4 +40,26 @@ module.exports = [
             'https://static.insistime.com/21_dishi_ls/static/',
         template: mobilePath,
     },
+
+    // localstorage
+    {
+        type: 'html',
+        inject: 'body',
+        title: 'dishi-localstorage-pc',
+        chunks: ['dishi-localstorage-pc'],
+        filename: '../views/dishi-localstorage-pc.html',
+        publicPath:
+            'https://static.insistime.com/21_dishi_ls/static/',
+        template: pcPath,
+    },
+    {
+        type: 'html',
+        inject: 'body',
+        title: 'dishi-localstorage-mobile',
+        chunks: ['dishi-localstorage-mobile'],
+        filename: '../views/dishi-localstorage-mobile.html',
+        publicPath:
+            'https://static.insistime.com/21_dishi_ls/static/',
+        template: mobilePath,
+    },
 ];

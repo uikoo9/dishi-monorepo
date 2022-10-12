@@ -3,13 +3,13 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 // css
-import '@styles/dishi/pc.scss';
+import '@styles/localstorage/mobile.scss';
 
 // ui
-import { Header, Footer } from 'qiao-ui';
+import { MobileFooter } from 'qiao-ui';
 
 // dishi
-import { DishiContainer } from '@components/dishi/dishi-container.jsx';
+import { DishiContainer } from '@components/localstorage/dishi-container.jsx';
 
 // util
 import { infoLog } from '@utils/log.js';
@@ -18,22 +18,18 @@ import { infoLog } from '@utils/log.js';
 import Constant from '../_constant.js';
 
 /**
- * dishi index pc view
+ * dishi index mobile view
  */
-const DishiIndexPCView = () => {
-    infoLog('dishi-web/dishi-index-pc-view: render');
+const DishiIndexMobileView = () => {
+    infoLog('dishi-web/dishi-index-mobile-view: render');
 
     return (
         <div className='container'>
-            <Header
-                logo={Constant.logo}
-                logoUrl={Constant.logoUrl}
-                navs={Constant.navs}
-            />
+            <div className="dishi-title">滴石todo</div>
             
             <DishiContainer />
 
-            <Footer
+            <MobileFooter
                 companyUrl={Constant.companyUrl}
                 companyName={Constant.companyName}
                 beianUrl={Constant.beianUrl}
@@ -45,4 +41,4 @@ const DishiIndexPCView = () => {
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-root.render(<DishiIndexPCView />);
+root.render(<DishiIndexMobileView />);

@@ -11,7 +11,7 @@ import { addTodo, getTodos } from './todo.js';
  * dishi input
  */
 export const DishiInput = (props) => {
-    console.log('components/dishi/dishi-input: render');
+    console.log('components/localstorage/dishi-input: render');
 
     // state
     const [todo, setTodo] = useState('');

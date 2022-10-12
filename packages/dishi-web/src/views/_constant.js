@@ -5,6 +5,9 @@ export default {
         name: 'Github',
         blank: true,
         url: 'https://github.com/uikoo9/dishi-monorepo'
+    },{
+        name: 'LocalStorage版',
+        url: 'https://dishi.insistime.com/localstorage'
     },],
 
     companyName: 'insistime.com',

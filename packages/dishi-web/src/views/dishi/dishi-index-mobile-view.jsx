@@ -3,7 +3,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 // css
-import '@styles/mobile.scss';
+import '@styles/dishi/mobile.scss';
 
 // ui
 import { MobileFooter } from 'qiao-ui';

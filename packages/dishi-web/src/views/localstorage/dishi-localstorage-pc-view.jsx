@@ -3,13 +3,13 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 // css
-import '@styles/dishi/pc.scss';
+import '@styles/localstorage/pc.scss';
 
 // ui
 import { Header, Footer } from 'qiao-ui';
 
 // dishi
-import { DishiContainer } from '@components/dishi/dishi-container.jsx';
+import { DishiContainer } from '@components/localstorage/dishi-container.jsx';
 
 // util
 import { infoLog } from '@utils/log.js';

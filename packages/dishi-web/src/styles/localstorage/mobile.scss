@@ -1,10 +1,10 @@
-@use "./base";
+@use "../base";
 
-$width: 1400px;
-$titleHeight: 100px;
-$height: 800px;
-$itemWidth: 400px;
-$itemHeight: 50px;
+$width: 16rem;
+$titleHeight: 3rem;
+$height: 26rem;
+$itemWidth: 16rem;
+$itemHeight: 1.5rem;
 
 html,
 body {
@@ -22,49 +22,50 @@ body {
     @include base.marginAuto();
 }
 
-.dishi-title {
+.dishi-title{
     @include base.width();
 
     height: $titleHeight;
     line-height: $titleHeight;
     border-bottom: base.$borderDotted;
 
-    @include base.font($size: 28px, $align: center);
+    @include base.font($size: 24px, $align: center);
     font-weight: 600;
 }
 
-.dishi-container {
+.dishi-container{
     width: $width;
     height: $height;
-    padding: 50px 0;
+    padding: 2rem 0;
     border-bottom: base.$borderDotted;
 
-    .dishi-input {
+    .dishi-input{
         width: $itemWidth;
         height: auto;
         @include base.marginAuto();
-    }
 
-    .dishi-list {
+        font-size: 16px;
+    }
+    .dishi-list{
         width: $itemWidth;
         height: calc($height - 61px);
         @include base.marginAuto();
 
         overflow-y: auto;
 
-        .dishi-item {
+        .dishi-item{
             width: calc(100% - 20px);
             height: $itemHeight;
             line-height: $itemHeight;
             padding: 0 10px;
             border-bottom: base.$borderDotted;
             @include base.cursor();
-        }
 
+            font-size: 16px;
+        }
         .dishi-item.todo:hover {
             background-color: rgba($color: #000000, $alpha: 0.1);
         }
-
         .dishi-item.done{
             text-decoration:line-through;
             color: #333;

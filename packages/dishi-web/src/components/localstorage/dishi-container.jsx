@@ -13,7 +13,7 @@ import { getTodos, getDones } from './todo.js';
  * dishi container
  */
 export const DishiContainer = () => {
-    console.log('components/dishi/dishi-container: render');
+    console.log('components/localstorage/dishi-container: render');
 
     // state
     const [todos, setTodos] = useState([]);
@@ -21,7 +21,7 @@ export const DishiContainer = () => {
 
     // effect
     useEffect(() => {
-        console.log('components/dishi/dishi-container: useEffect');
+        console.log('components/localstorage/dishi-container: useEffect');
 
         setTodos(getTodos());
         setDones(getDones());
