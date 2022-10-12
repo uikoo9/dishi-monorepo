@@ -22,16 +22,16 @@ exports.index = async function (req, res) {
 };
 
 /**
- * localstorage
+ * ls
  * @param {*} req 
  * @param {*} res 
  */
-exports.localstorage = async function (req, res) {
+exports.ls = async function (req, res) {
     // render
     var vendor = qiao.vendor(req.headers['user-agent']);
     if (vendor.mobile || vendor.android) {
-        res.render('./views/dishi-localstorage-mobile.html', data);
+        res.render('./views/dishi-ls-mobile.html', data);
     } else {
-        res.render('./views/dishi-localstorage-pc.html', data);
+        res.render('./views/dishi-ls-pc.html', data);
     }
 };

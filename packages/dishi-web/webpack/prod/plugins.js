@@ -41,13 +41,13 @@ module.exports = [
         template: mobilePath,
     },
 
-    // localstorage
+    // ls
     {
         type: 'html',
         inject: 'body',
-        title: 'dishi-localstorage-pc',
-        chunks: ['dishi-localstorage-pc'],
-        filename: '../views/dishi-localstorage-pc.html',
+        title: 'dishi-ls-pc',
+        chunks: ['dishi-ls-pc'],
+        filename: '../views/dishi-ls-pc.html',
         publicPath:
             'https://static.insistime.com/21_dishi_ls/static/',
         template: pcPath,
@@ -55,9 +55,9 @@ module.exports = [
     {
         type: 'html',
         inject: 'body',
-        title: 'dishi-localstorage-mobile',
-        chunks: ['dishi-localstorage-mobile'],
-        filename: '../views/dishi-localstorage-mobile.html',
+        title: 'dishi-ls-mobile',
+        chunks: ['dishi-ls-mobile'],
+        filename: '../views/dishi-ls-mobile.html',
         publicPath:
             'https://static.insistime.com/21_dishi_ls/static/',
         template: mobilePath,

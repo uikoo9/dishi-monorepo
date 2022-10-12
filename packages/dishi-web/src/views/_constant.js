@@ -6,8 +6,8 @@ export default {
         blank: true,
         url: 'https://github.com/uikoo9/dishi-monorepo'
     },{
-        name: 'LocalStorage版',
-        url: 'https://dishi.insistime.com/localstorage'
+        name: 'LS版',
+        url: 'https://dishi.insistime.com/ls'
     },],
 
     companyName: 'insistime.com',

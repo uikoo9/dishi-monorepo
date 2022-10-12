@@ -10,8 +10,8 @@ module.exports = function (app) {
         service.index(req, res);
     });
 
-    // localstorage
-    app.get('/localstorage', function (req, res) {
-        service.localstorage(req, res);
+    // ls
+    app.get('/ls', function (req, res) {
+        service.ls(req, res);
     });
 };

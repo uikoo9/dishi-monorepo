@@ -37,21 +37,21 @@ module.exports = [
         template: mobilePath,
     },
 
-    // localstorage
+    // ls
     {
         type: 'html',
         inject: 'body',
-        title: 'dishi-localstorage-pc',
-        chunks: ['dishi-localstorage-pc'],
-        filename: 'dishi-localstorage-pc.html',
+        title: 'dishi-ls-pc',
+        chunks: ['dishi-ls-pc'],
+        filename: 'dishi-ls-pc.html',
         template: pcPath,
     },
     {
         type: 'html',
         inject: 'body',
-        title: 'dishi-localstorage-mobile',
-        chunks: ['dishi-localstorage-mobile'],
-        filename: 'dishi-localstorage-mobile.html',
+        title: 'dishi-ls-mobile',
+        chunks: ['dishi-ls-mobile'],
+        filename: 'dishi-ls-mobile.html',
         template: mobilePath,
     },
 ];
