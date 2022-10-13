@@ -74,10 +74,13 @@ body {
             background-color: rgba($color: #000000, $alpha: 0.1);
         }
 
-        .dishi-item.done > div{
-            text-decoration:line-through;
-            color: #333;
+        .dishi-item.done{
             background-color: rgba($color: #999, $alpha: 0.1);
+
+            > div{
+                color: #333;
+                text-decoration:line-through;
+            }
         }
     }
 }
