@@ -7,7 +7,7 @@ import { DishiInput } from './dishi-input.jsx';
 import { DishiList } from './dishi-list.jsx';
 
 // dishi
-import { initDatabase } from './todo.js';
+import { initDatabase, getTodos } from './todo.js';
 
 /**
  * dishi container
@@ -23,8 +23,17 @@ export const DishiContainer = () => {
     useEffect(() => {
         console.log('components/dishi/dishi-container: useEffect');
 
-        initDatabase();
+        setData();
     }, []);// eslint-disable-line react-hooks/exhaustive-deps
+    
+    // set data
+    const setData = async () => {
+        const res = await initDatabase();
+        console.log('init database:', res);
+
+        const todos = await getTodos();
+        setTodos(todos);
+    };
 
     return (
         <>

@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { Input } from 'qiao-ui';
 
 // dishi
-// import { addTodo, getTodos } from './todo.js';
+import { addTodo, getTodos } from './todo.js';
 
 /**
  * dishi input
@@ -22,7 +22,7 @@ export const DishiInput = (props) => {
     };
 
     // on key press
-    const onKeyPress = (e) => {
+    const onKeyPress = async (e) => {
         // check
         if (e.nativeEvent.keyCode != 13) return;
 
@@ -30,10 +30,11 @@ export const DishiInput = (props) => {
         setTodo('');
 
         // add 
-        addTodo(Date.now(), todo);
+        await addTodo(todo);
 
         // reload
-        props.setTodos(getTodos());
+        const todos = await getTodos();
+        props.setTodos(todos);
     };
 
     return (

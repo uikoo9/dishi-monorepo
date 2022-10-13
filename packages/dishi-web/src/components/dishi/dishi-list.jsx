@@ -2,7 +2,7 @@
 import React from 'react';
 
 // dishi
-// import { delTodo, getTodos, getDones } from './todo.js';
+import { getTodos } from './todo.js';
 
 /**
  * dishi list
@@ -16,15 +16,15 @@ export const DishiList = (props) => {
                 props.todos && props.todos.map((item) => {
                     return <div
                         className="dishi-item todo"
-                        key={item.key}
+                        key={item.create_time}
                         onClick={() => {
-                            delTodo(item.key);
+                            delTodo(item.create_time);
 
                             props.setTodos(getTodos());
-                            props.setDones(getDones());
+                            // props.setDones(getDones());
                         }}
                     >
-                        {item.value}
+                        {item.todo_content}
                     </div>;
                 })
             }
