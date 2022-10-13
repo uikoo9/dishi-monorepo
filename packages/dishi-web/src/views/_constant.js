@@ -8,6 +8,9 @@ export default {
     },{
         name: 'LS版',
         url: 'https://dishi.insistime.com/ls'
+    },{
+        name: 'IndexedDB版',
+        url: 'https://dishi.insistime.com/'
     },],
 
     companyName: 'insistime.com',
