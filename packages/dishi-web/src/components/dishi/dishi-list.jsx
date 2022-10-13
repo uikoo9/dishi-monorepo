@@ -2,7 +2,7 @@
 import React from 'react';
 
 // dishi
-import { getTodos } from './todo.js';
+import { delTodo, getTodos, getDones } from './todo.js';
 
 /**
  * dishi list
@@ -17,14 +17,18 @@ export const DishiList = (props) => {
                     return <div
                         className="dishi-item todo"
                         key={item.create_time}
-                        onClick={() => {
-                            delTodo(item.create_time);
+                        onClick={async () => {
+                            await delTodo(item.create_time);
 
-                            props.setTodos(getTodos());
-                            // props.setDones(getDones());
+                            const todos = await getTodos();
+                            props.setTodos(todos);
+
+                            const dones = await getDones();
+                            props.setDones(dones);
                         }}
                     >
-                        {item.todo_content}
+                        <div className="content">{item.todo_content}</div>
+                        <div className="time">{item.todo_time}</div>
                     </div>;
                 })
             }
@@ -32,9 +36,10 @@ export const DishiList = (props) => {
                 props.dones && props.dones.map((item) => {
                     return <div
                         className="dishi-item done"
-                        key={item.key}
+                        key={item.done_time}
                     >
-                        {item.value}
+                        <div className="content">{item.todo_content}</div>
+                        <div className="time">{item.todo_time}</div>
                     </div>;
                 })
             }

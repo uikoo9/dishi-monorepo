@@ -7,7 +7,7 @@ import { DishiInput } from './dishi-input.jsx';
 import { DishiList } from './dishi-list.jsx';
 
 // dishi
-import { initDatabase, getTodos } from './todo.js';
+import { initDatabase, getTodos, getDones } from './todo.js';
 
 /**
  * dishi container
@@ -33,6 +33,9 @@ export const DishiContainer = () => {
 
         const todos = await getTodos();
         setTodos(todos);
+
+        const dones = await getDones();
+        setDones(dones);
     };
 
     return (

@@ -1,9 +1,10 @@
 // qiao
-import { listDB, openDB, createTable, save, getAll } from 'qiao.db.js';
+import { listDB, openDB, createTable, save, get, del, getAll } from 'qiao.db.js';
 
 // const
-const dbName = 'db_todo';
-const tableName = 't_todo';
+const dbName = 'db_dishi';
+const tableTodos = 't_todos';
+const tableDones = 't_dones';
 
 /**
  * init database
@@ -20,15 +21,23 @@ export const initDatabase = async () => {
 
     // table
     const tables = [{
-        name: tableName,
+        name: tableTodos,
         key: 'create_time',
         index: [{
             name: 'todo_time',
             index: ['todo_time', 'todo_content'],
             unique: false
         }]
+    }, {
+        name: tableDones,
+        key: 'done_time',
+        index: [{
+            name: 'done_time',
+            index: ['done_time'],
+            unique: false
+        }]
     }];
-    return await createTable(db, tables);
+    await createTable(db, tables);
 };
 
 /**
@@ -42,10 +51,10 @@ export const addTodo = async (todo) => {
     const todos = todo.split('@');
     const todo_content = todos[0].trim();
     let todo_time;
-    if (todos.length > 1){
+    if (todos.length > 1) {
         const todotime = todos[1].trim();
-        if(todotime.length == 8 && !isNaN(parseInt(todotime))) todo_time = todotime;
-    } 
+        if (todotime.length == 8 && !isNaN(parseInt(todotime))) todo_time = todotime;
+    }
 
     // save
     const create_time = Date.now();
@@ -55,8 +64,30 @@ export const addTodo = async (todo) => {
         create_time: create_time
     };
     const db = await openDB(dbName);
-    const saveRes = await save(db, tableName, create_time, data);
+    const saveRes = await save(db, tableTodos, create_time, data);
     console.log('add todo:', saveRes);
+};
+
+/**
+ * del todo
+ * @param {*} key 
+ */
+export const delTodo = async (key) => {
+    // todo
+    const db = await openDB(dbName);
+    const todo = await get(db, tableTodos, key);
+
+    // done
+    const done = {
+        todo_content: todo.todo_content,
+        todo_time: todo.todo_time,
+        done_time: Date.now()
+    };
+    const saveRes = await save(db, tableDones, null, done);
+
+    // del
+    await del(db, tableTodos, key);
+    console.log('del todo:', saveRes);
 };
 
 /**
@@ -65,8 +96,20 @@ export const addTodo = async (todo) => {
  */
 export const getTodos = async () => {
     const db = await openDB(dbName);
-    const res = await getAll(db, tableName, 'todo_time');
+    const res = await getAll(db, tableTodos, 'todo_time');
     console.log('get todos:', res);
+
+    return res;
+};
+
+/**
+ * get dones
+ * @returns todos
+ */
+ export const getDones = async () => {
+    const db = await openDB(dbName);
+    const res = await getAll(db, tableDones, 'done_time');
+    console.log('get dones:', res);
 
     return res;
 };
