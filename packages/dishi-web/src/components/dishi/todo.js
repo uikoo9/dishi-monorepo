@@ -37,7 +37,7 @@ export const initDatabase = async () => {
             unique: false
         }]
     }];
-    await createTable(db, tables);
+    return await createTable(db, tables);
 };
 
 /**
@@ -78,12 +78,13 @@ export const delTodo = async (key) => {
     const todo = await get(db, tableTodos, key);
 
     // done
+    const done_time = Date.now();
     const done = {
         todo_content: todo.todo_content,
         todo_time: todo.todo_time,
-        done_time: Date.now()
+        done_time: done_time
     };
-    const saveRes = await save(db, tableDones, null, done);
+    const saveRes = await save(db, tableDones, done_time, done);
 
     // del
     await del(db, tableTodos, key);
@@ -106,7 +107,7 @@ export const getTodos = async () => {
  * get dones
  * @returns todos
  */
- export const getDones = async () => {
+export const getDones = async () => {
     const db = await openDB(dbName);
     const res = await getAll(db, tableDones, 'done_time');
     console.log('get dones:', res);

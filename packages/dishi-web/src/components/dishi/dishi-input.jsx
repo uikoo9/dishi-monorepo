@@ -41,7 +41,7 @@ export const DishiInput = (props) => {
         <div className="dishi-input">
             <Input
                 type="text"
-                placeholder={'todo...'}
+                placeholder={'todo... @20221010'}
                 value={todo}
                 onChange={onChange}
                 onKeyPress={onKeyPress}
