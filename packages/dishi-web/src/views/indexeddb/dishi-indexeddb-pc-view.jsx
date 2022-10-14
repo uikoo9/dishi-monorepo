@@ -6,7 +6,7 @@ import { createRoot } from 'react-dom/client';
 import '@styles/indexeddb/pc.scss';
 
 // ui
-import { Header, Footer } from 'qiao-ui';
+import { Footer } from 'qiao-ui';
 
 // dishi
 import { DishiContainer } from '@components/indexeddb/dishi-container.jsx';
@@ -25,8 +25,6 @@ const DishiIndexedDBPCView = () => {
 
     return (
         <div className='container'>
-            <div className="dishi-title">滴石todo - IndexedDB</div>
-
             <DishiContainer />
 
             <Footer

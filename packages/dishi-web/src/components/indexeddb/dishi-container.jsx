@@ -25,7 +25,7 @@ export const DishiContainer = () => {
 
         setData();
     }, []);// eslint-disable-line react-hooks/exhaustive-deps
-    
+
     // set data
     const setData = async () => {
         const res = await initDatabase();
@@ -40,6 +40,8 @@ export const DishiContainer = () => {
 
     return (
         <>
+            <div className="dishi-title">滴石todo - IndexedDB</div>
+
             <div className="dishi-container">
                 <DishiInput
                     setTodos={setTodos}
@@ -51,6 +53,7 @@ export const DishiContainer = () => {
                     setDones={setDones}
                 />
             </div>
+            
             <Donate
                 type={'donate'}
                 tip={'觉得不错，请作者喝杯茶~'}

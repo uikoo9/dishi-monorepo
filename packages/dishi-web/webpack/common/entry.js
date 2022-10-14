@@ -12,5 +12,5 @@ module.exports = {
 
     // indexeddb
     'dishi-indexeddb-pc': '@views/indexeddb/dishi-indexeddb-pc-view.jsx',
-    'dishi-inindexeddbdex-mobile': '@views/indexeddb/dishi-indexeddb-mobile-view.jsx',
+    'dishi-indexeddb-mobile': '@views/indexeddb/dishi-indexeddb-mobile-view.jsx',
 };

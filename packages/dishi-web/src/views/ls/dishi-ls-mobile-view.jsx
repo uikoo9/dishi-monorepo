@@ -25,8 +25,6 @@ const DishiLSMobileView = () => {
 
     return (
         <div className='container'>
-            <div className="dishi-title">滴石todo - LocalStorage</div>
-            
             <DishiContainer />
 
             <MobileFooter

@@ -25,8 +25,6 @@ const DishiIndexedDBMobileView = () => {
 
     return (
         <div className='container'>
-            <div className="dishi-title">滴石todo - IndexedDB</div>
-            
             <DishiContainer />
 
             <MobileFooter
@@ -41,4 +39,4 @@ const DishiIndexedDBMobileView = () => {
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-root.render(<DishiIndexMobileView />);
+root.render(<DishiIndexedDBMobileView />);

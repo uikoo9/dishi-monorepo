@@ -6,7 +6,7 @@ import { createRoot } from 'react-dom/client';
 import '@styles/ls/pc.scss';
 
 // ui
-import { Header, Footer } from 'qiao-ui';
+import { Footer } from 'qiao-ui';
 
 // dishi
 import { DishiContainer } from '@components/ls/dishi-container.jsx';
@@ -25,12 +25,6 @@ const DishiLSPCView = () => {
 
     return (
         <div className='container'>
-            <Header
-                logo={Constant.logo}
-                logoUrl={Constant.logoUrl}
-                navs={Constant.navs}
-            />
-            
             <DishiContainer />
 
             <Footer
