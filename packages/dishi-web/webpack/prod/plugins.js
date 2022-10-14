@@ -27,7 +27,7 @@ module.exports = [
         chunks: ['dishi-index-pc'],
         filename: '../views/dishi-index-pc.html',
         publicPath:
-            'https://static.insistime.com/21_dishi_ls/static/',
+            'https://static.insistime.com/21_dishi/static/',
         template: pcPath,
     },
     {
@@ -37,7 +37,7 @@ module.exports = [
         chunks: ['dishi-index-mobile'],
         filename: '../views/dishi-index-mobile.html',
         publicPath:
-            'https://static.insistime.com/21_dishi_ls/static/',
+            'https://static.insistime.com/21_dishi/static/',
         template: mobilePath,
     },
 
@@ -49,7 +49,7 @@ module.exports = [
         chunks: ['dishi-ls-pc'],
         filename: '../views/dishi-ls-pc.html',
         publicPath:
-            'https://static.insistime.com/21_dishi_ls/static/',
+            'https://static.insistime.com/21_dishi/static/',
         template: pcPath,
     },
     {
@@ -59,7 +59,29 @@ module.exports = [
         chunks: ['dishi-ls-mobile'],
         filename: '../views/dishi-ls-mobile.html',
         publicPath:
-            'https://static.insistime.com/21_dishi_ls/static/',
+            'https://static.insistime.com/21_dishi/static/',
+        template: mobilePath,
+    },
+
+    // indexeddb
+    {
+        type: 'html',
+        inject: 'body',
+        title: 'dishi-indexeddb-pc',
+        chunks: ['dishi-indexeddb-pc'],
+        filename: '../views/dishi-indexeddb-pc.html',
+        publicPath:
+            'https://static.insistime.com/21_dishi/static/',
+        template: pcPath,
+    },
+    {
+        type: 'html',
+        inject: 'body',
+        title: 'dishi-indexeddb-mobile',
+        chunks: ['dishi-indexeddb-mobile'],
+        filename: '../views/dishi-indexeddb-mobile.html',
+        publicPath:
+            'https://static.insistime.com/21_dishi/static/',
         template: mobilePath,
     },
 ];

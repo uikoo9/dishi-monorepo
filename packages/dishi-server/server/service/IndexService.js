@@ -35,3 +35,18 @@ exports.ls = async function (req, res) {
         res.render('./views/dishi-ls-pc.html', data);
     }
 };
+
+/**
+ * indexeddb
+ * @param {*} req 
+ * @param {*} res 
+ */
+exports.indexeddb = async function (req, res) {
+    // render
+    var vendor = qiao.vendor(req.headers['user-agent']);
+    if (vendor.mobile || vendor.android) {
+        res.render('./views/dishi-indexeddb-mobile.html', data);
+    } else {
+        res.render('./views/dishi-indexeddb-pc.html', data);
+    }
+};

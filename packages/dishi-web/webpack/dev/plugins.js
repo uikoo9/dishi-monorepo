@@ -54,4 +54,22 @@ module.exports = [
         filename: 'dishi-ls-mobile.html',
         template: mobilePath,
     },
+
+    // indexeddb
+    {
+        type: 'html',
+        inject: 'body',
+        title: 'dishi-indexeddb-pc',
+        chunks: ['dishi-indexeddb-pc'],
+        filename: 'dishi-indexeddb-pc.html',
+        template: pcPath,
+    },
+    {
+        type: 'html',
+        inject: 'body',
+        title: 'dishi-indexeddb-mobile',
+        chunks: ['dishi-indexeddb-mobile'],
+        filename: 'dishi-indexeddb-mobile.html',
+        template: mobilePath,
+    },
 ];

@@ -14,4 +14,9 @@ module.exports = function (app) {
     app.get('/ls', function (req, res) {
         service.ls(req, res);
     });
+
+    // indexeddb
+    app.get('/indexeddb', function (req, res) {
+        service.indexeddb(req, res);
+    });
 };

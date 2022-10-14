@@ -7,10 +7,10 @@ export default {
         url: 'https://github.com/uikoo9/dishi-monorepo'
     },{
         name: 'LS版',
-        url: 'https://dishi.insistime.com/ls'
+        url: '/ls'
     },{
         name: 'IndexedDB版',
-        url: 'https://dishi.insistime.com/'
+        url: '/indexeddb'
     },],
 
     companyName: 'insistime.com',

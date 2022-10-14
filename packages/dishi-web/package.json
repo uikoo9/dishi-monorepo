@@ -8,7 +8,7 @@
     "scripts": {
         "dev": "qwebpack dev ./webpack/qiao-webpack.dev.js",
         "build": "qwebpack build ./webpack/qiao-webpack.prod.js",
-        "upload": "qcos fo ./config.json ../dishi-server/static 21_dishi_ls/static"
+        "upload": "qcos fo ./config.json ../dishi-server/static 21_dishi/static"
     },
     "dependencies": {
         "qiao-ui": "^1.4.4",
