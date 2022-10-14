@@ -2,9 +2,9 @@
 
 // entry
 module.exports = {
-    // dishi
-    'dishi-index-pc': '@views/dishi/dishi-index-pc-view.jsx',
-    'dishi-index-mobile': '@views/dishi/dishi-index-mobile-view.jsx',
+    // index
+    'dishi-index-pc': '@views/index/dishi-index-pc-view.jsx',
+    'dishi-index-mobile': '@views/index/dishi-index-mobile-view.jsx',
 
     // ls
     'dishi-ls-pc': '@views/ls/dishi-ls-pc-view.jsx',

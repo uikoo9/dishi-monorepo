@@ -1,17 +1,22 @@
 export default {
-    logo: '滴石',
-    logoUrl: 'https://dishi.insistime.com/',
+    logo: 'insistime.com',
+    logoUrl: 'https://insistime.com/',
     navs: [{
-        name: 'Github',
-        blank: true,
-        url: 'https://github.com/uikoo9/dishi-monorepo'
+        name: 'Donate',
+        url: 'https://insistime.com/donate'
     },{
-        name: 'LS版',
-        url: '/ls'
+        name: 'Dishi',
+        url: 'https://dishi.insistime.com/'
     },{
-        name: 'IndexedDB版',
-        url: '/indexeddb'
+        name: 'Code',
+        url: 'https://code.insistime.com/'
+    },{
+        name: 'Blog',
+        url: 'https://blog.insistime.com/'
     },],
+
+    contentName: '滴石',
+    contentSolgan: 'todo list，取水滴石穿之意',
 
     companyName: 'insistime.com',
     companyUrl: 'https://insistime.com/',

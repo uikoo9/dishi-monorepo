@@ -3,13 +3,18 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 // css
-import '@styles/dishi/pc.scss';
+import '@styles/index/pc.scss';
 
 // ui
-import { Header, Footer } from 'qiao-ui';
+import {
+    Header,
+    Footer,
+    Content,
+    Cards,
+} from 'qiao-ui';
 
 // dishi
-import { DishiContainer } from '@components/dishi/dishi-container.jsx';
+import { DishiCards } from '@components/index/dishi-cards.jsx';
 
 // util
 import { infoLog } from '@utils/log.js';
@@ -18,21 +23,25 @@ import { infoLog } from '@utils/log.js';
 import Constant from '../_constant.js';
 
 /**
- * dishi index pc view
+ * index pc view
  */
-const DishiIndexPCView = () => {
-    infoLog('dishi-web/dishi-index-pc-view: render');
+const IndexPCView = () => {
+    infoLog('insistime-web/index-pc-view: render');
 
     return (
-        <div className='container'>
+        <div className="container">
             <Header
                 logo={Constant.logo}
                 logoUrl={Constant.logoUrl}
                 navs={Constant.navs}
             />
-            
-            <DishiContainer />
-
+            <Content
+                contentName={Constant.contentName}
+                contentSolgan={Constant.contentSolgan}
+            />
+            <Cards
+                cards={DishiCards()}
+            />
             <Footer
                 companyUrl={Constant.companyUrl}
                 companyName={Constant.companyName}
@@ -45,4 +54,4 @@ const DishiIndexPCView = () => {
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-root.render(<DishiIndexPCView />);
+root.render(<IndexPCView />);
