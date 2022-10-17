@@ -1,7 +1,7 @@
 {
   "name": "dishi-electron",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "main.js",
   "devDependencies": {
     "electron": "^17.1.1"
