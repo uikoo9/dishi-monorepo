@@ -15,4 +15,7 @@ npm run clean
 
 # init packages
 npm run init
+
+# init packages with electron
+npm run init-electron
 ```
