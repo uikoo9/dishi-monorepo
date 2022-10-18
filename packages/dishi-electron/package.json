@@ -1,11 +1,18 @@
 {
-  "name": "dishi-electron",
-  "private": true,
-  "version": "0.0.5",
-  "devDependencies": {
-    "electron": "^21.1.1"
-  },
-  "scripts": {
-    "start": "electron electron-src"
-  }
+    "name": "dishi-electron",
+    "private": true,
+    "version": "0.0.5",
+    "devDependencies": {
+        "electron": "^21.1.1",
+        "qiao-electron-cli": "^0.8.9"
+    },
+    "scripts": {
+        "start": "electron electron-src",
+        "icon": "qelectron icon ./pack/static/icon/pic.png",
+        "dist": "qelectron d ./pack/qe.config.js",
+        "prepackmac": "npm run dist",
+        "packmac": "qelectron pm ./pack/qe.config.js",
+        "packdmg": "qelectron pd ./pack/qe.config.js",
+        "uploaddmg": "qelectron ud ./pack/qe.config.js"
+    }
 }
