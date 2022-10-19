@@ -1,5 +1,5 @@
-// 主进程下的package.json
-const srcPkg = require('../src/package.json');
+// pkg
+const pkg = require('../package.json');
 
 // config
 let config = {
@@ -7,16 +7,16 @@ let config = {
     appEnv: 'online',
 
     // app名称，默认从主进程下的package.json中获取
-    appName: srcPkg.name,
+    appName: '滴石',
 
     // app版本号，会显示在dmg安装包名以及关于面板上，默认从主进程下的package.json中获取
-    appVersion: srcPkg.version,
+    appVersion: pkg.version,
 
     // app应用图标
     appIconPath: 'pack/static/icon/icon.icns',
 
     // app权限声明，会显示在关于面板上
-    appCopyright: 'Copyright © 2022 dishi版权所有',
+    appCopyright: 'Copyright © 2022 滴石版权所有',
 
     // app操作系统，详见https://electron.github.io/electron-packager/main/interfaces/electronpackager.options.html#arch
     arch: 'x64',
