@@ -13,7 +13,7 @@ export const DishiCards = () => {
     // electron
     const electronTitle = <Link url='/' txt='滴石todo - Electron' blank={true} />;
     const electronDesc = <>
-        <Link url='https://static.insistime.com/21_dishi/dmg/%E6%BB%B4%E7%9F%B3-online-0.0.5.dmg' txt='Mac(Intel)' blank={true} />
+        <Link url='https://static.insistime.com/21_dishi/dmg/%E6%BB%B4%E7%9F%B3-online-0.0.6-x64.dmg' txt='Mac(Intel)' blank={true} />
         &nbsp;&nbsp;
         <Link url='https://blog.insistime.com/electron' txt='文章' blank={true} />
         &nbsp;&nbsp;
