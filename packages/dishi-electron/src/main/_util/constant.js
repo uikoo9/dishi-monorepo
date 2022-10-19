@@ -11,8 +11,8 @@ module.exports = {
     IPC_WINDOW_OPEN_INDEX   : 'ipc-window-open-index',
 
     // WINDOW INDEX
-    WINDOW_INDEX_WIDTH      : 300,
-    WINDOW_INDEX_HEIGHT     : 188,
+    WINDOW_INDEX_WIDTH      : 1400,
+    WINDOW_INDEX_HEIGHT     : 800,
     WINDOW_INDEX_COLOR      : '#fff',
 
     // IPC ZIP
