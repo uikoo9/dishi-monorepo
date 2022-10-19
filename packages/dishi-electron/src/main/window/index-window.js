@@ -31,7 +31,6 @@ module.exports = () => {
     backgroundColor: WINDOW_INDEX_COLOR,
     center: true,
     titleBarStyle: 'hiddenInset',
-    nodeIntegration: true,
     webPreferences: {
       preload: preloadPath,
       nodeIntegration: true
