@@ -1,5 +1,5 @@
 // pkg
-const pkg = require('../package.json');
+const pkg = require('../src/package.json');
 
 // config
 let config = {
@@ -29,9 +29,9 @@ let config = {
 
     // 最终要打包到app应用包中的文件和文件夹，在dist这一步会复制出去
     srcFiles: [
-        'index.html',
-        'main.js',
-        'preload.js',
+        'main',
+        'node_modules',
+        'renderer',
         'package.json'
     ],
 
