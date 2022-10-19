@@ -46,14 +46,14 @@ let config = {
 };
 
 // cos config，可以配置cos，直接上传到cos上
-// const cosConfig = require('./cos-config.json');
-// config.cosConfig = {
-//     SecretId: cosConfig.SecretId,
-//     SecretKey: cosConfig.SecretKey,
-//     Region: cosConfig.Region,
-//     Bucket: cosConfig.Bucket,
-//     destPath: 'xx/xx/xx/',
-// };
+const cosConfig = require('./config.json');
+config.cosConfig = {
+    SecretId: cosConfig.SecretId,
+    SecretKey: cosConfig.SecretKey,
+    Region: cosConfig.Region,
+    Bucket: cosConfig.Bucket,
+    destPath: '21_dishi/dmg',
+};
 
 // qe config
 module.exports = config;
