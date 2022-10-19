@@ -4,7 +4,7 @@
     "version": "0.1.6",
     "devDependencies": {
         "electron": "^21.1.1",
-        "qiao-electron-cli": "^1.0.1"
+        "qiao-electron-cli": "^1.0.3"
     },
     "scripts": {
         "init": "cd src/main && npm i",
