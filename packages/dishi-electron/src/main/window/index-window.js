@@ -30,6 +30,7 @@ module.exports = () => {
     height: WINDOW_INDEX_HEIGHT,
     center: true,
     backgroundColor: WINDOW_INDEX_COLOR,
+    titleBarStyle: 'hiddenInset',
     webPreferences: {
       preload: preloadPath
     }
