@@ -28,11 +28,13 @@ module.exports = () => {
   const options = {
     width: WINDOW_INDEX_WIDTH,
     height: WINDOW_INDEX_HEIGHT,
-    center: true,
     backgroundColor: WINDOW_INDEX_COLOR,
+    center: true,
     titleBarStyle: 'hiddenInset',
+    nodeIntegration: true,
     webPreferences: {
-      preload: preloadPath
+      preload: preloadPath,
+      nodeIntegration: true
     }
   };
 

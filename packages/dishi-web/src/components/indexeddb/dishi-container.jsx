@@ -18,6 +18,7 @@ export const DishiContainer = () => {
     // state
     const [todos, setTodos] = useState([]);
     const [dones, setDones] = useState([]);
+    const [version, setVersion] = useState('');
 
     // effect
     useEffect(() => {
@@ -28,6 +29,9 @@ export const DishiContainer = () => {
 
     // set data
     const setData = async () => {
+        const v = await window.electron.appGetVersionIPC();
+        setVersion(v);
+
         const res = await initDatabase();
         console.log('init database:', res);
 
@@ -40,7 +44,7 @@ export const DishiContainer = () => {
 
     return (
         <>
-            <div className="dishi-title">滴石todo - IndexedDB</div>
+            <div className="dishi-title">滴石todo - {version}</div>
 
             <div className="dishi-container">
                 <DishiInput
