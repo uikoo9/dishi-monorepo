@@ -52,7 +52,7 @@ config.cosConfig = {
     SecretKey: cosConfig.SecretKey,
     Region: cosConfig.Region,
     Bucket: cosConfig.Bucket,
-    destPath: '21_dishi/dmg',
+    destPath: '21_dishi/dmg/',
 };
 
 // qe config
