@@ -8,6 +8,7 @@
     "scripts": {
         "dev": "qwebpack dev ./webpack/qiao-webpack.dev.js",
         "build": "qwebpack build ./webpack/qiao-webpack.prod.js",
+        "electron": "qwebpack build ./webpack/qiao-webpack.electron.js",
         "upload": "qcos fo ./config.json ../dishi-server/static 21_dishi/static"
     },
     "dependencies": {

@@ -7,12 +7,14 @@
         "qiao-electron-cli": "^0.8.9"
     },
     "scripts": {
-        "start": "electron electron-src",
+        "init-main": "cd src/main && npm i",
+        "init-main-m1": "cd src/main && npm i --target_arch=arm64",
+        "start": "electron src",
         "icon": "qelectron icon ./pack/static/icon/pic.png",
-        "dist": "qelectron d ./pack/qe.config.js",
+        "dist": "qelectron d ./pack/qiao-electron.config.js",
         "prepackmac": "npm run dist",
-        "packmac": "qelectron pm ./pack/qe.config.js",
-        "packdmg": "qelectron pd ./pack/qe.config.js",
-        "uploaddmg": "qelectron ud ./pack/qe.config.js"
+        "packmac": "qelectron pm ./pack/qiao-electron.config.js",
+        "packdmg": "qelectron pd ./pack/qiao-electron.config.js",
+        "uploaddmg": "qelectron ud ./pack/qiao-electron.config.js"
     }
 }
