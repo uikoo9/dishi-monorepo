@@ -6,13 +6,10 @@ import { createRoot } from 'react-dom/client';
 import '@styles/electron/pc.scss';
 
 // dishi
-import { DishiContainer } from '@components/indexeddb/dishi-container.jsx';
+import { DishiContainer } from '@components/electron/dishi-container.jsx';
 
 // util
 import { infoLog } from '@utils/log.js';
-
-// constant
-import Constant from '../_constant.js';
 
 /**
  * dishi indexeddb electron view
