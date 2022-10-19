@@ -22,7 +22,7 @@ let config = {
     arch: 'x64',
 
     // app应用包中的app文件夹是否使用asar格式，默认为false
-    asar: false,
+    asar: true,
 
     // app中主进程src路径
     srcPath: 'src',
