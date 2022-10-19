@@ -5,13 +5,13 @@
  */
 module.exports = {
     // URL
-    LOCAL_URL               : 'http://localhost:5299',
+    LOCAL_URL               : 'http://localhost:5277',
 
     // IPC WINDOW
     IPC_WINDOW_OPEN_INDEX   : 'ipc-window-open-index',
 
     // WINDOW INDEX
-    WINDOW_INDEX_WIDTH      : 1400,
+    WINDOW_INDEX_WIDTH      : 400,
     WINDOW_INDEX_HEIGHT     : 800,
     WINDOW_INDEX_COLOR      : '#fff',
 

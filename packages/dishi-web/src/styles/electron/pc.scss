@@ -1,0 +1,86 @@
+@use "../base";
+
+$width: 400px;
+$titleHeight: 100px;
+$height: 800px;
+$itemWidth: 400px;
+$itemHeight: 50px;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    @include base.width();
+}
+
+#root {
+    @include base.width();
+}
+
+.container {
+    width: $width;
+    @include base.marginAuto();
+}
+
+.dishi-title {
+    @include base.width();
+
+    height: $titleHeight;
+    line-height: $titleHeight;
+    border-bottom: base.$borderDotted;
+
+    @include base.font($size: 28px, $align: center);
+    font-weight: 600;
+}
+
+.dishi-container {
+    width: $width;
+    height: $height;
+    padding: 50px 0;
+    border-bottom: base.$borderDotted;
+
+    .dishi-input {
+        width: $itemWidth;
+        height: auto;
+        @include base.marginAuto();
+    }
+
+    .dishi-list {
+        width: $itemWidth;
+        height: calc($height - 61px);
+        @include base.marginAuto();
+
+        overflow-y: auto;
+
+        .dishi-item {
+            width: calc(100% - 20px);
+            height: $itemHeight;
+            line-height: $itemHeight;
+            padding: 0 10px;
+            border-bottom: base.$borderDotted;
+            @include base.cursor();
+
+            .content{
+                float: left;
+                width: 60%;
+            }
+            .time{
+                float: left;
+                width: 40%;
+            }
+        }
+
+        .dishi-item.todo:hover {
+            background-color: rgba($color: #000000, $alpha: 0.1);
+        }
+
+        .dishi-item.done{
+            background-color: rgba($color: #999, $alpha: 0.1);
+
+            > div{
+                color: #333;
+                text-decoration:line-through;
+            }
+        }
+    }
+}

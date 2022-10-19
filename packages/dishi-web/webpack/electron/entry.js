@@ -2,6 +2,6 @@
 
 // entry
 module.exports = {
-    // indexeddb
-    'dishi-indexeddb-pc': '@views/indexeddb/dishi-indexeddb-pc-view.jsx',
+    // electron
+    'dishi-indexeddb-electron': '@views/electron/dishi-indexeddb-electron-view.jsx',
 };

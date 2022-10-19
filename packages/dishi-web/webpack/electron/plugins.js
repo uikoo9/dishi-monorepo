@@ -18,12 +18,12 @@ module.exports = [
         ignoreOrder: true,
     },
 
-    // indexeddb
+    // electron
     {
         type: 'html',
         inject: 'body',
-        title: 'dishi-indexeddb-pc',
-        chunks: ['dishi-indexeddb-pc'],
+        title: 'dishi-indexeddb-electron',
+        chunks: ['dishi-indexeddb-electron'],
         filename: 'index.html',
         template: pcPath,
     },
