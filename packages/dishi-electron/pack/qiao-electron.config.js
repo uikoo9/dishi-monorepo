@@ -13,7 +13,7 @@ let config = {
     appVersion: pkg.version,
 
     // app应用图标
-    appIconPath: 'pack/static/icon/icon.icns',
+    appIconPath: 'pack/img/icon/icon.icns',
 
     // app权限声明，会显示在关于面板上
     appCopyright: 'Copyright © 2022 滴石版权所有',
@@ -42,7 +42,7 @@ let config = {
     outPath: 'out',
 
     // app安装包dmg中的背景图
-    dmgBackground: 'pack/static/bg.png',
+    dmgBackground: 'pack/img/bg.png',
 };
 
 // cos config，可以配置cos，直接上传到cos上
