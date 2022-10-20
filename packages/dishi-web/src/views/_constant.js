@@ -2,17 +2,17 @@ export default {
     logo: 'insistime.com',
     logoUrl: 'https://insistime.com/',
     navs: [{
-        name: 'Donate',
+        name: '捐助',
         url: 'https://insistime.com/donate'
     },{
-        name: 'Dishi',
-        url: 'https://dishi.insistime.com/'
-    },{
-        name: 'Code',
+        name: '代码',
         url: 'https://code.insistime.com/'
     },{
-        name: 'Blog',
+        name: '博客',
         url: 'https://blog.insistime.com/'
+    },{
+        name: '滴石',
+        url: 'https://dishi.insistime.com/'
     },],
 
     contentName: '滴石',
