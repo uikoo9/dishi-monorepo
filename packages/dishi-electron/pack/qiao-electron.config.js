@@ -42,7 +42,7 @@ let config = {
     outPath: 'out',
 
     // app安装包dmg中的背景图
-    dmgBackground: 'pack/img/bg.png',
+    // dmgBackground: 'pack/img/bg.png',
 };
 
 // cos config，可以配置cos，直接上传到cos上
