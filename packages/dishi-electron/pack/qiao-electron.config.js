@@ -13,7 +13,7 @@ let config = {
     appVersion: pkg.version,
 
     // app应用图标
-    appIconPath: 'pack/img/icon/icon.icns',
+    appIconPath: 'pack/img/icon/icon',
 
     // app权限声明，会显示在关于面板上
     appCopyright: 'Copyright © 2022 滴石版权所有',
@@ -46,14 +46,14 @@ let config = {
 };
 
 // cos config，可以配置cos，直接上传到cos上
-const cosConfig = require('./config.json');
-config.cosConfig = {
-    SecretId: cosConfig.SecretId,
-    SecretKey: cosConfig.SecretKey,
-    Region: cosConfig.Region,
-    Bucket: cosConfig.Bucket,
-    destPath: '21_dishi/dmg/',
-};
+// const cosConfig = require('./config.json');
+// config.cosConfig = {
+//     SecretId: cosConfig.SecretId,
+//     SecretKey: cosConfig.SecretKey,
+//     Region: cosConfig.Region,
+//     Bucket: cosConfig.Bucket,
+//     destPath: '21_dishi/dmg/',
+// };
 
 // qe config
 module.exports = config;
