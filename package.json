@@ -6,6 +6,7 @@
         "init": "lerna bootstrap --ignore-prepublish --ignore=dishi-electron --hoist",
         "init-electron": "lerna bootstrap --ignore-prepublish --hoist",
         "check": "qlerna ncu ./packages",
+        "ncu": "lerna exec 'ncu -u'",
         "pkg": "qlerna pkg ./packages",
         "dpkg": "qlerna pkg ./packages 1",
         "eslint": "eslint . --ext .js,.jsx -c _config.eslint.js",
