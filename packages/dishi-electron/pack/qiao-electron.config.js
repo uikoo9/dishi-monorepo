@@ -19,7 +19,7 @@ let config = {
     appCopyright: 'Copyright © 2022 滴石版权所有',
 
     // app操作系统，详见https://electron.github.io/electron-packager/main/interfaces/electronpackager.options.html#arch
-    arch: 'arm64',
+    arch: 'x64',
 
     // app应用包中的app文件夹是否使用asar格式，默认为false
     asar: true,

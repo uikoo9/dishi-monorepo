@@ -10,12 +10,20 @@ import {
  * dishi container
  */
 export const DishiCards = () => {
+    // sqlite
+    const sqliteTitle = <Link url='/' txt='滴石todo - SQLite' blank={true} />;
+    const sqliteDesc = <>
+        <Link url='https://static.insistime.com/21_dishi/dmg/%E6%BB%B4%E7%9F%B3-online-0.2.0-x64.dmg' txt='Mac(Intel)' blank={true} />
+        &nbsp;&nbsp;
+        <Link url='https://blog.insistime.com/sqlite' txt='文章' blank={true} />
+        &nbsp;&nbsp;
+        <Link url='https://github.com/uikoo9/dishi-monorepo/tree/sqlite' txt='代码' blank={true} />
+    </>;
+
     // electron
     const electronTitle = <Link url='/' txt='滴石todo - Electron' blank={true} />;
     const electronDesc = <>
         <Link url='https://static.insistime.com/21_dishi/dmg/%E6%BB%B4%E7%9F%B3-online-0.1.2-x64.dmg' txt='Mac(Intel)' blank={true} />
-        &nbsp;&nbsp;
-        <Link url='https://static.insistime.com/21_dishi/dmg/%E6%BB%B4%E7%9F%B3-online-0.1.2-arm64.dmg' txt='Mac(M1)' blank={true} />
         &nbsp;&nbsp;
         <Link url='https://blog.insistime.com/electron' txt='文章' blank={true} />
         &nbsp;&nbsp;
@@ -44,6 +52,9 @@ export const DishiCards = () => {
 
     // cards
     const cards = [{
+        title: sqliteTitle,
+        desc: sqliteDesc,
+    }, {
         title: electronTitle,
         desc: electronDesc,
     }, {

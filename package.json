@@ -13,9 +13,9 @@
         "eslintfix": "eslint . --ext .js,jsx --fix -c _config.eslint.js"
     },
     "devDependencies": {
-        "eslint": "^8.25.0",
+        "eslint": "^8.26.0",
         "eslint-plugin-react": "^7.31.10",
         "eslint-plugin-react-hooks": "^4.6.0",
-        "qiao-lerna": "^0.5.2"
+        "qiao-lerna": "^1.0.0"
     }
 }

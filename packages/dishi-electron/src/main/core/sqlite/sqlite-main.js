@@ -7,7 +7,7 @@ const path = require('path');
 const { app } = require('electron');
 
 // sqlite
-const { createDb, createTable, dropTable, showTables, insertData, modifyData, deleteData, selectData } = require('qiao-sqlite');
+const { createDB, createTable, dropTable, showTables, insertData, modifyData, deleteData, selectData } = require('qiao-sqlite');
 
 // json
 const { success, danger } = require('qiao-json');
@@ -19,7 +19,7 @@ const { success, danger } = require('qiao-json');
 exports.sqlite = () => {
     const userDataPath = app.getPath('userData');
     const dbPath = path.resolve(userDataPath, './electron.db');
-    const db = createDb(dbPath);
+    const db = createDB(dbPath);
 
     return db;
 };

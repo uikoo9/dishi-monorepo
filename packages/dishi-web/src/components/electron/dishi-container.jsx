@@ -18,7 +18,6 @@ export const DishiContainer = () => {
     // state
     const [todos, setTodos] = useState([]);
     const [dones, setDones] = useState([]);
-    const [version, setVersion] = useState('');
 
     // effect
     useEffect(() => {
@@ -29,9 +28,6 @@ export const DishiContainer = () => {
 
     // set data
     const setData = async () => {
-        const v = await window.electron.appGetVersionIPC();
-        setVersion(v);
-
         await initDatabase();
 
         const todos = await getTodos();
@@ -43,7 +39,7 @@ export const DishiContainer = () => {
 
     return (
         <>
-            <div className="dishi-title">滴石todo - {version}</div>
+            <div className="dishi-title">滴石todo - SQLite</div>
 
             <div className="dishi-container">
                 <DishiInput
