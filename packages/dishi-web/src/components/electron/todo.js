@@ -52,6 +52,7 @@ export const delTodo = async (key) => {
     // query
     const selectSql = 'SELECT rowid,* FROM t_todos wherd rowid=?';
     const selectRes = await window.electron.selectDataIPC(selectSql, [key]);
+    console.log('get todo:', selectRes);
     if(!selectRes || selectRes.type != 'success' || !selectRes.obj || !selectRes.obj.length) return;
 
     // todo
@@ -61,9 +62,11 @@ export const delTodo = async (key) => {
     const insertSql = 'insert into t_dones values (?, ?, ?)';
     const insertRes = await window.electron.insertDataIPC(insertSql, [todo.todo_content, todo.todo_time, Date.now()]);
     console.log('add done:', insertRes);
+    // if(!insertRes || insertRes.type != 'success' || !insertRes.obj || !insertRes.obj.length) return;
 
     // del
-    await del(db, tableTodos, key);
+    const sql = 'delete from t_todos where rowid=?';
+    const res = await window.electron.deleteDataIPC(sql, [key]);
     console.log('del todo:', res);
 };
 
@@ -72,11 +75,16 @@ export const delTodo = async (key) => {
  * @returns todos
  */
 export const getTodos = async () => {
-    const db = await openDB(dbName);
-    const res = await getAll(db, tableTodos, 'todo_time');
-    console.log('get todos:', res);
+    // query
+    const selectSql = 'SELECT rowid,* FROM t_todos';
+    const selectRes = await window.electron.selectDataIPC(selectSql, []);
+    console.log('get todos:', selectRes);
 
-    return res;
+    // check
+    if(!selectRes || selectRes.type != 'success' || !selectRes.obj || !selectRes.obj.length) return;
+
+    // return
+    return selectRes.obj;
 };
 
 /**
@@ -84,9 +92,14 @@ export const getTodos = async () => {
  * @returns todos
  */
 export const getDones = async () => {
-    const db = await openDB(dbName);
-    const res = await getAll(db, tableDones, 'done_time');
-    console.log('get dones:', res);
+    // query
+    const selectSql = 'SELECT rowid,* FROM t_dones';
+    const selectRes = await window.electron.selectDataIPC(selectSql, []);
+    console.log('get dones:', selectRes);
 
-    return res;
+    // check
+    if(!selectRes || selectRes.type != 'success' || !selectRes.obj || !selectRes.obj.length) return;
+
+    // return
+    return selectRes.obj;
 };
