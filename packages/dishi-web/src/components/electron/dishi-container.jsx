@@ -32,6 +32,10 @@ export const DishiContainer = () => {
         const v = await window.electron.appGetVersionIPC();
         setVersion(v);
 
+        const sql = 'CREATE TABLE if not exists t_project (project_name TEXT, project_appid TEXT, project_icon_url TEXT)';
+        const rs = await window.electron.createTableIPC(sql);
+        console.log(rs);
+
         const res = await initDatabase();
         console.log('init database:', res);
 
