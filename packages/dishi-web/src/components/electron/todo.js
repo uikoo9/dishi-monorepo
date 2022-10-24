@@ -17,7 +17,7 @@ export const initDatabase = async () => {
     console.log('createTodoTableRs', createTodoTableRs);
 
     // done table
-    const createDoneTable = 'CREATE TABLE if not exists t_dones (todo_content TEXT, done_time TEXT)';
+    const createDoneTable = 'CREATE TABLE if not exists t_dones (todo_content TEXT, todo_time TEXT, done_time TEXT)';
     const createDoneTableRs = await window.electron.createTableIPC(createDoneTable);
     console.log('createDoneTableRs', createDoneTableRs);
 };
@@ -40,7 +40,7 @@ export const addTodo = async (todo) => {
 
     // save
     const sql = 'insert into t_todos values (?, ?)';
-    const res = await window.electron.insertDataIPC(db, sql, [todo_content, todo_time || '_']);
+    const res = await window.electron.insertDataIPC(sql, [todo_content, todo_time || '_']);
     console.log('add todo:', res);
 };
 
@@ -49,22 +49,22 @@ export const addTodo = async (todo) => {
  * @param {*} key 
  */
 export const delTodo = async (key) => {
+    // query
+    const selectSql = 'SELECT rowid,* FROM t_todos wherd rowid=?';
+    const selectRes = await window.electron.selectDataIPC(selectSql, [key]);
+    if(!selectRes || selectRes.type != 'success' || !selectRes.obj || !selectRes.obj.length) return;
+
     // todo
-    const db = await openDB(dbName);
-    const todo = await get(db, tableTodos, key);
+    const todo = selectRes.obj[0];
 
     // done
-    const done_time = Date.now();
-    const done = {
-        todo_content: todo.todo_content,
-        todo_time: todo.todo_time,
-        done_time: done_time
-    };
-    const saveRes = await save(db, tableDones, done_time, done);
+    const insertSql = 'insert into t_dones values (?, ?, ?)';
+    const insertRes = await window.electron.insertDataIPC(insertSql, [todo.todo_content, todo.todo_time, Date.now()]);
+    console.log('add done:', insertRes);
 
     // del
     await del(db, tableTodos, key);
-    console.log('del todo:', saveRes);
+    console.log('del todo:', res);
 };
 
 /**
