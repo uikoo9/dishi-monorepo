@@ -17,4 +17,5 @@ module.exports = {
 
     // IPC SQLITE
     IPC_SQLITE_CREATE_TABLE: 'ipc-sqlite-create-table',
+    IPC_SQLITE_INSERT_DATA: 'ipc-sqlite-insert-data',
 };
