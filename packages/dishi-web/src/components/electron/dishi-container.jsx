@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 
 // ui
 import { Donate } from 'qiao-ui';
-import { DishiInput } from '../indexeddb/dishi-input.jsx';
-import { DishiList } from '../indexeddb/dishi-list.jsx';
+import { DishiInput } from './dishi-input.jsx';
+import { DishiList } from './dishi-list.jsx';
 
 // dishi
-import { initDatabase, getTodos, getDones } from '../indexeddb/todo.js';
+import { initDatabase, getTodos, getDones } from './todo.js';
 
 /**
  * dishi container

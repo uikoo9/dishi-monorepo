@@ -50,7 +50,7 @@ export const addTodo = async (todo) => {
  */
 export const delTodo = async (key) => {
     // query
-    const selectSql = 'SELECT rowid,* FROM t_todos wherd rowid=?';
+    const selectSql = 'SELECT rowid,* FROM t_todos where rowid=?';
     const selectRes = await window.electron.selectDataIPC(selectSql, [key]);
     console.log('get todo:', selectRes);
     if(!selectRes || selectRes.type != 'success' || !selectRes.obj || !selectRes.obj.length) return;
@@ -76,7 +76,7 @@ export const delTodo = async (key) => {
  */
 export const getTodos = async () => {
     // query
-    const selectSql = 'SELECT rowid,* FROM t_todos';
+    const selectSql = 'SELECT rowid,* FROM t_todos order by todo_time, todo_content';
     const selectRes = await window.electron.selectDataIPC(selectSql, []);
     console.log('get todos:', selectRes);
 
@@ -93,7 +93,7 @@ export const getTodos = async () => {
  */
 export const getDones = async () => {
     // query
-    const selectSql = 'SELECT rowid,* FROM t_dones';
+    const selectSql = 'SELECT rowid,* FROM t_dones order by todo_time, todo_content';
     const selectRes = await window.electron.selectDataIPC(selectSql, []);
     console.log('get dones:', selectRes);
 

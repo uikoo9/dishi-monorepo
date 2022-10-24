@@ -16,9 +16,9 @@ export const DishiList = (props) => {
                 props.todos && props.todos.map((item) => {
                     return <div
                         className="dishi-item todo"
-                        key={item.create_time}
+                        key={item.rowid}
                         onClick={async () => {
-                            await delTodo(item.create_time);
+                            await delTodo(item.rowid);
 
                             const todos = await getTodos();
                             props.setTodos(todos);
@@ -36,7 +36,7 @@ export const DishiList = (props) => {
                 props.dones && props.dones.map((item) => {
                     return <div
                         className="dishi-item done"
-                        key={item.done_time}
+                        key={item.rowid}
                     >
                         <div className="content">{item.todo_content}</div>
                         <div className="time">{item.todo_time}</div>

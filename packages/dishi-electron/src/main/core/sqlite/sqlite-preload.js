@@ -17,7 +17,7 @@ const {
  * @returns 
  */
 exports.createTableIPC = async (sql) => {
-    return await ipcRenderer.invoke(IPC_SQLITE_CREATE_TABLE, sql);
+    return await ipcRenderer.invoke(IPC_SQLITE_CREATE_TABLE, {sql});
 };
 
 /**
@@ -27,7 +27,7 @@ exports.createTableIPC = async (sql) => {
  * @returns 
  */
 exports.insertDataIPC = async (sql, params) => {
-    return await ipcRenderer.invoke(IPC_SQLITE_INSERT_DATA, sql, params);
+    return await ipcRenderer.invoke(IPC_SQLITE_INSERT_DATA, {sql, params});
 };
 
 /**
@@ -37,7 +37,7 @@ exports.insertDataIPC = async (sql, params) => {
  * @returns 
  */
 exports.selectDataIPC = async (sql, params) => {
-    return await ipcRenderer.invoke(IPC_SQLITE_SELECT_DATA, sql, params);
+    return await ipcRenderer.invoke(IPC_SQLITE_SELECT_DATA, {sql, params});
 };
 
 /**
@@ -47,5 +47,5 @@ exports.selectDataIPC = async (sql, params) => {
  * @returns 
  */
 exports.deleteDataIPC = async (sql, params) => {
-    return await ipcRenderer.invoke(IPC_SQLITE_DELETE_DATA, sql, params);
+    return await ipcRenderer.invoke(IPC_SQLITE_DELETE_DATA, {sql, params});
 };
