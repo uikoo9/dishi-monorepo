@@ -13,5 +13,5 @@ const { IPC_SQLITE_CREATE_TABLE } = require('../../_util/constant.js');
  * ipc sqlite create table
  */
 ipcMain.handle(IPC_SQLITE_CREATE_TABLE, (sql) => {
-    return dbCreateTable(sql);
+    return dbCreateTable(sql); 
 });
