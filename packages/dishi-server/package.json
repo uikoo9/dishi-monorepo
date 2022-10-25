@@ -1,7 +1,7 @@
 {
   "name": "dishi-server",
   "private": true,
-  "version": "0.3.6",
+  "version": "0.3.7",
   "dependencies": {
     "qiao-z": "^0.2.2"
   }
