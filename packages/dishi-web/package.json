@@ -13,13 +13,13 @@
     },
     "dependencies": {
         "qiao-ui": "^1.4.4",
-        "qiao.db.js": "^1.0.5",
-        "qiao.ls.js": "^1.1.5",
+        "qiao.db.js": "^1.0.6",
+        "qiao.ls.js": "^1.1.6",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
-        "qiao-cos": "^1.0.3",
-        "qiao-webpack": "^1.2.0"
+        "qiao-cos": "^2.0.2",
+        "qiao-webpack": "^1.2.2"
     }
 }

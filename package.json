@@ -2,11 +2,11 @@
     "name": "root",
     "private": true,
     "scripts": {
+        "check": "qlerna ncu ./packages",
+        "ncu": "lerna exec 'ncu -u'",
         "clean": "lerna clean -y",
         "init": "lerna bootstrap --ignore-prepublish --ignore=dishi-electron --hoist",
         "init-electron": "lerna bootstrap --ignore-prepublish --hoist",
-        "check": "qlerna ncu ./packages",
-        "ncu": "lerna exec 'ncu -u'",
         "pkg": "qlerna pkg ./packages",
         "dpkg": "qlerna pkg ./packages 1",
         "eslint": "eslint . --ext .js,.jsx -c _config.eslint.js",
@@ -16,6 +16,6 @@
         "eslint": "^8.26.0",
         "eslint-plugin-react": "^7.31.10",
         "eslint-plugin-react-hooks": "^4.6.0",
-        "qiao-lerna": "^1.0.0"
+        "qiao-lerna": "^1.0.5"
     }
 }

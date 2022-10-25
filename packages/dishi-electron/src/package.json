@@ -4,8 +4,8 @@
   "version": "0.2.0",
   "main": "main/main.js",
   "dependencies": {
-    "qiao-electron": "^1.3.6",
-    "qiao-json": "^0.1.0",
-    "qiao-sqlite": "^1.0.0"
+    "qiao-electron": "^1.3.9",
+    "qiao-json": "^0.1.1",
+    "qiao-sqlite": "^1.0.2"
   }
 }
