@@ -1,6 +1,3 @@
-// qiao
-var qiao = require('../_qiao.js');
-
 // desc
 var data = {
     desc: '滴石，todo list，取水滴石穿之意'
@@ -13,10 +10,9 @@ var data = {
  */
 exports.index = async function (req, res) {
     // render
-    var vendor = qiao.vendor(req.headers['user-agent']);
-    if (vendor.mobile || vendor.android) {
+    if(req.useragent.isMobile){
         res.render('./views/dishi-index-mobile.html', data);
-    } else {
+    }else{
         res.render('./views/dishi-index-pc.html', data);
     }
 };
@@ -28,8 +24,7 @@ exports.index = async function (req, res) {
  */
 exports.ls = async function (req, res) {
     // render
-    var vendor = qiao.vendor(req.headers['user-agent']);
-    if (vendor.mobile || vendor.android) {
+    if(req.useragent.isMobile){
         res.render('./views/dishi-ls-mobile.html', data);
     } else {
         res.render('./views/dishi-ls-pc.html', data);
@@ -43,8 +38,7 @@ exports.ls = async function (req, res) {
  */
 exports.indexeddb = async function (req, res) {
     // render
-    var vendor = qiao.vendor(req.headers['user-agent']);
-    if (vendor.mobile || vendor.android) {
+    if(req.useragent.isMobile){
         res.render('./views/dishi-indexeddb-mobile.html', data);
     } else {
         res.render('./views/dishi-indexeddb-pc.html', data);
