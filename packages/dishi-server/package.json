@@ -3,6 +3,6 @@
   "private": true,
   "version": "0.3.8",
   "dependencies": {
-    "qiao-z": "^0.2.3"
+    "qiao-z": "^0.3.2"
   }
 }
