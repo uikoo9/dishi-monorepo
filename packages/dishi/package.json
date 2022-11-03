@@ -15,7 +15,7 @@
   "dependencies": {
     "dishi-service": "^0.3.3",
     "qiao-ajax": "^2.7.3",
-    "qiao-cli": "^0.3.3",
+    "qiao-cli": "^1.0.0",
     "qiao-config": "^0.3.9",
     "qiao-console": "^0.1.2",
     "qiao-service": "^0.1.9"
