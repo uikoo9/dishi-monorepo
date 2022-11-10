@@ -16,7 +16,7 @@
     "dishi-service": "^0.3.3",
     "qiao-ajax": "^2.7.3",
     "qiao-cli": "^1.0.5",
-    "qiao-config": "^0.3.9",
+    "qiao-config": "^0.4.1",
     "qiao-console": "^1.0.0",
     "qiao-service": "^0.1.9"
   }
