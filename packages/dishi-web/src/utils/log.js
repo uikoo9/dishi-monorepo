@@ -1,16 +1,16 @@
 /**
  * normalLog
- * @param {*} msg 
- * @param {*} color 
+ * @param {*} msg
+ * @param {*} color
  */
 const normalLog = (msg, color) => {
-    console.log(`%c${msg}`, color);
+  console.log(`%c${msg}`, color);
 };
 
 /**
  * infoLog
- * @param {*} msg 
+ * @param {*} msg
  */
 export const infoLog = (msg) => {
-    normalLog(msg, 'color: green');
+  normalLog(msg, "color: green");
 };

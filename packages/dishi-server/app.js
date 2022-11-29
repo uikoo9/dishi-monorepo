@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 // port
-const port = require('./server/config.json').port;
+const port = require("./server/config.json").port;
 
 // app
-const app = require('qiao-z')();
+const app = require("qiao-z")();
 
 // listen
 app.listen(port);

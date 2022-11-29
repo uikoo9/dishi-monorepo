@@ -1,25 +1,25 @@
 {
-    "name": "dishi-web",
-    "private": true,
-    "version": "0.5.3",
-    "sideEffects": [
-        "**/*.scss"
-    ],
-    "scripts": {
-        "dev": "qwebpack dev ./webpack/qiao-webpack.dev.js",
-        "build": "qwebpack build ./webpack/qiao-webpack.prod.js",
-        "electron": "qwebpack build ./webpack/qiao-webpack.electron.js",
-        "upload": "qcos fo ./config.json ../dishi-server/static 21_dishi/static"
-    },
-    "dependencies": {
-        "qiao-ui": "^1.4.5",
-        "qiao.db.js": "^1.0.6",
-        "qiao.ls.js": "^1.1.6",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
-    },
-    "devDependencies": {
-        "qiao-cos": "^2.1.6",
-        "qiao-webpack": "^1.2.8"
-    }
+  "name": "dishi-web",
+  "private": true,
+  "version": "0.5.3",
+  "sideEffects": [
+    "**/*.scss"
+  ],
+  "scripts": {
+    "dev": "qwebpack dev ./webpack/qiao-webpack.dev.js",
+    "build": "qwebpack build ./webpack/qiao-webpack.prod.js",
+    "electron": "qwebpack build ./webpack/qiao-webpack.electron.js",
+    "upload": "qcos fo ./config.json ../dishi-server/static 21_dishi/static"
+  },
+  "dependencies": {
+    "qiao-ui": "^1.4.6",
+    "qiao.db.js": "^1.0.7",
+    "qiao.ls.js": "^1.1.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "qiao-cos": "^2.1.7",
+    "qiao-webpack": "^1.3.3"
+  }
 }

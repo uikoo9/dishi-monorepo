@@ -1,0 +1,5 @@
+node_modules
+
+packages/dishi-electron/dist
+packages/dishi-electron/out
+packages/dishi-server/static

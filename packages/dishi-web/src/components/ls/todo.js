@@ -1,65 +1,65 @@
 // qiao
-import { ls, cache } from 'qiao.ls.js';
+import { ls, cache } from "qiao.ls.js";
 
 /**
  * add todo
- * @param {*} todo 
+ * @param {*} todo
  */
 export const addTodo = (key, todo) => {
-    cache('todos', key, todo);
+  cache("todos", key, todo);
 };
 
 /**
  * del todo
- * @param {*} key 
+ * @param {*} key
  */
 export const delTodo = (key) => {
-    // dones
-    const done = cache('todos', key);
-    cache('dones', key, done);
+  // dones
+  const done = cache("todos", key);
+  cache("dones", key, done);
 
-    // todos
-    cache('todos', key, null);
+  // todos
+  cache("todos", key, null);
 };
 
 /**
  * get todos
- * @returns 
+ * @returns
  */
 export const getTodos = () => {
-    // check
-    const todos = ls('todos');
-    if (!todos) return [];
+  // check
+  const todos = ls("todos");
+  if (!todos) return [];
 
-    // res
-    const res = [];
-    for (const [key, value] of Object.entries(todos)) {
-        res.push({
-            key: key,
-            value: value
-        });
-    }
+  // res
+  const res = [];
+  for (const [key, value] of Object.entries(todos)) {
+    res.push({
+      key: key,
+      value: value,
+    });
+  }
 
-    return res;
+  return res;
 };
 
 /**
  * get dones
- * @returns 
+ * @returns
  */
 export const getDones = () => {
-    // check
-    const dones = ls('dones');
-    if (!dones) return [];
+  // check
+  const dones = ls("dones");
+  if (!dones) return [];
 
-    // res
-    const res = [];
-    for (const [key, value] of Object.entries(dones)) {
-        res.push({
-            key: key,
-            value: value
-        });
-    }
+  // res
+  const res = [];
+  for (const [key, value] of Object.entries(dones)) {
+    res.push({
+      key: key,
+      value: value,
+    });
+  }
 
-    return res;
+  return res;
 };

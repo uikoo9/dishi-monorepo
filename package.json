@@ -1,21 +1,28 @@
 {
-    "name": "root",
-    "private": true,
-    "scripts": {
-        "check": "qlerna ncu ./packages",
-        "ncu": "lerna exec 'ncu -u'",
-        "clean": "lerna clean -y",
-        "init": "lerna bootstrap --ignore-prepublish --ignore=dishi-electron --hoist",
-        "init-electron": "lerna bootstrap --ignore-prepublish --hoist",
-        "pkg": "qlerna pkg ./packages",
-        "dpkg": "qlerna pkg ./packages 1",
-        "eslint": "eslint . --ext .js,.jsx -c _config.eslint.js",
-        "eslintfix": "eslint . --ext .js,jsx --fix -c _config.eslint.js"
-    },
-    "devDependencies": {
-        "eslint": "^8.27.0",
-        "eslint-plugin-react": "^7.31.10",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "qiao-lerna": "^1.1.8"
-    }
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "check": "qlerna ncu ./packages",
+    "ncu": "lerna exec 'ncu -u'",
+    "clean": "lerna clean -y",
+    "init": "lerna bootstrap --ignore=dishi-electron --hoist",
+    "init-electron": "lerna bootstrap --hoist",
+    "build": "lerna run build",
+    "prettier": "prettier --write .",
+    "eslintfix": "eslint . --ext .js --fix",
+    "prepublish": "npm run build && npm run prettier && npm run eslintfix",
+    "dc": "qlerna dc ./packages",
+    "ls": "lerna ls -l",
+    "pkg": "qlerna pkg ./packages",
+    "dpkg": "qlerna pkg ./packages 1"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.0",
+    "qiao-lerna": "^1.2.0",
+    "rollup": "^3.5.0"
+  }
 }

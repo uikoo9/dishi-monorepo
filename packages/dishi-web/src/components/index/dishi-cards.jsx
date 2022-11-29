@@ -1,68 +1,109 @@
 // react
-import React from 'react';
+import React from "react";
 
 // ui
-import {
-    Link,
-} from 'qiao-ui';
+import { Link } from "qiao-ui";
 
 /**
  * dishi container
  */
 export const DishiCards = () => {
-    // sqlite
-    const sqliteTitle = <Link url='/' txt='滴石todo - SQLite' blank={true} />;
-    const sqliteDesc = <>
-        <Link url='https://static.insistime.com/21_dishi/dmg/%E6%BB%B4%E7%9F%B3-online-0.2.0-x64.dmg' txt='Mac(Intel)' blank={true} />
-        &nbsp;&nbsp;
-        <Link url='https://blog.insistime.com/sqlite' txt='文章' blank={true} />
-        &nbsp;&nbsp;
-        <Link url='https://github.com/uikoo9/dishi-monorepo/tree/sqlite' txt='代码' blank={true} />
-    </>;
+  // sqlite
+  const sqliteTitle = <Link url="/" txt="滴石todo - SQLite" blank={true} />;
+  const sqliteDesc = (
+    <>
+      <Link
+        url="https://static.insistime.com/21_dishi/dmg/%E6%BB%B4%E7%9F%B3-online-0.2.0-x64.dmg"
+        txt="Mac(Intel)"
+        blank={true}
+      />
+      &nbsp;&nbsp;
+      <Link url="https://blog.insistime.com/sqlite" txt="文章" blank={true} />
+      &nbsp;&nbsp;
+      <Link
+        url="https://github.com/uikoo9/dishi-monorepo/tree/sqlite"
+        txt="代码"
+        blank={true}
+      />
+    </>
+  );
 
-    // electron
-    const electronTitle = <Link url='/' txt='滴石todo - Electron' blank={true} />;
-    const electronDesc = <>
-        <Link url='https://static.insistime.com/21_dishi/dmg/%E6%BB%B4%E7%9F%B3-online-0.1.2-x64.dmg' txt='Mac(Intel)' blank={true} />
-        &nbsp;&nbsp;
-        <Link url='https://blog.insistime.com/electron' txt='文章' blank={true} />
-        &nbsp;&nbsp;
-        <Link url='https://github.com/uikoo9/dishi-monorepo/tree/electron' txt='代码' blank={true} />
-    </>;
+  // electron
+  const electronTitle = <Link url="/" txt="滴石todo - Electron" blank={true} />;
+  const electronDesc = (
+    <>
+      <Link
+        url="https://static.insistime.com/21_dishi/dmg/%E6%BB%B4%E7%9F%B3-online-0.1.2-x64.dmg"
+        txt="Mac(Intel)"
+        blank={true}
+      />
+      &nbsp;&nbsp;
+      <Link url="https://blog.insistime.com/electron" txt="文章" blank={true} />
+      &nbsp;&nbsp;
+      <Link
+        url="https://github.com/uikoo9/dishi-monorepo/tree/electron"
+        txt="代码"
+        blank={true}
+      />
+    </>
+  );
 
-    // indexeddb
-    const indexedDBTitle = <Link url='/indexeddb' txt='滴石todo - IndexedDB' blank={true} />;
-    const indexedDBDesc = <>
-        <Link url='/indexeddb' txt='地址' blank={true} />
-        &nbsp;&nbsp;
-        <Link url='https://blog.insistime.com/indexeddb' txt='文章' blank={true} />
-        &nbsp;&nbsp;
-        <Link url='https://github.com/uikoo9/dishi-monorepo/tree/indexeddb' txt='代码' blank={true} />
-    </>;
+  // indexeddb
+  const indexedDBTitle = (
+    <Link url="/indexeddb" txt="滴石todo - IndexedDB" blank={true} />
+  );
+  const indexedDBDesc = (
+    <>
+      <Link url="/indexeddb" txt="地址" blank={true} />
+      &nbsp;&nbsp;
+      <Link
+        url="https://blog.insistime.com/indexeddb"
+        txt="文章"
+        blank={true}
+      />
+      &nbsp;&nbsp;
+      <Link
+        url="https://github.com/uikoo9/dishi-monorepo/tree/indexeddb"
+        txt="代码"
+        blank={true}
+      />
+    </>
+  );
 
-    // ls
-    const lsTitle = <Link url='/ls' txt='滴石todo - LocalStorage' blank={true} />;
-    const lsDesc = <>
-        <Link url='/ls' txt='地址' blank={true} />
-        &nbsp;&nbsp;
-        <Link url='https://blog.insistime.com/dishi1' txt='文章' blank={true} />
-        &nbsp;&nbsp;
-        <Link url='https://github.com/uikoo9/dishi-monorepo/tree/localstorage' txt='代码' blank={true} />
-    </>;
+  // ls
+  const lsTitle = <Link url="/ls" txt="滴石todo - LocalStorage" blank={true} />;
+  const lsDesc = (
+    <>
+      <Link url="/ls" txt="地址" blank={true} />
+      &nbsp;&nbsp;
+      <Link url="https://blog.insistime.com/dishi1" txt="文章" blank={true} />
+      &nbsp;&nbsp;
+      <Link
+        url="https://github.com/uikoo9/dishi-monorepo/tree/localstorage"
+        txt="代码"
+        blank={true}
+      />
+    </>
+  );
 
-    // cards
-    const cards = [{
-        title: sqliteTitle,
-        desc: sqliteDesc,
-    }, {
-        title: electronTitle,
-        desc: electronDesc,
-    }, {
-        title: indexedDBTitle,
-        desc: indexedDBDesc,
-    }, {
-        title: lsTitle,
-        desc: lsDesc,
-    }];
-    return cards;
+  // cards
+  const cards = [
+    {
+      title: sqliteTitle,
+      desc: sqliteDesc,
+    },
+    {
+      title: electronTitle,
+      desc: electronDesc,
+    },
+    {
+      title: indexedDBTitle,
+      desc: indexedDBDesc,
+    },
+    {
+      title: lsTitle,
+      desc: lsDesc,
+    },
+  ];
+  return cards;
 };

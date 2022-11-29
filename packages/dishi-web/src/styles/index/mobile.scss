@@ -4,16 +4,16 @@ $width: 16rem;
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    @include base.width();
+  margin: 0;
+  padding: 0;
+  @include base.width();
 }
 
 #root {
-    @include base.width();
+  @include base.width();
 }
 
 .container {
-    width: $width;
-    @include base.marginAuto();
+  width: $width;
+  @include base.marginAuto();
 }

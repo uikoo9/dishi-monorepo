@@ -1,22 +1,22 @@
 {
-    "name": "dishi-electron",
-    "private": true,
-    "version": "0.3.1",
-    "devDependencies": {
-        "electron": "^21.2.3",
-        "qiao-electron-cli": "^1.2.4"
-    },
-    "scripts": {
-        "init": "cd src/main && npm i",
-        "init-m1": "cd src/main && npm i --target_arch=arm64",
-        "start": "electron src",
-        "icon": "qelectron icon ./pack/icon/pic.png",
-        "dist": "qelectron d ./pack/qiao-electron.config.js",
-        "prepackmac": "npm run dist",
-        "packmac": "qelectron pm ./pack/qiao-electron.config.js",
-        "packdmg": "qelectron pd ./pack/qiao-electron.config.js",
-        "uploaddmg": "qelectron ud ./pack/qiao-electron.config.js",
-        "prepackwin": "npm run dist",
-        "packwin": "qelectron pw ./pack/qiao-electron.config.js"
-    }
+  "name": "dishi-electron",
+  "private": true,
+  "version": "0.3.1",
+  "devDependencies": {
+    "electron": "^21.3.1",
+    "qiao-electron-cli": "^1.2.8"
+  },
+  "scripts": {
+    "init": "cd src/main && npm i",
+    "init-m1": "cd src/main && npm i --target_arch=arm64",
+    "start": "electron src",
+    "icon": "qelectron icon ./pack/icon/pic.png",
+    "dist": "qelectron d ./pack/qiao-electron.config.js",
+    "prepackmac": "npm run dist",
+    "packmac": "qelectron pm ./pack/qiao-electron.config.js",
+    "packdmg": "qelectron pd ./pack/qiao-electron.config.js",
+    "uploaddmg": "qelectron ud ./pack/qiao-electron.config.js",
+    "prepackwin": "npm run dist",
+    "packwin": "qelectron pw ./pack/qiao-electron.config.js"
+  }
 }
