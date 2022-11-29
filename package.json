@@ -10,7 +10,7 @@
     "build": "lerna run build",
     "prettier": "prettier --write .",
     "eslintfix": "eslint . --ext .js --fix",
-    "prepublish": "npm run build && npm run prettier && npm run eslintfix",
+    "prepublish": "npm run prettier && npm run eslintfix",
     "dc": "qlerna dc ./packages",
     "ls": "lerna ls -l",
     "pkg": "qlerna pkg ./packages",
@@ -22,7 +22,7 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.0",
-    "qiao-lerna": "^1.2.1",
+    "qiao-lerna": "^1.2.3",
     "rollup": "^3.5.0"
   }
 }
