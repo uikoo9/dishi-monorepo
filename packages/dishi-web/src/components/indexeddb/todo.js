@@ -1,13 +1,5 @@
 // qiao
-import {
-  listDB,
-  openDB,
-  createTable,
-  save,
-  get,
-  del,
-  getAll,
-} from "qiao.db.js";
+import { listDB, openDB, createTable, save, get, del, getAll } from "qiao.db.js";
 
 // const
 const dbName = "db_dishi";
@@ -68,8 +60,7 @@ export const addTodo = async (todo) => {
   let todo_time;
   if (todos.length > 1) {
     const todotime = todos[1].trim();
-    if (todotime.length == 8 && !isNaN(parseInt(todotime)))
-      todo_time = todotime;
+    if (todotime.length == 8 && !isNaN(parseInt(todotime))) todo_time = todotime;
   }
 
   // save

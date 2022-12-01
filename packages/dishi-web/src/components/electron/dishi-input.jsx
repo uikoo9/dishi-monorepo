@@ -1,20 +1,20 @@
 // react
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 // ui
-import { Input } from "qiao-ui";
+import { Input } from 'qiao-ui';
 
 // dishi
-import { addTodo, getTodos } from "./todo.js";
+import { addTodo, getTodos } from './todo.js';
 
 /**
  * dishi input
  */
 export const DishiInput = (props) => {
-  console.log("components/indexeddb/dishi-input: render");
+  console.log('components/indexeddb/dishi-input: render');
 
   // state
-  const [todo, setTodo] = useState("");
+  const [todo, setTodo] = useState('');
 
   // on change
   const onChange = (e) => {
@@ -27,7 +27,7 @@ export const DishiInput = (props) => {
     if (e.nativeEvent.keyCode != 13) return;
 
     // clear
-    setTodo("");
+    setTodo('');
 
     // add
     await addTodo(todo);
@@ -39,13 +39,7 @@ export const DishiInput = (props) => {
 
   return (
     <div className="dishi-input">
-      <Input
-        type="text"
-        placeholder={"todo... @20221010"}
-        value={todo}
-        onChange={onChange}
-        onKeyPress={onKeyPress}
-      />
+      <Input type="text" placeholder={'todo... @20221010'} value={todo} onChange={onChange} onKeyPress={onKeyPress} />
     </div>
   );
 };

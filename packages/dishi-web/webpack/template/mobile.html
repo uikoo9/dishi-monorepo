@@ -4,10 +4,7 @@
     <!-- important meta -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
     <!-- 360 and baidu -->
     <meta name="renderer" content="webkit" />
@@ -25,38 +22,19 @@
     <meta name="robots" contect="all" />
 
     <!-- favicon.ico -->
-    <link
-      href="https://static.insistime.com/00_insistime/favicon.ico"
-      type="image/x-icon"
-      rel="bookmark"
-    />
-    <link
-      href="https://static.insistime.com/00_insistime/favicon.ico"
-      type="image/x-icon"
-      rel="icon"
-    />
-    <link
-      href="https://static.insistime.com/00_insistime/favicon.ico"
-      type="image/x-icon"
-      rel="shortcut icon"
-    />
+    <link href="https://static.insistime.com/00_insistime/favicon.ico" type="image/x-icon" rel="bookmark" />
+    <link href="https://static.insistime.com/00_insistime/favicon.ico" type="image/x-icon" rel="icon" />
+    <link href="https://static.insistime.com/00_insistime/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes" />
-    <link
-      rel="icon"
-      sizes="144x144"
-      href="https://static.insistime.com/00_insistime/logo_144_144.png"
-    />
+    <link rel="icon" sizes="144x144" href="https://static.insistime.com/00_insistime/logo_144_144.png" />
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-title" content="滴石" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="https://static.insistime.com/00_insistime/logo_144_144.png"
-    />
+    <link rel="apple-touch-icon-precomposed" href="https://static.insistime.com/00_insistime/logo_144_144.png" />
     <link
       href="https://static.insistime.com/00_insistime/splashscreens1/iphone5_splash.png"
       media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
@@ -113,8 +91,7 @@
     <script type="text/javascript">
       (function (window, document) {
         window.qresize = {};
-        window.qresize.event =
-          "orientationchange" in window ? "orientationchange" : "resize";
+        window.qresize.event = 'orientationchange' in window ? 'orientationchange' : 'resize';
         window.qresize.func = function () {
           var docEl = document.documentElement;
 
@@ -123,15 +100,11 @@
 
           var fontSize = 20 * (clientWidth / 320);
           if (fontSize > 40) return;
-          docEl.style.fontSize = fontSize + "px";
+          docEl.style.fontSize = fontSize + 'px';
         };
 
         if (!document.addEventListener) return;
-        window.addEventListener(
-          window.qresize.event,
-          window.qresize.func,
-          false
-        );
+        window.addEventListener(window.qresize.event, window.qresize.func, false);
 
         window.qresize.func();
       })(window, document);
@@ -140,16 +113,15 @@
     <script>
       var _hmt = _hmt || [];
       (function () {
-        if (location.href.indexOf("insistime.com") > -1) {
-          console.log("%cbaidu tongji open", "color:red;");
+        if (location.href.indexOf('insistime.com') > -1) {
+          console.log('%cbaidu tongji open', 'color:red;');
 
-          var hm = document.createElement("script");
-          hm.src =
-            "https://hm.baidu.com/hm.js?a43b64e7e94e8a1d3c2c60c85b202828";
-          var s = document.getElementsByTagName("script")[0];
+          var hm = document.createElement('script');
+          hm.src = 'https://hm.baidu.com/hm.js?a43b64e7e94e8a1d3c2c60c85b202828';
+          var s = document.getElementsByTagName('script')[0];
           s.parentNode.insertBefore(hm, s);
         } else {
-          console.log("%cbaidu tongji close", "color:red;");
+          console.log('%cbaidu tongji close', 'color:red;');
         }
       })();
     </script>

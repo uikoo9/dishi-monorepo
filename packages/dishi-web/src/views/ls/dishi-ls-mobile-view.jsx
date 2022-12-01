@@ -1,27 +1,27 @@
 // react
-import React from "react";
-import { createRoot } from "react-dom/client";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 
 // css
-import "@styles/ls/mobile.scss";
+import '@styles/ls/mobile.scss';
 
 // ui
-import { MobileFooter } from "qiao-ui";
+import { MobileFooter } from 'qiao-ui';
 
 // dishi
-import { DishiContainer } from "@components/ls/dishi-container.jsx";
+import { DishiContainer } from '@components/ls/dishi-container.jsx';
 
 // util
-import { infoLog } from "@utils/log.js";
+import { infoLog } from '@utils/log.js';
 
 // constant
-import Constant from "../_constant.js";
+import Constant from '../_constant.js';
 
 /**
  * dishi ls mobile view
  */
 const DishiLSMobileView = () => {
-  infoLog("dishi-web/dishi-index-mobile-view: render");
+  infoLog('dishi-web/dishi-index-mobile-view: render');
 
   return (
     <div className="container">
@@ -37,6 +37,6 @@ const DishiLSMobileView = () => {
   );
 };
 
-const container = document.getElementById("root");
+const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(<DishiLSMobileView />);

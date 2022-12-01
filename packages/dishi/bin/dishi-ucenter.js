@@ -99,12 +99,7 @@ async function register() {
       },
     ]);
 
-    await dishi.register(
-      mobileAnswers.mobile,
-      answers.password,
-      answers.repassword,
-      answers.code
-    );
+    await dishi.register(mobileAnswers.mobile, answers.password, answers.repassword, answers.code);
   } catch (e) {
     qiao.log.danger(e.message);
   }

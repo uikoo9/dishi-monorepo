@@ -1,21 +1,21 @@
 // react
-import React from "react";
-import { createRoot } from "react-dom/client";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 
 // css
-import "@styles/electron/pc.scss";
+import '@styles/electron/pc.scss';
 
 // dishi
-import { DishiContainer } from "@components/electron/dishi-container.jsx";
+import { DishiContainer } from '@components/electron/dishi-container.jsx';
 
 // util
-import { infoLog } from "@utils/log.js";
+import { infoLog } from '@utils/log.js';
 
 /**
  * dishi indexeddb electron view
  */
 const DishiIndexedDElectronCView = () => {
-  infoLog("dishi-web/dishi-indexeddb-electron-view: render");
+  infoLog('dishi-web/dishi-indexeddb-electron-view: render');
 
   return (
     <div className="container">
@@ -24,6 +24,6 @@ const DishiIndexedDElectronCView = () => {
   );
 };
 
-const container = document.getElementById("root");
+const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(<DishiIndexedDElectronCView />);

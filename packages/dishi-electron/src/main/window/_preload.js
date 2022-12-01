@@ -7,12 +7,7 @@ const { contextBridge } = require("electron");
 const { getPreloads } = require("qiao-electron");
 
 // custom preload
-const {
-  createTableIPC,
-  insertDataIPC,
-  selectDataIPC,
-  deleteDataIPC,
-} = require("../core/sqlite/sqlite-preload.js");
+const { createTableIPC, insertDataIPC, selectDataIPC, deleteDataIPC } = require("../core/sqlite/sqlite-preload.js");
 
 // get all preloads
 const getAllPreloads = () => {

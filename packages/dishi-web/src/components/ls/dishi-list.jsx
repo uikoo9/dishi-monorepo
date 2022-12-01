@@ -1,14 +1,14 @@
 // react
-import React from "react";
+import React from 'react';
 
 // dishi
-import { delTodo, getTodos, getDones } from "./todo.js";
+import { delTodo, getTodos, getDones } from './todo.js';
 
 /**
  * dishi list
  */
 export const DishiList = (props) => {
-  console.log("components/localstorage/dishi-list: render");
+  console.log('components/localstorage/dishi-list: render');
 
   return (
     <div className="dishi-list">

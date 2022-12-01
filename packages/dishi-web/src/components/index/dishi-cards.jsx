@@ -1,8 +1,8 @@
 // react
-import React from "react";
+import React from 'react';
 
 // ui
-import { Link } from "qiao-ui";
+import { Link } from 'qiao-ui';
 
 /**
  * dishi container
@@ -20,11 +20,7 @@ export const DishiCards = () => {
       &nbsp;&nbsp;
       <Link url="https://blog.insistime.com/sqlite" txt="文章" blank={true} />
       &nbsp;&nbsp;
-      <Link
-        url="https://github.com/uikoo9/dishi-monorepo/tree/sqlite"
-        txt="代码"
-        blank={true}
-      />
+      <Link url="https://github.com/uikoo9/dishi-monorepo/tree/sqlite" txt="代码" blank={true} />
     </>
   );
 
@@ -40,33 +36,19 @@ export const DishiCards = () => {
       &nbsp;&nbsp;
       <Link url="https://blog.insistime.com/electron" txt="文章" blank={true} />
       &nbsp;&nbsp;
-      <Link
-        url="https://github.com/uikoo9/dishi-monorepo/tree/electron"
-        txt="代码"
-        blank={true}
-      />
+      <Link url="https://github.com/uikoo9/dishi-monorepo/tree/electron" txt="代码" blank={true} />
     </>
   );
 
   // indexeddb
-  const indexedDBTitle = (
-    <Link url="/indexeddb" txt="滴石todo - IndexedDB" blank={true} />
-  );
+  const indexedDBTitle = <Link url="/indexeddb" txt="滴石todo - IndexedDB" blank={true} />;
   const indexedDBDesc = (
     <>
       <Link url="/indexeddb" txt="地址" blank={true} />
       &nbsp;&nbsp;
-      <Link
-        url="https://blog.insistime.com/indexeddb"
-        txt="文章"
-        blank={true}
-      />
+      <Link url="https://blog.insistime.com/indexeddb" txt="文章" blank={true} />
       &nbsp;&nbsp;
-      <Link
-        url="https://github.com/uikoo9/dishi-monorepo/tree/indexeddb"
-        txt="代码"
-        blank={true}
-      />
+      <Link url="https://github.com/uikoo9/dishi-monorepo/tree/indexeddb" txt="代码" blank={true} />
     </>
   );
 
@@ -78,11 +60,7 @@ export const DishiCards = () => {
       &nbsp;&nbsp;
       <Link url="https://blog.insistime.com/dishi1" txt="文章" blank={true} />
       &nbsp;&nbsp;
-      <Link
-        url="https://github.com/uikoo9/dishi-monorepo/tree/localstorage"
-        txt="代码"
-        blank={true}
-      />
+      <Link url="https://github.com/uikoo9/dishi-monorepo/tree/localstorage" txt="代码" blank={true} />
     </>
   );
 

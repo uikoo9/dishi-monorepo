@@ -12,12 +12,7 @@ const {
 } = require("../../_util/constant.js");
 
 // sqlite
-const {
-  dbCreateTable,
-  dbInsertData,
-  dbSelectData,
-  dbDeleteData,
-} = require("./sqlite-main.js");
+const { dbCreateTable, dbInsertData, dbSelectData, dbDeleteData } = require("./sqlite-main.js");
 
 /**
  * ipc sqlite create table

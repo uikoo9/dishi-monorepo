@@ -8,12 +8,7 @@ var dishi = require("../src/dishi.js");
 
 // cmd for group-----------------------------------------------------
 // cmd for add
-qiao.cli.cmd
-  .command("group-add <name>")
-  .alias("ga")
-  .usage("<name>")
-  .description("todo group add")
-  .action(add);
+qiao.cli.cmd.command("group-add <name>").alias("ga").usage("<name>").description("todo group add").action(add);
 
 // cmd for update
 qiao.cli.cmd
@@ -24,20 +19,10 @@ qiao.cli.cmd
   .action(update);
 
 // cmd for del
-qiao.cli.cmd
-  .command("group-del <ids>")
-  .alias("gd")
-  .usage("<ids>")
-  .description("todo group delete")
-  .action(del);
+qiao.cli.cmd.command("group-del <ids>").alias("gd").usage("<ids>").description("todo group delete").action(del);
 
 // cmd for list
-qiao.cli.cmd
-  .command("group")
-  .alias("g")
-  .usage(" ")
-  .description("todo group list")
-  .action(list);
+qiao.cli.cmd.command("group").alias("g").usage(" ").description("todo group list").action(list);
 
 // list
 function list() {
