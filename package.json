@@ -9,6 +9,7 @@
     "init": "lerna bootstrap --ignore=dishi-electron --hoist",
     "init-electron": "lerna bootstrap --hoist",
     "build": "lerna run build",
+    "upload": "lerna run upload",
     "prettier": "prettier --write .",
     "eslintfix": "eslint . --ext .js --fix",
     "lint": "npm run prettier && npm run eslintfix",
