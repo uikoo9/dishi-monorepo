@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "check": "qlerna ncu ./packages",
     "ncu": "lerna exec 'ncu -u'",
     "clean": "lerna clean -y",
@@ -10,19 +11,22 @@
     "build": "lerna run build",
     "prettier": "prettier --write .",
     "eslintfix": "eslint . --ext .js --fix",
-    "prepublish": "npm run prettier && npm run eslintfix",
-    "dc": "qlerna dc ./packages",
+    "lint": "npm run prettier && npm run eslintfix",
+    "postinstall": "npm run clean && npm run init && npm run lint",
     "ls": "lerna ls -l",
     "pkg": "qlerna pkg ./packages",
     "dpkg": "qlerna pkg ./packages 1"
   },
   "devDependencies": {
-    "eslint": "^8.28.0",
-    "eslint-config-prettier": "^8.5.0",
+    "@commitlint/cli": "^17.4.0",
+    "@commitlint/config-conventional": "^17.4.0",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.8.0",
-    "qiao-lerna": "^1.2.5",
-    "rollup": "^3.5.1"
+    "husky": "^8.0.3",
+    "prettier": "^2.8.1",
+    "qiao-lerna": "^1.2.7",
+    "rollup": "^3.9.1"
   }
 }
