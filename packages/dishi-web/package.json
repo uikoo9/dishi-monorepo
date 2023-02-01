@@ -12,14 +12,14 @@
     "upload": "qcos fo ./config.json ../dishi-server/static 21_dishi/static"
   },
   "dependencies": {
-    "qiao-ui": "^1.4.8",
-    "qiao.db.js": "^1.0.9",
-    "qiao.ls.js": "^1.1.9",
+    "qiao-ui": "^1.4.9",
+    "qiao.db.js": "^1.1.0",
+    "qiao.ls.js": "^1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "qiao-cos": "^2.2.1",
-    "qiao-webpack": "^1.4.0"
+    "qiao-cos": "^2.2.2",
+    "qiao-webpack": "^1.4.1"
   }
 }
