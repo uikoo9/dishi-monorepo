@@ -5,7 +5,7 @@
     "prepare": "husky install",
     "check": "qlerna ncu ./packages",
     "ncu": "lerna exec 'ncu -u'",
-    "clean": "lerna clean -y",
+    "clean": "lerna clean -y && lerna exec 'rm -rf package-lock.json'",
     "init": "lerna bootstrap --ignore=dishi-electron --hoist",
     "init-electron": "lerna bootstrap --hoist",
     "build": "lerna run build",
@@ -13,7 +13,8 @@
     "prettier": "prettier --write .",
     "eslintfix": "eslint . --ext .js --fix",
     "lint": "npm run prettier && npm run eslintfix",
-    "postinstall": "npm run clean && npm run init && npm run lint",
+    "test": "lerna run test",
+    "postinstall": "npm run clean && npm run init && npm run lint && npm run test",
     "ls": "lerna ls -l",
     "pkg": "qlerna pkg ./packages",
     "dpkg": "qlerna pkg ./packages 1"
