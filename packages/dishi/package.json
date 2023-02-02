@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "dishi-service": "^0.3.3",
-    "qiao-ajax": "^2.8.2",
+    "qiao-ajax": "^2.8.4",
     "qiao-cli": "^1.1.1",
     "qiao-config": "^1.0.4",
     "qiao-console": "^1.0.4",
-    "qiao-service": "^0.2.8"
+    "qiao-service": "^0.3.0"
   }
 }
