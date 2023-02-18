@@ -1,5 +1,5 @@
 {
-  "name": "dishi-web",
+  "name": "dishi-renderer",
   "private": true,
   "version": "0.5.9",
   "sideEffects": [
