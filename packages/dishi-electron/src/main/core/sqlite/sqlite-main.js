@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 // path
-const path = require("path");
+const path = require('path');
 
 // electron
-const { app } = require("electron");
+const { app } = require('electron');
 
 // sqlite
 const {
@@ -16,18 +16,18 @@ const {
   modifyData,
   deleteData,
   selectData,
-} = require("qiao-sqlite");
+} = require('qiao-sqlite');
 
 // json
-const { success, danger } = require("qiao-json");
+const { success, danger } = require('qiao-json');
 
 /**
  * sqlite
  * @returns
  */
 exports.sqlite = () => {
-  const userDataPath = app.getPath("userData");
-  const dbPath = path.resolve(userDataPath, "./electron.db");
+  const userDataPath = app.getPath('userData');
+  const dbPath = path.resolve(userDataPath, './electron.db');
   const db = createDB(dbPath);
 
   return db;
@@ -40,7 +40,7 @@ exports.sqlite = () => {
  */
 exports.dbCreateTable = async (sql) => {
   // check
-  if (!sql) return danger("need create table sql");
+  if (!sql) return danger('need create table sql');
 
   // db
   const db = exports.sqlite();
@@ -48,10 +48,10 @@ exports.dbCreateTable = async (sql) => {
   // create table
   try {
     await createTable(db, sql);
-    return success("create table success");
+    return success('create table success');
   } catch (e) {
     // return danger('create table fail', e);
-    return success("create table success");
+    return success('create table success');
   }
 };
 
@@ -62,7 +62,7 @@ exports.dbCreateTable = async (sql) => {
  */
 exports.dbDropTable = async (tableName) => {
   // check
-  if (!tableName) return danger("need tableName");
+  if (!tableName) return danger('need tableName');
 
   // db
   const db = exports.sqlite();
@@ -70,9 +70,9 @@ exports.dbDropTable = async (tableName) => {
   // drop table
   try {
     await dropTable(db, tableName);
-    return success("drop table success");
+    return success('drop table success');
   } catch (e) {
-    return success("drop table success");
+    return success('drop table success');
   }
 };
 
@@ -87,9 +87,9 @@ exports.dbShowTables = async () => {
   // show tables
   try {
     const rows = await showTables(db);
-    return success("show table success", rows);
+    return success('show table success', rows);
   } catch (e) {
-    return success("show table success");
+    return success('show table success');
   }
 };
 
@@ -101,7 +101,7 @@ exports.dbShowTables = async () => {
  */
 exports.dbInsertData = async (sql, params) => {
   // check
-  if (!sql) return danger("need insert data sql");
+  if (!sql) return danger('need insert data sql');
 
   // db
   const db = exports.sqlite();
@@ -109,9 +109,9 @@ exports.dbInsertData = async (sql, params) => {
   // insert data
   try {
     await insertData(db, sql, params);
-    return success("insert data success");
+    return success('insert data success');
   } catch (e) {
-    return danger("insert data fail", e);
+    return danger('insert data fail', e);
   }
 };
 
@@ -123,7 +123,7 @@ exports.dbInsertData = async (sql, params) => {
  */
 exports.dbDeleteData = async (sql, params) => {
   // check
-  if (!sql) return danger("need delete data sql");
+  if (!sql) return danger('need delete data sql');
 
   // db
   const db = exports.sqlite();
@@ -131,9 +131,9 @@ exports.dbDeleteData = async (sql, params) => {
   // delete data
   try {
     await deleteData(db, sql, params);
-    return success("delete data success");
+    return success('delete data success');
   } catch (e) {
-    return danger("delete data fail", e);
+    return danger('delete data fail', e);
   }
 };
 
@@ -145,7 +145,7 @@ exports.dbDeleteData = async (sql, params) => {
  */
 exports.dbModifyData = async (sql, params) => {
   // check
-  if (!sql) return danger("need modify data sql");
+  if (!sql) return danger('need modify data sql');
 
   // db
   const db = exports.sqlite();
@@ -153,9 +153,9 @@ exports.dbModifyData = async (sql, params) => {
   // modify data
   try {
     await modifyData(db, sql, params);
-    return success("modify data success");
+    return success('modify data success');
   } catch (e) {
-    return danger("modify data fail", e);
+    return danger('modify data fail', e);
   }
 };
 
@@ -167,7 +167,7 @@ exports.dbModifyData = async (sql, params) => {
  */
 exports.dbSelectData = async (sql, params) => {
   // check
-  if (!sql) return danger("need select data sql");
+  if (!sql) return danger('need select data sql');
 
   // db
   const db = exports.sqlite();
@@ -175,8 +175,8 @@ exports.dbSelectData = async (sql, params) => {
   // select data
   try {
     const rows = await selectData(db, sql, params);
-    return success("select data success", rows);
+    return success('select data success', rows);
   } catch (e) {
-    return danger("select data fail", e);
+    return danger('select data fail', e);
   }
 };

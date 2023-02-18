@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 // electron
-const { ipcRenderer } = require("electron");
+const { ipcRenderer } = require('electron');
 
 // const
 const {
@@ -9,7 +9,7 @@ const {
   IPC_SQLITE_INSERT_DATA,
   IPC_SQLITE_SELECT_DATA,
   IPC_SQLITE_DELETE_DATA,
-} = require("../../_util/constant.js");
+} = require('../../_util/constant.js');
 
 /**
  * createTableIPC

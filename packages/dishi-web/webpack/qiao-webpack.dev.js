@@ -1,16 +1,16 @@
-"use strict";
+'use strict';
 
 // alias
-var alias = require("./common/alias.js");
+var alias = require('./common/alias.js');
 
 // entry
-var entry = require("./common/entry.js");
+var entry = require('./common/entry.js');
 
 // dev
-var dev = require("./dev/server.js");
+var dev = require('./dev/server.js');
 
 // plugins
-var plugins = require("./dev/plugins.js");
+var plugins = require('./dev/plugins.js');
 
 /**
  * qiao.webpack.js

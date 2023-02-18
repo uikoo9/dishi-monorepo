@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 // path
-var path = require("path");
+var path = require('path');
 
 // static path
-var distPath = path.resolve(__dirname, "../../static");
+var distPath = path.resolve(__dirname, '../../static');
 
 /**
  * dev server

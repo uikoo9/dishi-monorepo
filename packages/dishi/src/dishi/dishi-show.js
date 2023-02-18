@@ -1,17 +1,17 @@
-"use strict";
+'use strict';
 
 // qiao
-var qiao = require("../util/qiao.js");
-global.insistime_userinfo = qiao.config.config("userinfo");
+var qiao = require('../util/qiao.js');
+global.insistime_userinfo = qiao.config.config('userinfo');
 
 // service
-var dishiService = require("dishi-service");
+var dishiService = require('dishi-service');
 
 // vars
 var showNum = 8;
 var showLines = 29;
-var showSplit1 = "======================== ";
-var showSplit2 = "------------------------ ";
+var showSplit1 = '======================== ';
+var showSplit2 = '------------------------ ';
 
 /**
  * show
@@ -23,7 +23,7 @@ exports.show = async function (num) {
   // check
   var n = Number(num);
   if (!n || isNaN(n)) {
-    qiao.log.danger("num must be number");
+    qiao.log.danger('num must be number');
     return;
   }
 
@@ -36,7 +36,7 @@ exports.show = async function (num) {
 
   // check groups
   if (!groups.obj || !groups.obj.rows || !groups.obj.rows.length) {
-    qiao.log.danger("no groups, add group first");
+    qiao.log.danger('no groups, add group first');
     return;
   }
 
@@ -67,10 +67,10 @@ function writeLineContent(i, res) {
     // title
     if (i == 0 || i == 2) s.push(showSplit1);
     if (i == 1) s.push(formatContent(`todo group '${item.group.todo_group_name}[${item.group.id}]'`));
-    if (i == 3) s.push("");
+    if (i == 3) s.push('');
 
     // todo rows
-    if (i == 4) s.push(formatContent("todo items"));
+    if (i == 4) s.push(formatContent('todo items'));
     if (i == 5) s.push(showSplit2);
     if (i > 5 && i < showLines) {
       var items = item.items.obj.todoRows;
@@ -79,10 +79,10 @@ function writeLineContent(i, res) {
         var todo = items[index];
         s.push(formatContent(`${todo.id}-${todo.todo_item_name}`));
       } else {
-        s.push(formatContent(""));
+        s.push(formatContent(''));
       }
     }
-    if (i == showLines) s.push("");
+    if (i == showLines) s.push('');
 
     // done rows
     // if(i == 17) s.push(formatContent(`done items`));
@@ -99,7 +99,7 @@ function writeLineContent(i, res) {
     // }
   }
 
-  var ss = s.join("");
+  var ss = s.join('');
   // title
   if (i == 0 || i == 1 || i == 2) {
     writeInfo(i, ss);
@@ -138,9 +138,9 @@ function formatContent(r) {
 
   var rr = [r];
   var len = sLength - rLength;
-  for (let i = 0; i < len; i++) rr.push(" ");
+  for (let i = 0; i < len; i++) rr.push(' ');
 
-  return rr.join("");
+  return rr.join('');
 }
 
 // write info

@@ -1,28 +1,28 @@
-"use strict";
+'use strict';
 
 // qiao
-var qiao = require("../src/util/qiao.js");
+var qiao = require('../src/util/qiao.js');
 
 // dishi
-var dishi = require("../src/dishi.js");
+var dishi = require('../src/dishi.js');
 
 // cmd for ucenter-----------------------------------------------------
 // cmd for login
-qiao.cli.cmd.command("login").usage(" ").description("login").action(login);
+qiao.cli.cmd.command('login').usage(' ').description('login').action(login);
 
 // cmd for logout
-qiao.cli.cmd.command("logout").usage(" ").description("logout").action(logout);
+qiao.cli.cmd.command('logout').usage(' ').description('logout').action(logout);
 
 // cmd for whoami
-qiao.cli.cmd.command("whoami").usage(" ").description("whoami").action(whoami);
+qiao.cli.cmd.command('whoami').usage(' ').description('whoami').action(whoami);
 
 // cmd for reg
-qiao.cli.cmd.command("reg").usage(" ").description("register").action(register);
+qiao.cli.cmd.command('reg').usage(' ').description('register').action(register);
 
 // login
 async function login() {
   try {
-    var userinfo = qiao.config.config("userinfo");
+    var userinfo = qiao.config.config('userinfo');
     if (userinfo && userinfo.userid && userinfo.usertoken && userinfo.mobile) {
       qiao.log.suc(`already login as ${userinfo.mobile}`);
       return;
@@ -30,15 +30,15 @@ async function login() {
 
     var answers = await qiao.cli.ask([
       {
-        type: "input",
-        name: "mobile",
-        message: "mobile:",
+        type: 'input',
+        name: 'mobile',
+        message: 'mobile:',
       },
       {
-        type: "password",
-        mask: "*",
-        name: "password",
-        message: "password:",
+        type: 'password',
+        mask: '*',
+        name: 'password',
+        message: 'password:',
       },
     ]);
 
@@ -51,18 +51,18 @@ async function login() {
 // logout
 function logout() {
   qiao.config.clear();
-  qiao.log.suc("already logout");
+  qiao.log.suc('already logout');
 }
 
 // whoami
 function whoami() {
-  var userinfo = qiao.config.config("userinfo");
+  var userinfo = qiao.config.config('userinfo');
   if (userinfo && userinfo.userid && userinfo.usertoken && userinfo.mobile) {
     qiao.log.suc(`login as ${userinfo.mobile}`);
     return;
   }
 
-  qiao.log.danger("not login");
+  qiao.log.danger('not login');
 }
 
 // register
@@ -70,9 +70,9 @@ async function register() {
   try {
     var mobileAnswers = await qiao.cli.ask([
       {
-        type: "input",
-        name: "mobile",
-        message: "mobile:",
+        type: 'input',
+        name: 'mobile',
+        message: 'mobile:',
       },
     ]);
 
@@ -81,21 +81,21 @@ async function register() {
 
     var answers = await qiao.cli.ask([
       {
-        type: "input",
-        name: "code",
-        message: "code:",
+        type: 'input',
+        name: 'code',
+        message: 'code:',
       },
       {
-        type: "password",
-        mask: "*",
-        name: "password",
-        message: "password:",
+        type: 'password',
+        mask: '*',
+        name: 'password',
+        message: 'password:',
       },
       {
-        type: "password",
-        mask: "*",
-        name: "repassword",
-        message: "confirm password:",
+        type: 'password',
+        mask: '*',
+        name: 'repassword',
+        message: 'confirm password:',
       },
     ]);
 

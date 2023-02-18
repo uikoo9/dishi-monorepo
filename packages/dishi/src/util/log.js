@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 // qiao
-var qiao = require("qiao-cli");
+var qiao = require('qiao-cli');
 
 /**
  * log
@@ -9,7 +9,7 @@ var qiao = require("qiao-cli");
 exports.log = function (json) {
   if (!json) return;
 
-  if (json.type == "danger") exports.danger(json.msg);
+  if (json.type == 'danger') exports.danger(json.msg);
 };
 
 /**

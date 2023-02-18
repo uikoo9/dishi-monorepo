@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 
 // qiao
-var qiao = require("../util/qiao.js");
-global.insistime_userinfo = qiao.config.config("userinfo");
+var qiao = require('../util/qiao.js');
+global.insistime_userinfo = qiao.config.config('userinfo');
 
 // service
-var dishiService = require("dishi-service");
+var dishiService = require('dishi-service');
 
 /**
  * done
@@ -21,7 +21,7 @@ exports.done = async function (id) {
     todo_group_id: item.todo_group_id,
     todo_item_name: item.todo_item_name,
     todo_item_order: item.todo_item_order,
-    todo_item_status: "1",
+    todo_item_status: '1',
   });
   if (!json) return;
 

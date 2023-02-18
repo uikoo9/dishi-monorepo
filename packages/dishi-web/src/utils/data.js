@@ -3,7 +3,7 @@
  * @returns data
  */
 export const getServerData = () => {
-  const $data = document.getElementById("serverData");
+  const $data = document.getElementById('serverData');
   if (!$data || !$data.value) return;
 
   try {

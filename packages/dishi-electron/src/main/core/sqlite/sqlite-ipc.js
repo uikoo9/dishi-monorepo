@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 // electron
-const { ipcMain } = require("electron");
+const { ipcMain } = require('electron');
 
 // const
 const {
@@ -9,10 +9,10 @@ const {
   IPC_SQLITE_INSERT_DATA,
   IPC_SQLITE_SELECT_DATA,
   IPC_SQLITE_DELETE_DATA,
-} = require("../../_util/constant.js");
+} = require('../../_util/constant.js');
 
 // sqlite
-const { dbCreateTable, dbInsertData, dbSelectData, dbDeleteData } = require("./sqlite-main.js");
+const { dbCreateTable, dbInsertData, dbSelectData, dbDeleteData } = require('./sqlite-main.js');
 
 /**
  * ipc sqlite create table

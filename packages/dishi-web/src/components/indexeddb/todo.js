@@ -1,10 +1,10 @@
 // qiao
-import { listDB, openDB, createTable, save, get, del, getAll } from "qiao.db.js";
+import { listDB, openDB, createTable, save, get, del, getAll } from 'qiao.db.js';
 
 // const
-const dbName = "db_dishi";
-const tableTodos = "t_todos";
-const tableDones = "t_dones";
+const dbName = 'db_dishi';
+const tableTodos = 't_todos';
+const tableDones = 't_dones';
 
 /**
  * init database
@@ -23,22 +23,22 @@ export const initDatabase = async () => {
   const tables = [
     {
       name: tableTodos,
-      key: "create_time",
+      key: 'create_time',
       index: [
         {
-          name: "todo_time",
-          index: ["todo_time", "todo_content"],
+          name: 'todo_time',
+          index: ['todo_time', 'todo_content'],
           unique: false,
         },
       ],
     },
     {
       name: tableDones,
-      key: "done_time",
+      key: 'done_time',
       index: [
         {
-          name: "done_time",
-          index: ["done_time"],
+          name: 'done_time',
+          index: ['done_time'],
           unique: false,
         },
       ],
@@ -55,7 +55,7 @@ export const addTodo = async (todo) => {
   if (!todo) return;
 
   // todo
-  const todos = todo.split("@");
+  const todos = todo.split('@');
   const todo_content = todos[0].trim();
   let todo_time;
   if (todos.length > 1) {
@@ -67,12 +67,12 @@ export const addTodo = async (todo) => {
   const create_time = Date.now();
   const data = {
     todo_content: todo_content,
-    todo_time: todo_time || "_",
+    todo_time: todo_time || '_',
     create_time: create_time,
   };
   const db = await openDB(dbName);
   const saveRes = await save(db, tableTodos, create_time, data);
-  console.log("add todo:", saveRes);
+  console.log('add todo:', saveRes);
 };
 
 /**
@@ -95,7 +95,7 @@ export const delTodo = async (key) => {
 
   // del
   await del(db, tableTodos, key);
-  console.log("del todo:", saveRes);
+  console.log('del todo:', saveRes);
 };
 
 /**
@@ -104,8 +104,8 @@ export const delTodo = async (key) => {
  */
 export const getTodos = async () => {
   const db = await openDB(dbName);
-  const res = await getAll(db, tableTodos, "todo_time");
-  console.log("get todos:", res);
+  const res = await getAll(db, tableTodos, 'todo_time');
+  console.log('get todos:', res);
 
   return res;
 };
@@ -116,8 +116,8 @@ export const getTodos = async () => {
  */
 export const getDones = async () => {
   const db = await openDB(dbName);
-  const res = await getAll(db, tableDones, "done_time");
-  console.log("get dones:", res);
+  const res = await getAll(db, tableDones, 'done_time');
+  console.log('get dones:', res);
 
   return res;
 };

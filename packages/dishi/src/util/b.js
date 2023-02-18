@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 // qiao
-var qiao = require("./qiao.js");
+var qiao = require('./qiao.js');
 
 /**
  * get group id
@@ -17,9 +17,9 @@ exports.getGroupId = function () {
  * get group
  */
 exports.getGroup = function () {
-  var group = qiao.config.config("group");
+  var group = qiao.config.config('group');
   if (!group) {
-    qiao.log.danger("please select a todo group");
+    qiao.log.danger('please select a todo group');
     return;
   }
 

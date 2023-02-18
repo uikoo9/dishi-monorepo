@@ -1,6 +1,6 @@
 // desc
 var data = {
-  desc: "滴石，todo list，取水滴石穿之意",
+  desc: '滴石，todo list，取水滴石穿之意',
 };
 
 /**
@@ -11,9 +11,9 @@ var data = {
 exports.index = async function (req, res) {
   // render
   if (req.useragent.isMobile) {
-    res.render("./views/dishi-index-mobile.html", data);
+    res.render('./views/dishi-index-mobile.html', data);
   } else {
-    res.render("./views/dishi-index-pc.html", data);
+    res.render('./views/dishi-index-pc.html', data);
   }
 };
 
@@ -25,9 +25,9 @@ exports.index = async function (req, res) {
 exports.ls = async function (req, res) {
   // render
   if (req.useragent.isMobile) {
-    res.render("./views/dishi-ls-mobile.html", data);
+    res.render('./views/dishi-ls-mobile.html', data);
   } else {
-    res.render("./views/dishi-ls-pc.html", data);
+    res.render('./views/dishi-ls-pc.html', data);
   }
 };
 
@@ -39,8 +39,8 @@ exports.ls = async function (req, res) {
 exports.indexeddb = async function (req, res) {
   // render
   if (req.useragent.isMobile) {
-    res.render("./views/dishi-indexeddb-mobile.html", data);
+    res.render('./views/dishi-indexeddb-mobile.html', data);
   } else {
-    res.render("./views/dishi-indexeddb-pc.html", data);
+    res.render('./views/dishi-indexeddb-pc.html', data);
   }
 };
