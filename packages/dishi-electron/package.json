@@ -1,7 +1,7 @@
 {
   "name": "dishi-electron",
   "private": true,
-  "version": "0.4.1",
+  "version": "0.4.2",
   "devDependencies": {
     "electron": "^23.0.0",
     "qiao-electron-cli": "^1.4.1"
