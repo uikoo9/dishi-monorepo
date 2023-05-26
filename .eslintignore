@@ -1,4 +1,10 @@
+# project
 node_modules
+package-lock.json
 
+# packages
 packages/dishi-electron/src/renderer
+packages/dishi-electron/dist
+packages/dishi-electron/out
 packages/dishi-server/static
+packages/dishi-server/views
