@@ -3,8 +3,8 @@
   "private": true,
   "version": "2.0.1",
   "devDependencies": {
-    "electron": "^24.4.0",
-    "qiao-electron-cli": "^3.2.0"
+    "electron": "^25.1.0",
+    "qiao-electron-cli": "^3.2.2"
   },
   "scripts": {
     "init": "cd src/main && npm i",
