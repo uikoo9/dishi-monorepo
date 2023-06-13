@@ -7,8 +7,6 @@
     "todo"
   ],
   "author": "uikoo9 <uikoo9@qq.com>",
-  "main": "index.js",
-  "scripts": {},
   "bin": {
     "dishi": "./bin/dishi.js"
   },
