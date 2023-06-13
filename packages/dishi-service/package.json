@@ -1,0 +1,40 @@
+{
+  "name": "dishi-service",
+  "version": "0.3.3",
+  "description": "dishi service",
+  "keywords": [
+    "dishi",
+    "service"
+  ],
+  "author": "uikoo9 <uikoo9@qq.com>",
+  "main": "index.js",
+  "module": "src/index.js",
+  "sideEffets": false,
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "qiao-ajax": "^3.1.1",
+    "qiao-json": "^3.0.6"
+  },
+  "nx": {
+    "namedInputs": {
+      "default": [
+        "{projectRoot}/src/**/*"
+      ]
+    },
+    "targets": {
+      "build": {
+        "inputs": [
+          "default"
+        ],
+        "outputs": [
+          "{projectRoot}/index.js"
+        ]
+      }
+    }
+  }
+}

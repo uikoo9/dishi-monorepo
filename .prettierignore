@@ -8,3 +8,4 @@ packages/dishi-electron/dist
 packages/dishi-electron/out
 packages/dishi-server/static
 packages/dishi-server/views
+packages/dishi-service/index.js

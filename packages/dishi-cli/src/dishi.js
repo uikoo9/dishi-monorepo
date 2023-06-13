@@ -1,11 +1,9 @@
-'use strict';
-
 // dishi
-var _ucenter = require('./dishi/dishi-ucenter.js');
-var _config = require('./dishi/dishi-config.js');
-var _crud = require('./dishi/dishi-crud.js');
-var _operate = require('./dishi/dishi-operate.js');
-var _show = require('./dishi/dishi-show.js');
+const _ucenter = require('./dishi/dishi-ucenter.js');
+const _config = require('./dishi/dishi-config.js');
+const _crud = require('./dishi/dishi-crud.js');
+const _operate = require('./dishi/dishi-operate.js');
+const _show = require('./dishi/dishi-show.js');
 
 // ucenter
 exports.login = _ucenter.login;

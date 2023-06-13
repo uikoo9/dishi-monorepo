@@ -1,7 +1,5 @@
-'use strict';
-
 // qiao
-var qiao = require('qiao-cli');
+const qiao = require('qiao-cli');
 
 /**
  * log

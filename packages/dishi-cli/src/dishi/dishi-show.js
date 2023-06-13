@@ -1,17 +1,15 @@
-'use strict';
-
 // qiao
-var qiao = require('../util/qiao.js');
+const qiao = require('../util/qiao.js');
 global.insistime_userinfo = qiao.config.config('userinfo');
 
 // service
-var dishiService = require('dishi-service');
+const dishiService = require('dishi-service');
 
 // vars
-var showNum = 8;
-var showLines = 29;
-var showSplit1 = '======================== ';
-var showSplit2 = '------------------------ ';
+const showNum = 8;
+const showLines = 29;
+const showSplit1 = '======================== ';
+const showSplit2 = '------------------------ ';
 
 /**
  * show
@@ -21,7 +19,7 @@ exports.show = async function (num) {
   num = num || showNum;
 
   // check
-  var n = Number(num);
+  let n = Number(num);
   if (!n || isNaN(n)) {
     qiao.log.danger('num must be number');
     return;
@@ -31,7 +29,7 @@ exports.show = async function (num) {
   if (n > showNum || n < 1) n = showNum;
 
   // get group list
-  var groups = await dishiService.todoGroupList();
+  const groups = await dishiService.todoGroupList();
   if (!groups) return;
 
   // check groups
@@ -41,11 +39,11 @@ exports.show = async function (num) {
   }
 
   // for
-  var res = [];
-  var finalNum = Math.min(n, groups.obj.rows.length);
-  for (var i = 0; i < finalNum; i++) {
-    var group = groups.obj.rows[i];
-    var items = await dishiService.todoList(group.id);
+  const res = [];
+  const finalNum = Math.min(n, groups.obj.rows.length);
+  for (let i = 0; i < finalNum; i++) {
+    const group = groups.obj.rows[i];
+    const items = await dishiService.todoList(group.id);
     res.push({
       group: group,
       items: items,
@@ -54,16 +52,16 @@ exports.show = async function (num) {
 
   // list
   qiao.console.clear();
-  for (var j = 0; j < showLines; j++) {
+  for (let j = 0; j < showLines; j++) {
     writeLineContent(j, res);
   }
 };
 
 // write line content
 function writeLineContent(i, res) {
-  var s = [];
-  for (var j = 0; j < res.length; j++) {
-    var item = res[j];
+  const s = [];
+  for (let j = 0; j < res.length; j++) {
+    const item = res[j];
     // title
     if (i == 0 || i == 2) s.push(showSplit1);
     if (i == 1) s.push(formatContent(`todo group '${item.group.todo_group_name}[${item.group.id}]'`));
@@ -73,10 +71,10 @@ function writeLineContent(i, res) {
     if (i == 4) s.push(formatContent('todo items'));
     if (i == 5) s.push(showSplit2);
     if (i > 5 && i < showLines) {
-      var items = item.items.obj.todoRows;
-      var index = i - 6;
+      const items = item.items.obj.todoRows;
+      const index = i - 6;
       if (items.length > index) {
-        var todo = items[index];
+        const todo = items[index];
         s.push(formatContent(`${todo.id}-${todo.todo_item_name}`));
       } else {
         s.push(formatContent(''));
@@ -99,7 +97,7 @@ function writeLineContent(i, res) {
     // }
   }
 
-  var ss = s.join('');
+  const ss = s.join('');
   // title
   if (i == 0 || i == 1 || i == 2) {
     writeInfo(i, ss);
@@ -127,8 +125,8 @@ function writeLineContent(i, res) {
 
 // format content
 function formatContent(r) {
-  var sLength = showSplit1.length;
-  var rLength = 0;
+  const sLength = showSplit1.length;
+  let rLength = 0;
 
   for (let i = 0; i < r.length; i++) {
     r.charCodeAt(i) > 255 ? (rLength += 2) : rLength++;
@@ -136,8 +134,8 @@ function formatContent(r) {
     if (rLength >= sLength) return r.substring(0, i + 1);
   }
 
-  var rr = [r];
-  var len = sLength - rLength;
+  const rr = [r];
+  const len = sLength - rLength;
   for (let i = 0; i < len; i++) rr.push(' ');
 
   return rr.join('');

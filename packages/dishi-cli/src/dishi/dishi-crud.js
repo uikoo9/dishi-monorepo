@@ -1,14 +1,12 @@
-'use strict';
-
 // b
-var b = require('../util/b.js');
+const b = require('../util/b.js');
 
 // qiao
-var qiao = require('../util/qiao.js');
+const qiao = require('../util/qiao.js');
 global.insistime_userinfo = qiao.config.config('userinfo');
 
 // service
-var dishiService = require('dishi-service');
+const dishiService = require('dishi-service');
 
 /**
  * list
@@ -21,7 +19,7 @@ exports.list = async function (group) {
     qiao.log.suc(`${json.time}ms | list group success`);
     listGroups(json.obj.rows);
   } else {
-    var groupId = b.getGroupId();
+    const groupId = b.getGroupId();
     if (!groupId) return;
 
     const json = await dishiService.todoList(groupId);
@@ -44,7 +42,7 @@ exports.add = async function (name, group) {
 
     qiao.log.suc(`${json.time}ms | add group success`);
   } else {
-    var groupId = b.getGroupId();
+    const groupId = b.getGroupId();
     if (!groupId) return;
 
     const json = await dishiService.todoItemSave({
@@ -71,7 +69,7 @@ exports.update = async function (id, name, group) {
 
     qiao.log.suc(`${json.time}ms | update group success`);
   } else {
-    var groupId = b.getGroupId();
+    const groupId = b.getGroupId();
     if (!groupId) return;
 
     const json = await dishiService.todoItemSave({
@@ -90,7 +88,7 @@ exports.update = async function (id, name, group) {
  */
 exports.del = async function (ids, group) {
   if (group) {
-    var idss = ids.split(',');
+    const idss = ids.split(',');
     if (idss.includes('1')) {
       qiao.log.danger('can note delete default group');
       return;
@@ -113,15 +111,15 @@ function listGroups(rows) {
   qiao.log.normal();
   qiao.log.info('id	group-name');
 
-  for (var i = 0; i < rows.length; i++) {
-    var item = rows[i];
+  for (let i = 0; i < rows.length; i++) {
+    const item = rows[i];
     qiao.log.normal(`${item.id}	${item.todo_group_name}`);
   }
 }
 
 // list todos
 function listTodos(obj) {
-  var group = b.getGroup();
+  const group = b.getGroup();
   if (!group) return;
 
   qiao.log.normal();
@@ -130,7 +128,7 @@ function listTodos(obj) {
   qiao.log.info('========================');
   qiao.log.normal();
 
-  var todoRows = obj.todoRows;
+  const todoRows = obj.todoRows;
   qiao.log.danger('todo items');
   qiao.log.danger('------------------------');
   for (let i = 0; i < todoRows.length; i++) {
@@ -139,7 +137,7 @@ function listTodos(obj) {
   }
   qiao.log.normal();
 
-  var doneRows = obj.doneRows;
+  const doneRows = obj.doneRows;
   qiao.log.suc('done items');
   qiao.log.suc('------------------------');
   for (let i = 0; i < doneRows.length; i++) {

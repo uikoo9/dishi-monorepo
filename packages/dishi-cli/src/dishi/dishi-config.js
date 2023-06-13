@@ -1,17 +1,15 @@
-'use strict';
-
 // qiao
-var qiao = require('../util/qiao.js');
+const qiao = require('../util/qiao.js');
 global.insistime_userinfo = qiao.config.config('userinfo');
 
 // service
-var dishiService = require('dishi-service');
+const dishiService = require('dishi-service');
 
 /**
  * use
  */
 exports.use = async function (id) {
-  var item = await dishiService.todoGroupGet(id);
+  const item = await dishiService.todoGroupGet(id);
   if (!item) return;
 
   qiao.config.config('group', item);
