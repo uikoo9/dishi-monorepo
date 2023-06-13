@@ -1,10 +1,8 @@
-'use strict';
-
 // qiao
-var qiao = require('../src/util/qiao.js');
+const qiao = require('../src/util/qiao.js');
 
 // dishi
-var dishi = require('../src/dishi.js');
+const dishi = require('../src/dishi.js');
 
 // cmd for config-----------------------------------------------------
 // cmd for use
