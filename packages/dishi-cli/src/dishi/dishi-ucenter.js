@@ -16,7 +16,7 @@ exports.login = async function (mobile, password) {
 
   const userinfo = json.obj;
   userinfo.mobile = mobile;
-  qiao.config.config('userinfo', userinfo);
+  await qiao.config.config('userinfo', userinfo);
   qiao.log.suc(`${json.time}ms | login success`);
 };
 

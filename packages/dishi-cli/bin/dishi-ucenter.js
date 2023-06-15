@@ -20,7 +20,7 @@ qiao.cli.cmd.command('reg').usage(' ').description('register').action(register);
 // login
 async function login() {
   try {
-    const userinfo = qiao.config.config('userinfo');
+    const userinfo = await qiao.config.config('userinfo');
     if (userinfo && userinfo.userid && userinfo.usertoken && userinfo.mobile) {
       qiao.log.suc(`already login as ${userinfo.mobile}`);
       return;
@@ -47,14 +47,14 @@ async function login() {
 }
 
 // logout
-function logout() {
-  qiao.config.clear();
+async function logout() {
+  await qiao.config.clear();
   qiao.log.suc('already logout');
 }
 
 // whoami
-function whoami() {
-  const userinfo = qiao.config.config('userinfo');
+async function whoami() {
+  const userinfo = await qiao.config.config('userinfo');
   if (userinfo && userinfo.userid && userinfo.usertoken && userinfo.mobile) {
     qiao.log.suc(`login as ${userinfo.mobile}`);
     return;
