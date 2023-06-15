@@ -45,7 +45,7 @@ export const delTodo = async (key) => {
   const selectSql = 'SELECT rowid,* FROM t_todos where rowid=?';
   const selectRes = await window.electron.selectDataIPC(selectSql, [key]);
   console.log('get todo:', selectRes);
-  if (!selectRes || selectRes.type != 'success' || !selectRes.obj || !selectRes.obj.length) return;
+  if (!selectRes || selectRes.type !== 'success' || !selectRes.obj || !selectRes.obj.length) return;
 
   // todo
   const todo = selectRes.obj[0];
@@ -73,7 +73,7 @@ export const getTodos = async () => {
   console.log('get todos:', selectRes);
 
   // check
-  if (!selectRes || selectRes.type != 'success' || !selectRes.obj || !selectRes.obj.length) return;
+  if (!selectRes || selectRes.type !== 'success' || !selectRes.obj || !selectRes.obj.length) return;
 
   // return
   return selectRes.obj;
@@ -90,7 +90,7 @@ export const getDones = async () => {
   console.log('get dones:', selectRes);
 
   // check
-  if (!selectRes || selectRes.type != 'success' || !selectRes.obj || !selectRes.obj.length) return;
+  if (!selectRes || selectRes.type !== 'success' || !selectRes.obj || !selectRes.obj.length) return;
 
   // return
   return selectRes.obj;

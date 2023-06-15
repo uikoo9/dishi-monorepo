@@ -7,7 +7,7 @@ const qiao = require('qiao-cli');
 exports.log = function (json) {
   if (!json) return;
 
-  if (json.type == 'danger') exports.danger(json.msg);
+  if (json.type !== 'success') exports.danger(json.msg);
 };
 
 /**

@@ -9,7 +9,7 @@ const ucenterService = require('qiao-service');
  */
 exports.login = async function (mobile, password) {
   const json = await ucenterService.login(mobile, password);
-  if (json.type != 'success') {
+  if (json.type !== 'success') {
     qiao.log.log(json);
     return;
   }
@@ -25,7 +25,7 @@ exports.login = async function (mobile, password) {
  */
 exports.sendCode = async function (mobile) {
   const json = await ucenterService.sendCode(mobile);
-  if (json.type != 'success') {
+  if (json.type !== 'success') {
     qiao.log.log(json);
     return;
   }
@@ -39,7 +39,7 @@ exports.sendCode = async function (mobile) {
  */
 exports.register = async function (mobile, password, repassword, code) {
   const json = await ucenterService.register(mobile, password, repassword, code);
-  if (json.type != 'success') {
+  if (json.type !== 'success') {
     qiao.log.log(json);
     return;
   }

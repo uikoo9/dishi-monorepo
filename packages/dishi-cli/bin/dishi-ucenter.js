@@ -20,13 +20,13 @@ qiao.cli.cmd.command('reg').usage(' ').description('register').action(register);
 // login
 async function login() {
   try {
-    var userinfo = qiao.config.config('userinfo');
+    const userinfo = qiao.config.config('userinfo');
     if (userinfo && userinfo.userid && userinfo.usertoken && userinfo.mobile) {
       qiao.log.suc(`already login as ${userinfo.mobile}`);
       return;
     }
 
-    var answers = await qiao.cli.ask([
+    const answers = await qiao.cli.ask([
       {
         type: 'input',
         name: 'mobile',
@@ -54,7 +54,7 @@ function logout() {
 
 // whoami
 function whoami() {
-  var userinfo = qiao.config.config('userinfo');
+  const userinfo = qiao.config.config('userinfo');
   if (userinfo && userinfo.userid && userinfo.usertoken && userinfo.mobile) {
     qiao.log.suc(`login as ${userinfo.mobile}`);
     return;
@@ -66,7 +66,7 @@ function whoami() {
 // register
 async function register() {
   try {
-    var mobileAnswers = await qiao.cli.ask([
+    const mobileAnswers = await qiao.cli.ask([
       {
         type: 'input',
         name: 'mobile',
@@ -74,10 +74,10 @@ async function register() {
       },
     ]);
 
-    var mobileRes = await dishi.sendCode(mobileAnswers.mobile);
+    const mobileRes = await dishi.sendCode(mobileAnswers.mobile);
     if (!mobileRes) return;
 
-    var answers = await qiao.cli.ask([
+    const answers = await qiao.cli.ask([
       {
         type: 'input',
         name: 'code',

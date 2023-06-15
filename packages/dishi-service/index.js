@@ -72,7 +72,7 @@ async function ajax(url, data, headers) {
   if (!json) return qiaoJson.danger(`${time}ms | request fail: no data`);
 
   // danger
-  if (json.type == 'danger') return qiaoJson.danger(`${time}ms | ${json.msg}`);
+  if (json.type !== 'success') return qiaoJson.danger(`${time}ms | ${json.msg}`);
 
   json.time = time;
   return json;
