@@ -1,14 +1,14 @@
 // alias
-const alias = require('./alias.js');
+const alias = require('./webpack/alias.js');
 
 // entry
-const entry = require('./entry.js');
+const entry = require('./webpack/entry.js');
 
 // output
-const output = require('./output.js');
+const output = require('./webpack/output.js');
 
 // plugins
-const plugins = require('./plugins.js');
+const plugins = require('./webpack/plugins.js');
 
 /**
  * qiao.webpack.js

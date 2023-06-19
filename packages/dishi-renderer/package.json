@@ -6,11 +6,28 @@
     "**/*.scss"
   ],
   "scripts": {
-    "electron": "qwebpack build ./webpack/qiao-webpack.electron.js"
+    "build": "qwebpack build ./electron.webpack.js"
   },
   "dependencies": {
     "qiao-ui": "^3.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "nx": {
+    "namedInputs": {
+      "default": [
+        "{projectRoot}/src/**/*"
+      ]
+    },
+    "targets": {
+      "build": {
+        "inputs": [
+          "default"
+        ],
+        "outputs": [
+          "{workspaceRoot}/packages/dishi-main/renderer/**/*"
+        ]
+      }
+    }
   }
 }
