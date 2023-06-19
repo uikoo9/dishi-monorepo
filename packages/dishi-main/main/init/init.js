@@ -19,6 +19,6 @@ require('./init-menu.js');
 require('./init-ipc.js');
 
 // app init
-app.whenReady().then(async () => {
+app.whenReady().then(() => {
   require('./init-window.js');
 });

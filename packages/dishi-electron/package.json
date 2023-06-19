@@ -9,7 +9,7 @@
   "scripts": {
     "init": "cd src/main && npm i",
     "init-m1": "cd src/main && npm i --target_arch=arm64",
-    "start": "electron src",
+    "start": "electron ../dishi-main",
     "icon": "qelectron icon ./pack/icon/pic.png",
     "dist": "qelectron d ./pack/qiao-electron.config.js",
     "prepackmac": "npm run dist",
