@@ -6,7 +6,6 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "build": "lerna run build",
     "prettier": "prettier --write .",
     "eslintfix": "eslint . --ext .js --fix",
     "test": "lerna run test",
@@ -17,7 +16,9 @@
     "check": "ncu && lerna exec ncu --concurrency=1",
     "update": "ncu -u && lerna exec 'ncu -u' --concurrency=1",
     "pkg": "qlerna pkg ./packages",
-    "dpkg": "qlerna pkg ./packages dev"
+    "dpkg": "qlerna pkg ./packages dev",
+    "build": "lerna run build",
+    "start": "npm run build && npm run start -w dishi-electron"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.5",
