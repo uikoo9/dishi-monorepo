@@ -1,5 +1,5 @@
 // gulp
-const { parallel, series } = require('gulp');
+const { series } = require('gulp');
 
 // cp
 const { cp } = require('qiao-file');
@@ -8,11 +8,11 @@ const { cp } = require('qiao-file');
 const { exec } = require('child_process');
 
 // main
-const copyMain = async () => await cp('../../dishi-main', '../dist/main');
-const npmInstallMain = async () => exec('cd ../dist/main && npm i');
+const copyMain = async () => await cp('../../dishi-main', '../dist');
+const npmInstallMain = async () => exec('cd ../dist && npm i');
 
 // renderer
 const buildRenderer = async () => exec('cd ../../dishi-renderer && npm run build');
 
 // go
-exports.dist = parallel(series(copyMain, npmInstallMain), buildRenderer);
+exports.dist = series(copyMain, npmInstallMain, buildRenderer);
