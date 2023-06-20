@@ -11,7 +11,8 @@
   "scripts": {
     "start": "electron ../dishi-main",
     "icon": "electron-icns ./pack/icon/pic.png",
-    "pack": "gulp -f ./gulp/pack.js",
-    "packmac": "qelectron pm ./pack/electron.config.js"
+    "dist": "gulp -f ./gulp/pack-dist.js",
+    "prepack": "npm run dist",
+    "pack": "qelectron pm ./pack/electron.config.js"
   }
 }

@@ -1,18 +1,11 @@
 // gulp
 const { series } = require('gulp');
 
-// cp
-const { cp } = require('qiao-file');
+// clean
+const { clean } = require('./pack-clean.js');
 
-// exec
-const { exec } = require('child_process');
-
-// main
-const copyMain = async () => await cp('../../dishi-main', '../dist');
-const npmInstallMain = async () => exec('cd ../dist && npm i --target_arch=arm64');
-
-// renderer
-const buildRenderer = async () => exec('cd ../../dishi-renderer && npm run build');
+// build
+const { build } = require('./pack-build.js');
 
 // go
-exports.dist = series(copyMain, npmInstallMain, buildRenderer);
+exports.default = series(clean, build);

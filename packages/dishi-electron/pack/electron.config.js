@@ -1,6 +1,10 @@
 // pkg
 const pkg = require('../dist/package.json');
 
+// log
+console.log(`arch: ${process.arch}`);
+console.log(`version: ${pkg.version}`);
+
 // config
 let config = {
   // app环境，online，test之类的，会拼接在dmg安装包名上
