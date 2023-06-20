@@ -1,44 +1,30 @@
 // pkg
 const pkg = require('../dist/package.json');
 
+// const
+const arch = process.arch;
+const version = pkg.version;
+const iconPath = `pack/icon/icon${arch === 'win32' ? '.ico' : '.icns'}`;
+
 // log
-console.log(`arch: ${process.arch}`);
-console.log(`version: ${pkg.version}`);
+console.log(`arch: ${arch}`);
+console.log(`version: ${version}`);
+console.log(`iconPath: ${iconPath}`);
 
 // config
+// https://electron.github.io/electron-packager/main/interfaces/electronpackager.options.html
 let config = {
-  // app环境，online，test之类的，会拼接在dmg安装包名上
-  appEnv: 'online',
+  dir: 'dist',
+  out: 'out',
+  overwrite: true,
 
-  // app名称，默认从主进程下的package.json中获取
-  appName: '滴石',
-
-  // app版本号，会显示在dmg安装包名以及关于面板上，默认从主进程下的package.json中获取
-  appVersion: pkg.version,
-
-  // app应用图标
-  appIconPath: 'pack/icon/icon',
-
-  // app权限声明，会显示在关于面板上
-  appCopyright: 'Copyright © 2022 滴石版权所有',
-
-  // app操作系统，详见https://electron.github.io/electron-packager/main/interfaces/electronpackager.options.html#arch
-  arch: process.arch,
-
-  // app应用包中的app文件夹是否使用asar格式，默认为false
+  arch: arch,
   asar: true,
 
-  // app中主进程src路径
-  srcPath: 'src',
-
-  // srcFiles中的文件和文件夹会复制到这个目录
-  distPath: 'dist',
-
-  // app应用包及dmg安装包生成的路径
-  outPath: 'out',
-
-  // app安装包dmg中的背景图
-  // dmgBackground: 'pack/img/bg.png',
+  name: 'dishi',
+  icon: iconPath,
+  appVersion: version,
+  appCopyright: 'Copyright © 2023 insistime.com版权所有',
 };
 
 // cos config，可以配置cos，直接上传到cos上
