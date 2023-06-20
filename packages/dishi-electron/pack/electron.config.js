@@ -3,23 +3,26 @@ const pkg = require('../dist/package.json');
 
 // const
 const arch = process.arch;
+const platform = process.platform;
 const version = pkg.version;
-const iconPath = `pack/icon/icon${arch === 'win32' ? '.ico' : '.icns'}`;
+const iconPath = `pack/icon/icon${platform === 'darwin' ? '.icns' : '.ico'}`;
 
 // log
 console.log(`arch: ${arch}`);
+console.log(`platform: ${platform}`);
 console.log(`version: ${version}`);
 console.log(`iconPath: ${iconPath}`);
 
 // config
 // https://electron.github.io/electron-packager/main/interfaces/electronpackager.options.html
 let config = {
+  overwrite: true,
+  asar: true,
   dir: 'dist',
   out: 'out',
-  overwrite: true,
 
   arch: arch,
-  asar: true,
+  platform: platform,
 
   name: 'dishi',
   icon: iconPath,
