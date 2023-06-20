@@ -5,10 +5,12 @@
   "devDependencies": {
     "electron": "^25.1.1",
     "electron-icns": "^3.2.3",
-    "qiao-electron-cli": "^3.2.3"
+    "qiao-electron-cli": "^3.2.3",
+    "qiao-file": "^3.1.9"
   },
   "scripts": {
     "start": "electron ../dishi-main",
-    "icon": "electron-icns ./pack/icon/pic.png"
+    "icon": "electron-icns ./pack/icon/pic.png",
+    "pack": "gulp -f ./gulp/pack.js"
   }
 }

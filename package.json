@@ -9,7 +9,7 @@
     "prettier": "prettier --write .",
     "eslintfix": "eslint . --ext .js --fix",
     "test": "lerna run test",
-    "lint": "npm run build && npm run prettier && npm run eslintfix && npm run test",
+    "lint": "npm run prettier && npm run eslintfix && npm run test",
     "postinstall": "npm run lint",
     "pb": "lerna publish",
     "graph": "nx graph",
@@ -17,7 +17,6 @@
     "update": "ncu -u && lerna exec 'ncu -u' --concurrency=1",
     "pkg": "qlerna pkg ./packages",
     "dpkg": "qlerna pkg ./packages dev",
-    "build": "lerna run build",
     "start": "npm run build && npm run start -w dishi-electron"
   },
   "devDependencies": {
@@ -30,6 +29,8 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
     "husky": "^8.0.3",
     "lerna": "^7.0.2",
     "lint-staged": "^13.2.2",
