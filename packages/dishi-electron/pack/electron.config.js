@@ -1,5 +1,5 @@
 // pkg
-const pkg = require('../src/package.json');
+const pkg = require('../dist/package.json');
 
 // config
 let config = {
@@ -19,7 +19,7 @@ let config = {
   appCopyright: 'Copyright © 2022 滴石版权所有',
 
   // app操作系统，详见https://electron.github.io/electron-packager/main/interfaces/electronpackager.options.html#arch
-  arch: 'x64',
+  arch: process.arch,
 
   // app应用包中的app文件夹是否使用asar格式，默认为false
   asar: true,
@@ -41,14 +41,14 @@ let config = {
 };
 
 // cos config，可以配置cos，直接上传到cos上
-const cosConfig = require('./config.json');
-config.cosConfig = {
-  SecretId: cosConfig.SecretId,
-  SecretKey: cosConfig.SecretKey,
-  Region: cosConfig.Region,
-  Bucket: cosConfig.Bucket,
-  destPath: '21_dishi/dmg/',
-};
+// const cosConfig = require('./config.json');
+// config.cosConfig = {
+//   SecretId: cosConfig.SecretId,
+//   SecretKey: cosConfig.SecretKey,
+//   Region: cosConfig.Region,
+//   Bucket: cosConfig.Bucket,
+//   destPath: '21_dishi/dmg/',
+// };
 
 // qe config
 module.exports = config;

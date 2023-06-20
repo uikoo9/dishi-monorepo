@@ -9,7 +9,7 @@ const { exec } = require('child_process');
 
 // main
 const copyMain = async () => await cp('../../dishi-main', '../dist');
-const npmInstallMain = async () => exec('cd ../dist && npm i');
+const npmInstallMain = async () => exec('cd ../dist && npm i --target_arch=arm64');
 
 // renderer
 const buildRenderer = async () => exec('cd ../../dishi-renderer && npm run build');
