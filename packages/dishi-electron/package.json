@@ -5,7 +5,7 @@
   "devDependencies": {
     "electron": "^25.1.1",
     "electron-icns": "^3.2.3",
-    "qiao-electron-cli": "^3.2.3",
+    "qiao-electron-cli": "^3.2.8",
     "qiao-file": "^3.1.9"
   },
   "scripts": {
@@ -13,6 +13,7 @@
     "icon": "electron-icns ./pack/icon/pic.png",
     "dist": "gulp -f ./pack/gulp/pack-dist.js",
     "packmac": "npm run dist && qelectron pm ./pack/electron.config.js",
-    "packdmg": "npm run packmac && qelectron pd ./pack/electron.config.js"
+    "packdmg": "npm run packmac && qelectron pd ./pack/electron.config.js",
+    "uploaddmg": "qelectron ud ./pack/electron.config.js"
   }
 }

@@ -31,9 +31,6 @@ let config = {
   // app中主进程src路径
   srcPath: 'src',
 
-  // 最终要打包到app应用包中的文件和文件夹，在dist这一步会复制出去
-  srcFiles: ['main', 'node_modules', 'renderer', 'package.json'],
-
   // srcFiles中的文件和文件夹会复制到这个目录
   distPath: 'dist',
 
@@ -45,14 +42,14 @@ let config = {
 };
 
 // cos config，可以配置cos，直接上传到cos上
-// const cosConfig = require('./config.json');
-// config.cosConfig = {
-//   SecretId: cosConfig.SecretId,
-//   SecretKey: cosConfig.SecretKey,
-//   Region: cosConfig.Region,
-//   Bucket: cosConfig.Bucket,
-//   destPath: '21_dishi/dmg/',
-// };
+const cosConfig = require('./config.json');
+config.cosConfig = {
+  SecretId: cosConfig.SecretId,
+  SecretKey: cosConfig.SecretKey,
+  Region: cosConfig.Region,
+  Bucket: cosConfig.Bucket,
+  destPath: '21_dishi/dmg/',
+};
 
 // qe config
 module.exports = config;
