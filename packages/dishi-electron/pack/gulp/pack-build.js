@@ -8,13 +8,13 @@ const { cp } = require('qiao-file');
 const { exec } = require('child_process');
 
 // main
-const copyMain = async () => await cp('../../dishi-main', '../dist');
-const cmd = `cd ../dist && npm i ${process.arch === 'arm64' ? '--target_arch=arm64' : ''}`;
+const copyMain = async () => await cp('../../../dishi-main', '../../dist');
+const cmd = `cd ../../dist && npm i ${process.arch === 'arm64' ? '--target_arch=arm64' : ''}`;
 console.log(`cmd:${cmd}`);
 const npmInstallMain = async () => exec(cmd);
 
 // renderer
-const buildRenderer = async () => exec('cd ../../dishi-renderer && npm run build');
+const buildRenderer = async () => exec('cd ../../../dishi-renderer && npm run build');
 
 // build
 exports.build = series(copyMain, parallel(npmInstallMain, buildRenderer));
