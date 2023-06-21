@@ -1,7 +1,7 @@
 {
   "name": "dishi-electron",
   "private": true,
-  "version": "2.0.5",
+  "version": "2.0.6",
   "devDependencies": {
     "electron": "^25.1.1",
     "electron-icns": "^3.2.3",
