@@ -5,3 +5,4 @@ package-lock.json
 # packages
 packages/dishi-electron/dist
 packages/dishi-electron/out
+packages/dishi-main/renderer

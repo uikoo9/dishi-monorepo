@@ -17,6 +17,7 @@
     "update": "ncu -u && lerna exec 'ncu -u' --concurrency=1",
     "pkg": "qlerna pkg ./packages",
     "dpkg": "qlerna pkg ./packages dev",
+    "build": "lerna run build --scope=dishi-renderer",
     "start": "npm run build && npm run start -w dishi-electron"
   },
   "devDependencies": {

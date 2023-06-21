@@ -2,7 +2,7 @@
 const path = require('path');
 
 // static path
-const distPath = path.resolve(__dirname, '../../dishi-electron/dist/renderer');
+const distPath = path.resolve(__dirname, '../../dishi-main/renderer');
 
 // output
 module.exports = {
