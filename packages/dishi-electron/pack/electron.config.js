@@ -30,6 +30,25 @@ let config = {
   appCopyright: 'Copyright © 2023 insistime.com版权所有',
 };
 
+// darwin
+if (process.platform === 'darwin') {
+  // app bundle id
+  config.appBundleId = 'com.insistime.dishi';
+
+  // sign
+  config.osxSign = {
+    identity: 'Developer ID Application: Gang Wang (V5HT5XN7MW)',
+  };
+
+  // // notarize
+  // config.osxNotarize = {
+  //   tool: 'notarytool',
+  //   teamId: '88L2Q4487U',
+  //   appleId: 'vincentqiao@tencent.com',
+  //   appleIdPassword: 'vnfm-lptx-kfzi-wnlp',
+  // };
+}
+
 // cos config，可以配置cos，直接上传到cos上
 const cosConfig = require('./config.json');
 config.cosConfig = {
@@ -39,6 +58,11 @@ config.cosConfig = {
   Bucket: cosConfig.Bucket,
   destPath: '21_dishi/dmg/',
 };
+
+// log
+console.log('config:');
+console.log(config);
+console.log();
 
 // qe config
 module.exports = config;
