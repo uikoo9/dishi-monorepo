@@ -1,7 +1,7 @@
 {
   "name": "dishi",
   "private": true,
-  "version": "2.0.3",
+  "version": "2.0.7",
   "main": "main/index.js",
   "dependencies": {
     "qiao-electron": "^3.2.6",
