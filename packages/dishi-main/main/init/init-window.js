@@ -7,8 +7,8 @@ const { app, BrowserWindow } = require('electron');
 const win = require('../window/window.js');
 
 // open window
-const openWindow = () => {
-  win.windowOpenIndex();
+const openWindow = async () => {
+  await win.windowOpenIndex();
 };
 
 // open window
