@@ -186,3 +186,6 @@ renderer
 
 config.json
 lerna-debug.log
+
+packages/dishi-electron/pack/qiao-electron.mac-sign.js
+packages/dishi-electron/pack/qiao-electron.upload-dmg.js

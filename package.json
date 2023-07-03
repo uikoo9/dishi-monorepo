@@ -20,24 +20,24 @@
     "start": "npm run build && npm run start -w dishi-electron"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.5",
-    "@commitlint/config-conventional": "^17.6.5",
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
     "@rollup/plugin-json": "^6.0.0",
     "ava": "^5.3.1",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.43.0",
+    "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "husky": "^8.0.3",
-    "lerna": "^7.0.2",
-    "lint-staged": "^13.2.2",
-    "nx": "^16.3.2",
+    "lerna": "^7.1.1",
+    "lint-staged": "^13.2.3",
+    "nx": "^16.4.2",
     "prettier": "^2.8.8",
     "qiao-lerna": "^3.3.5",
     "qiao-webpack": "^3.3.6",
-    "rollup": "^3.25.1"
+    "rollup": "^3.26.0"
   }
 }

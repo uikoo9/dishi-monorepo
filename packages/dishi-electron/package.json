@@ -3,17 +3,17 @@
   "private": true,
   "version": "2.0.7",
   "devDependencies": {
-    "electron": "^25.1.1",
+    "electron": "^25.2.0",
     "electron-icns": "^3.2.3",
-    "qiao-electron-cli": "^3.3.0",
+    "qiao-electron-cli": "^3.3.5",
     "qiao-file": "^3.1.9"
   },
   "scripts": {
     "start": "electron ../dishi-main",
     "icon": "electron-icns ./pack/icon/pic.png",
     "dist": "gulp -f ./pack/gulp/pack-dist.js",
-    "packmac": "qelectron pm ./pack/electron.config.js",
-    "packdmg": "qelectron pd ./pack/electron.config.js",
-    "uploaddmg": "qelectron ud ./pack/electron.config.js"
+    "packmac": "qelectron pm ./pack/qiao-electron.config.js",
+    "packdmg": "qelectron pd ./pack/qiao-electron.config.js",
+    "uploaddmg": "qelectron ud ./pack/qiao-electron.config.js"
   }
 }
