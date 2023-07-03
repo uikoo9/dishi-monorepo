@@ -8,7 +8,6 @@ const version = pkg.version;
 const iconPath = `pack/icon/icon${platform === 'darwin' ? '.icns' : '.ico'}`;
 
 // qiao-electron config
-// https://electron.github.io/electron-packager/main/interfaces/electronpackager.options.html
 module.exports = {
   overwrite: true,
   asar: false,
