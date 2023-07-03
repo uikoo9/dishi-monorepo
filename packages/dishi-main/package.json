@@ -1,7 +1,7 @@
 {
   "name": "dishi",
   "private": true,
-  "version": "2.0.7",
+  "version": "2.0.9",
   "main": "main/index.js",
   "description": "2.0.8, mac sign and notarize ok",
   "dependencies": {
