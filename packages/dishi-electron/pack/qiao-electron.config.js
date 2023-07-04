@@ -39,25 +39,4 @@ module.exports = {
 
   // 应用的版权说明
   appCopyright: 'Copyright © 2023 insistime.com版权所有',
-
-  // dmg配置项-背景图
-  dmgBackground: 'pack/icon/bg.png',
-
-  // dmg配置项-内容位置
-  dmgContents: [
-    { x: 160, y: 90, type: 'file' },
-    { x: 360, y: 90, type: 'link' },
-  ],
-
-  // dmg配置项-窗口大小
-  dmgWindowSize: {
-    width: 500,
-    height: 200,
-  },
-
-  // dmg配置项-窗口位置
-  dmgWindowPosition: {
-    x: 500,
-    y: 500,
-  },
 };

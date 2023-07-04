@@ -5,7 +5,7 @@
   "devDependencies": {
     "electron": "^25.2.0",
     "electron-icns": "^3.2.3",
-    "qiao-electron-cli": "^3.4.0",
+    "qiao-electron-cli": "^3.4.1",
     "qiao-file": "^3.1.9"
   },
   "scripts": {
