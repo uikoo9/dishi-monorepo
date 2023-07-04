@@ -19,9 +19,9 @@ todo list, 取水滴石穿之意
 ### SQLite
 
 1. 基于 Electron 和 SQLite 开发的 todo-list
-2. 分支：[https://github.com/uikoo9/dishi-monorepo/tree/mac-sign](https://github.com/uikoo9/dishi-monorepo/tree/mac-sign)
-3. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.0.9-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.0.9-x64.dmg)
-4. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.0.9-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.0.9-arm64.dmg)
+2. 分支：[https://github.com/uikoo9/dishi-monorepo/tree/custom-dmg](https://github.com/uikoo9/dishi-monorepo/tree/custom-dmg)
+3. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-x64.dmg)
+4. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-arm64.dmg)
 
 ## 版本
 
@@ -32,8 +32,8 @@ todo list, 取水滴石穿之意
 3. 相关文章：
    1. [Electron-开发实践：DMG 安装包定制](https://blog.insistime.com/electron-dmg)
 4. 相关产物：
-   1. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.0-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.0-x64.dmg)
-   2. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.0-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.0-arm64.dmg)
+   1. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-x64.dmg)
+   2. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-arm64.dmg)
 
 ### 0.0.6.20230703
 
