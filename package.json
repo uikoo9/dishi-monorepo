@@ -34,7 +34,7 @@
     "husky": "^8.0.3",
     "lerna": "^7.1.1",
     "lint-staged": "^13.2.3",
-    "nx": "^16.4.2",
+    "nx": "^16.4.3",
     "prettier": "^2.8.8",
     "qiao-lerna": "^3.3.5",
     "qiao-webpack": "^3.3.6",
