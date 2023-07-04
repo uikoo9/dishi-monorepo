@@ -25,6 +25,16 @@ todo list, 取水滴石穿之意
 
 ## 版本
 
+### 0.0.7.20230704
+
+1. 对 mac dmg 文件进行了定制
+2. 分支：[https://github.com/uikoo9/dishi-monorepo/tree/custom-dmg](https://github.com/uikoo9/dishi-monorepo/tree/custom-dmg)
+3. 相关文章：
+   1. [Electron-开发实践：DMG 安装包定制](https://blog.insistime.com/electron-dmg)
+4. 相关产物：
+   1. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.0-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.0-x64.dmg)
+   2. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.0-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.0-arm64.dmg)
+
 ### 0.0.6.20230703
 
 1. 对 mac 应用进行签名和公证

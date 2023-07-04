@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.0.9",
   "main": "main/index.js",
-  "description": "2.0.8, mac sign and notarize ok",
+  "description": "2.1.0, custom mac dmg",
   "dependencies": {
     "qiao-electron": "^3.2.6",
     "qiao-json": "^3.1.2",
