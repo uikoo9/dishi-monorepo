@@ -45,7 +45,19 @@ module.exports = {
 
   // dmg配置项-内容位置
   dmgContents: [
-    { x: 80, y: 60, type: 'file' },
-    { x: 260, y: 60, type: 'link' },
+    { x: 160, y: 90, type: 'file' },
+    { x: 360, y: 90, type: 'link' },
   ],
+
+  // dmg配置项-窗口大小
+  dmgWindowSize: {
+    width: 500,
+    height: 200,
+  },
+
+  // dmg配置项-窗口位置
+  dmgWindowPosition: {
+    x: 500,
+    y: 500,
+  },
 };
