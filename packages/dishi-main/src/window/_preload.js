@@ -1,13 +1,11 @@
-'use strict';
-
 // electron
-const { contextBridge } = require('electron');
+import { contextBridge } from 'electron';
 
 // preload
-const { getPreloads } = require('qiao-electron');
+import { getPreloads } from 'qiao-electron';
 
 // custom preload
-const { createTableIPC, insertDataIPC, selectDataIPC, deleteDataIPC } = require('../core/sqlite/sqlite-preload.js');
+import { createTableIPC, insertDataIPC, selectDataIPC, deleteDataIPC } from '../core/sqlite/sqlite-preload.js';
 
 // get all preloads
 const getAllPreloads = () => {

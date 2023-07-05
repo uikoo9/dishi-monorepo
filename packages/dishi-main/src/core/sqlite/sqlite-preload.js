@@ -1,22 +1,20 @@
-'use strict';
-
 // electron
-const { ipcRenderer } = require('electron');
+import { ipcRenderer } from 'electron';
 
 // const
-const {
+import {
   IPC_SQLITE_CREATE_TABLE,
   IPC_SQLITE_INSERT_DATA,
   IPC_SQLITE_SELECT_DATA,
   IPC_SQLITE_DELETE_DATA,
-} = require('../../_util/constant.js');
+} from '../../_util/constant.js';
 
 /**
  * createTableIPC
  * @param {*} sql
  * @returns
  */
-exports.createTableIPC = async (sql) => {
+export const createTableIPC = async (sql) => {
   return await ipcRenderer.invoke(IPC_SQLITE_CREATE_TABLE, { sql });
 };
 
@@ -26,7 +24,7 @@ exports.createTableIPC = async (sql) => {
  * @param {*} params
  * @returns
  */
-exports.insertDataIPC = async (sql, params) => {
+export const insertDataIPC = async (sql, params) => {
   return await ipcRenderer.invoke(IPC_SQLITE_INSERT_DATA, { sql, params });
 };
 
@@ -36,7 +34,7 @@ exports.insertDataIPC = async (sql, params) => {
  * @param {*} params
  * @returns
  */
-exports.selectDataIPC = async (sql, params) => {
+export const selectDataIPC = async (sql, params) => {
   return await ipcRenderer.invoke(IPC_SQLITE_SELECT_DATA, { sql, params });
 };
 
@@ -46,6 +44,6 @@ exports.selectDataIPC = async (sql, params) => {
  * @param {*} params
  * @returns
  */
-exports.deleteDataIPC = async (sql, params) => {
+export const deleteDataIPC = async (sql, params) => {
   return await ipcRenderer.invoke(IPC_SQLITE_DELETE_DATA, { sql, params });
 };

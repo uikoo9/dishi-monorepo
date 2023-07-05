@@ -1,13 +1,11 @@
-'use strict';
-
 // path
-const path = require('path');
+import path from 'path';
 
 // electron
-const { app } = require('electron');
+import { app } from 'electron';
 
 // sqlite
-const {
+import {
   createDB,
   createTable,
   dropTable,
@@ -16,16 +14,16 @@ const {
   modifyData,
   deleteData,
   selectData,
-} = require('qiao-sqlite');
+} from 'qiao-sqlite';
 
 // json
-const { success, fail } = require('qiao-json');
+import { success, fail } from 'qiao-json';
 
 /**
  * sqlite
  * @returns
  */
-exports.sqlite = () => {
+export const sqlite = () => {
   const userDataPath = app.getPath('userData');
   const dbPath = path.resolve(userDataPath, './electron.db');
   const db = createDB(dbPath);
@@ -38,12 +36,12 @@ exports.sqlite = () => {
  * @param {*} sql
  * @returns
  */
-exports.dbCreateTable = async (sql) => {
+export const dbCreateTable = async (sql) => {
   // check
   if (!sql) return fail('need create table sql');
 
   // db
-  const db = exports.sqlite();
+  const db = sqlite();
 
   // create table
   try {
@@ -60,12 +58,12 @@ exports.dbCreateTable = async (sql) => {
  * @param {*} tableName
  * @returns
  */
-exports.dbDropTable = async (tableName) => {
+export const dbDropTable = async (tableName) => {
   // check
   if (!tableName) return fail('need tableName');
 
   // db
-  const db = exports.sqlite();
+  const db = sqlite();
 
   // drop table
   try {
@@ -80,9 +78,9 @@ exports.dbDropTable = async (tableName) => {
  * dbShowTables
  * @returns
  */
-exports.dbShowTables = async () => {
+export const dbShowTables = async () => {
   // db
-  const db = exports.sqlite();
+  const db = sqlite();
 
   // show tables
   try {
@@ -99,12 +97,12 @@ exports.dbShowTables = async () => {
  * @param {*} params
  * @returns
  */
-exports.dbInsertData = async (sql, params) => {
+export const dbInsertData = async (sql, params) => {
   // check
   if (!sql) return fail('need insert data sql');
 
   // db
-  const db = exports.sqlite();
+  const db = sqlite();
 
   // insert data
   try {
@@ -121,12 +119,12 @@ exports.dbInsertData = async (sql, params) => {
  * @param {*} params
  * @returns
  */
-exports.dbDeleteData = async (sql, params) => {
+export const dbDeleteData = async (sql, params) => {
   // check
   if (!sql) return fail('need delete data sql');
 
   // db
-  const db = exports.sqlite();
+  const db = sqlite();
 
   // delete data
   try {
@@ -143,12 +141,12 @@ exports.dbDeleteData = async (sql, params) => {
  * @param {*} params
  * @returns
  */
-exports.dbModifyData = async (sql, params) => {
+export const dbModifyData = async (sql, params) => {
   // check
   if (!sql) return fail('need modify data sql');
 
   // db
-  const db = exports.sqlite();
+  const db = sqlite();
 
   // modify data
   try {
@@ -165,12 +163,12 @@ exports.dbModifyData = async (sql, params) => {
  * @param {*} params
  * @returns
  */
-exports.dbSelectData = async (sql, params) => {
+export const dbSelectData = async (sql, params) => {
   // check
   if (!sql) return fail('need select data sql');
 
   // db
-  const db = exports.sqlite();
+  const db = sqlite();
 
   // select data
   try {

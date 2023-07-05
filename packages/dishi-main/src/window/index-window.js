@@ -1,19 +1,17 @@
-'use strict';
-
 // path
-const path = require('path');
+import path from 'path';
 
 // qiao-electron
-const { openWindowByFile } = require('qiao-x-window');
+import { openWindowByFile } from 'qiao-x-window';
 
 // const
-const { WINDOW_INDEX_WIDTH, WINDOW_INDEX_HEIGHT, WINDOW_INDEX_COLOR } = require('../_util/constant.js');
+import { WINDOW_INDEX_WIDTH, WINDOW_INDEX_HEIGHT, WINDOW_INDEX_COLOR } from '../_util/constant.js';
 
 /**
  * open index window
  * @returns
  */
-module.exports = async () => {
+export const openIndexWindow = async () => {
   // urls
   const preloadPath = path.resolve(__dirname, './_preload.js');
   const indexFilePath = path.resolve(__dirname, '../../renderer/index.html');
