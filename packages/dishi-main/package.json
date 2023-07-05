@@ -8,6 +8,6 @@
     "qiao-electron": "^3.2.6",
     "qiao-json": "^3.1.2",
     "qiao-sqlite": "^3.2.3",
-    "qiao-x-window": "^3.3.1"
+    "qiao-x-window": "^3.4.2"
   }
 }
