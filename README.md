@@ -20,10 +20,20 @@ todo list, 取水滴石穿之意
 
 1. 基于 Electron 和 SQLite 开发的 todo-list
 2. 分支：[https://github.com/uikoo9/dishi-monorepo/tree/custom-dmg](https://github.com/uikoo9/dishi-monorepo/tree/custom-dmg)
-3. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-x64.dmg)
-4. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-arm64.dmg)
+3. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-x64.dmg)
+4. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-arm64.dmg)
 
 ## 版本
+
+### 0.0.7.20230706
+
+1. 将主进程代码改为 es6+rollup
+2. 分支：[https://github.com/uikoo9/dishi-monorepo/tree/es6-rollup](https://github.com/uikoo9/dishi-monorepo/tree/es6-rollup)
+3. 相关文章：
+   1. [Electron-开发实践：包体积精简](https://blog.insistime.com/electron-es6)
+4. 相关产物：
+   1. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-x64.dmg)
+   2. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-arm64.dmg)
 
 ### 0.0.7.20230704
 
@@ -32,8 +42,8 @@ todo list, 取水滴石穿之意
 3. 相关文章：
    1. [Electron-开发实践：DMG 安装包定制](https://blog.insistime.com/electron-dmg)
 4. 相关产物：
-   1. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-x64.dmg)
-   2. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.1-arm64.dmg)
+   1. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-x64.dmg)
+   2. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-arm64.dmg)
 
 ### 0.0.6.20230703
 
