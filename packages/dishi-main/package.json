@@ -1,7 +1,7 @@
 {
   "name": "dishi",
   "private": true,
-  "version": "2.1.4",
+  "version": "2.1.6",
   "description": "2.1.0, custom mac dmg",
   "main": "index.js",
   "module": "src/index.js",
