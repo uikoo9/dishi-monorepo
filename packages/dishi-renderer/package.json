@@ -25,7 +25,7 @@
           "default"
         ],
         "outputs": [
-          "{workspaceRoot}/packages/dishi-main/renderer/**/*"
+          "{workspaceRoot}/packages/dishi-electron/dist/renderer/**/*"
         ]
       }
     }
