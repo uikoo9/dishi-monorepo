@@ -21,7 +21,8 @@
   "nx": {
     "namedInputs": {
       "default": [
-        "{projectRoot}/src/**/*"
+        "{projectRoot}/src/**/*",
+        "{projectRoot}/package_bak.json"
       ]
     },
     "targets": {
@@ -30,7 +31,7 @@
           "default"
         ],
         "outputs": [
-          "{workspaceRoot}/packages/dishi-electron/dist/main/**/*"
+          "{workspaceRoot}/packages/dishi-electron/dist/**/*"
         ]
       }
     }

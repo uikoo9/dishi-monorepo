@@ -13,8 +13,8 @@ import { WINDOW_INDEX_WIDTH, WINDOW_INDEX_HEIGHT, WINDOW_INDEX_COLOR } from '../
  */
 export const openIndexWindow = async () => {
   // urls
-  const preloadPath = path.resolve(__dirname, './_preload.js');
-  const indexFilePath = path.resolve(__dirname, '../../renderer/index.html');
+  const preloadPath = path.resolve(__dirname, './preload.js');
+  const indexFilePath = path.resolve(__dirname, '../renderer/index.html');
 
   // options
   const options = {

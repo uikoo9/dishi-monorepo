@@ -9,7 +9,7 @@
     "qiao-file": "^3.1.9"
   },
   "scripts": {
-    "start": "electron ../dishi-main",
+    "start": "electron dist",
     "icon": "electron-icns ./pack/icon/pic.png",
     "dist": "gulp -f ./pack/gulp/pack-dist.js",
     "packmac": "qelectron pm ./pack/qiao-electron.config.js",

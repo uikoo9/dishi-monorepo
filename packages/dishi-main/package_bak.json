@@ -1,0 +1,9 @@
+{
+  "name": "dishi",
+  "private": true,
+  "version": "2.1.1",
+  "main": "main/index.js",
+  "dependencies": {
+    "sqlite": "^5.1.6"
+  }
+}

@@ -7,6 +7,9 @@ const commonjs = require('@rollup/plugin-commonjs');
 // node
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 
+// copy
+const copy = require('rollup-plugin-copy');
+
 // external
 const external = [
   'electron',
@@ -34,6 +37,7 @@ module.exports = [
       file: '../dishi-electron/dist/main/index.js',
       format: 'cjs',
     },
+    external: external,
     plugins: [
       json(),
       commonjs(),
@@ -43,8 +47,10 @@ module.exports = [
           return m !== 'sqlite3';
         },
       }),
+      copy({
+        targets: [{ src: 'package_bak.json', dest: '../dishi-electron/dist', rename: 'package.json' }],
+      }),
     ],
-    external: external,
   },
   {
     input: 'src/window/_preload.js',
@@ -52,7 +58,7 @@ module.exports = [
       file: '../dishi-electron/dist/main/preload.js',
       format: 'cjs',
     },
-    plugins: [commonjs(), nodeResolve()],
     external: external,
+    plugins: [commonjs(), nodeResolve()],
   },
 ];
