@@ -25,7 +25,7 @@ todo list, 取水滴石穿之意
 
 ## 版本
 
-### 0.0.7.20230706
+### 0.0.8.20230706
 
 1. 将主进程代码改为 es6+rollup
 2. 分支：[https://github.com/uikoo9/dishi-monorepo/tree/es6-rollup](https://github.com/uikoo9/dishi-monorepo/tree/es6-rollup)
