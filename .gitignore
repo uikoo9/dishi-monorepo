@@ -180,7 +180,6 @@ dist
 config.json
 lerna-debug.log
 
-packages/dishi-main/renderer
 packages/dishi-electron/dist
 packages/dishi-electron/out
 packages/dishi-electron/pack/qiao-electron.mac-sign.js
