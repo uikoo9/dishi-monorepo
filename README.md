@@ -18,10 +18,9 @@ todo list, 取水滴石穿之意
 
 ### SQLite
 
-1. 基于 Electron 和 SQLite 开发的 todo-list
-2. 分支：[https://github.com/uikoo9/dishi-monorepo/tree/es6-rollup](https://github.com/uikoo9/dishi-monorepo/tree/es6-rollup)
-3. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-x64.dmg)
-4. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-arm64.dmg)
+1. [v2.1.7](https://github.com/uikoo9/dishi-monorepo/tree/v2.1.7)：基于 Electron 和 SQLite 开发的 todo-list
+2. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-x64.dmg)
+3. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-arm64.dmg)
 
 ## 版本
 
