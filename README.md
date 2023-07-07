@@ -31,7 +31,9 @@ todo list, 取水滴石穿之意
 2. 分支：[https://github.com/uikoo9/dishi-monorepo/tree/mac-menu](https://github.com/uikoo9/dishi-monorepo/tree/mac-menu)
 3. 相关文章：
    1. [Electron-开发实践：定制 Mac 菜单](https://blog.insistime.com/electron-mac-menu)
-4. 相关产物：
+4. 相关技术：
+   1. [qiao-x-menu](https://code.insistime.com/qiao-x-menu#/)
+5. 相关产物：
    1. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-x64.dmg)
    2. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.7-arm64.dmg)
 
@@ -41,7 +43,9 @@ todo list, 取水滴石穿之意
 2. 分支：[https://github.com/uikoo9/dishi-monorepo/tree/es6-rollup](https://github.com/uikoo9/dishi-monorepo/tree/es6-rollup)
 3. 相关文章：
    1. [Electron-开发实践：包体积精简](https://blog.insistime.com/electron-es6)
-4. 相关产物：
+4. 相关技术：
+   1. [qiao-x-window](https://code.insistime.com/qiao-x-window#/)
+5. 相关产物：
    1. Mac(Intel)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-x64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-x64.dmg)
    2. Mac(M1)：[https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-arm64.dmg](https://static.insistime.com/21_dishi/dmg/dishi-2.1.6-arm64.dmg)
 
