@@ -1,5 +1,5 @@
 // q
-import { setApplicationMenu, setAboutVersion } from 'qiao-electron';
+import { setApplicationMenu, setAboutVersion } from 'qiao-x-menu';
 
 // version
 import { version } from '../../package.json';
@@ -10,7 +10,6 @@ import { version } from '../../package.json';
 export const initMenu = () => {
   // set application menu
   setApplicationMenu();
-
   // set about version
   setAboutVersion(version);
 };

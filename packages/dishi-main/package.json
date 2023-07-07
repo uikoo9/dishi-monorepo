@@ -13,10 +13,11 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "qiao-electron": "^3.2.6",
+    "qiao-electron": "^3.4.5",
     "qiao-json": "^3.1.2",
     "qiao-sqlite": "^3.2.3",
-    "qiao-x-window": "^3.4.2"
+    "qiao-x-menu": "^3.4.5",
+    "qiao-x-window": "^3.4.3"
   },
   "nx": {
     "namedInputs": {
