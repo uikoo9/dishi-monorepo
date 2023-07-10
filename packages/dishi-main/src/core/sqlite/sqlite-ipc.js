@@ -17,25 +17,25 @@ import { dbCreateTable, dbInsertData, dbSelectData, dbDeleteData } from './sqlit
  */
 export const SQLiteIPC = () => {
   // ipc sqlite create table
-  ipcMain.handle(IPC_SQLITE_CREATE_TABLE, (event, args) => {
-    return dbCreateTable(args.sql);
+  ipcMain.handle(IPC_SQLITE_CREATE_TABLE, async (event, args) => {
+    return await dbCreateTable(args.sql);
   });
 
   // ipc sqlite insert data
-  ipcMain.handle(IPC_SQLITE_INSERT_DATA, (event, args) => {
+  ipcMain.handle(IPC_SQLITE_INSERT_DATA, async (event, args) => {
     console.log(args);
-    return dbInsertData(args.sql, args.params);
+    return await dbInsertData(args.sql, args.params);
   });
 
   // ipc sqlite select data
-  ipcMain.handle(IPC_SQLITE_SELECT_DATA, (event, args) => {
+  ipcMain.handle(IPC_SQLITE_SELECT_DATA, async (event, args) => {
     console.log(args);
-    return dbSelectData(args.sql, args.params);
+    return await dbSelectData(args.sql, args.params);
   });
 
   // ipc sqlite delete data
-  ipcMain.handle(IPC_SQLITE_DELETE_DATA, (event, args) => {
+  ipcMain.handle(IPC_SQLITE_DELETE_DATA, async (event, args) => {
     console.log(args);
-    return dbDeleteData(args.sql, args.params);
+    return await dbDeleteData(args.sql, args.params);
   });
 };

@@ -15,8 +15,8 @@
   "dependencies": {
     "qiao-electron": "^3.4.5",
     "qiao-json": "^3.1.2",
-    "qiao-sqlite": "^3.2.3",
-    "qiao-x-menu": "^3.4.5",
+    "qiao-sqlite": "^3.4.8",
+    "qiao-x-menu": "^3.4.6",
     "qiao-x-window": "^3.4.3"
   },
   "nx": {

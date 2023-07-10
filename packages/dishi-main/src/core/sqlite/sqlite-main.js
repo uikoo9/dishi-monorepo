@@ -1,35 +1,8 @@
-// path
-import path from 'path';
-
-// electron
-import { app } from 'electron';
-
-// sqlite
-import {
-  createDB,
-  createTable,
-  dropTable,
-  showTables,
-  insertData,
-  modifyData,
-  deleteData,
-  selectData,
-} from 'qiao-sqlite';
+// db
+import { getDB } from './_db.js';
 
 // json
 import { success, fail } from 'qiao-json';
-
-/**
- * sqlite
- * @returns
- */
-export const sqlite = () => {
-  const userDataPath = app.getPath('userData');
-  const dbPath = path.resolve(userDataPath, './electron.db');
-  const db = createDB(dbPath);
-
-  return db;
-};
 
 /**
  * dbCreateTable
@@ -41,15 +14,20 @@ export const dbCreateTable = async (sql) => {
   if (!sql) return fail('need create table sql');
 
   // db
-  const db = sqlite();
+  const db = await getDB();
+  console.log(db);
 
   // create table
   try {
-    await createTable(db, sql);
-    return success('create table success');
+    const res = await db.createTable(sql);
+    console.log(res);
+    if (res) {
+      return success('create table success');
+    } else {
+      return fail('create table fail');
+    }
   } catch (e) {
-    // return danger('create table fail', e);
-    return success('create table success');
+    return fail('create table fail', e);
   }
 };
 
@@ -63,14 +41,18 @@ export const dbDropTable = async (tableName) => {
   if (!tableName) return fail('need tableName');
 
   // db
-  const db = sqlite();
+  const db = await getDB();
 
   // drop table
   try {
-    await dropTable(db, tableName);
-    return success('drop table success');
+    const res = await db.dropTable(tableName);
+    if (res) {
+      return success('drop table success');
+    } else {
+      return fail('drop table fail');
+    }
   } catch (e) {
-    return success('drop table success');
+    return fail('drop table fail', e);
   }
 };
 
@@ -80,14 +62,14 @@ export const dbDropTable = async (tableName) => {
  */
 export const dbShowTables = async () => {
   // db
-  const db = sqlite();
+  const db = await getDB();
 
   // show tables
   try {
-    const rows = await showTables(db);
+    const rows = await db.showTables();
     return success('show table success', rows);
   } catch (e) {
-    return success('show table success');
+    return fail('show table fail', e);
   }
 };
 
@@ -102,14 +84,18 @@ export const dbInsertData = async (sql, params) => {
   if (!sql) return fail('need insert data sql');
 
   // db
-  const db = sqlite();
+  const db = await getDB();
 
   // insert data
   try {
-    await insertData(db, sql, params);
-    return success('insert data success');
+    const res = await db.insertData(sql, params);
+    if (res) {
+      return success('insert data success');
+    } else {
+      return fail('insert data fail');
+    }
   } catch (e) {
-    return fail('insert data fail', e);
+    return fail('drop table fail', e);
   }
 };
 
@@ -124,14 +110,18 @@ export const dbDeleteData = async (sql, params) => {
   if (!sql) return fail('need delete data sql');
 
   // db
-  const db = sqlite();
+  const db = await getDB();
 
   // delete data
   try {
-    await deleteData(db, sql, params);
-    return success('delete data success');
+    const res = await db.deleteData(sql, params);
+    if (res) {
+      return success('delete data success');
+    } else {
+      return fail('delete data fail');
+    }
   } catch (e) {
-    return fail('delete data fail', e);
+    return fail('delete table fail', e);
   }
 };
 
@@ -146,14 +136,18 @@ export const dbModifyData = async (sql, params) => {
   if (!sql) return fail('need modify data sql');
 
   // db
-  const db = sqlite();
+  const db = await getDB();
 
   // modify data
   try {
-    await modifyData(db, sql, params);
-    return success('modify data success');
+    const res = await db.modifyData(sql, params);
+    if (res) {
+      return success('modify data success');
+    } else {
+      return fail('modify data fail');
+    }
   } catch (e) {
-    return fail('modify data fail', e);
+    return fail('modify table fail', e);
   }
 };
 
@@ -168,13 +162,13 @@ export const dbSelectData = async (sql, params) => {
   if (!sql) return fail('need select data sql');
 
   // db
-  const db = sqlite();
+  const db = await getDB();
 
   // select data
   try {
-    const rows = await selectData(db, sql, params);
+    const rows = await db.selectData(sql, params);
     return success('select data success', rows);
   } catch (e) {
-    return fail('select data fail', e);
+    return fail('select table fail', e);
   }
 };
