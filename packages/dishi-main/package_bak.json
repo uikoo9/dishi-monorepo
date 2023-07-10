@@ -1,7 +1,7 @@
 {
   "name": "dishi",
   "private": true,
-  "version": "2.1.7",
+  "version": "2.1.9",
   "main": "main/index.js",
   "dependencies": {
     "sqlite3": "^5.1.6"
