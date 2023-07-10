@@ -25,7 +25,9 @@ export const openIndexWindow = async () => {
     titleBarStyle: 'hiddenInset',
     webPreferences: {
       preload: preloadPath,
-      nodeIntegration: true,
+      sandbox: true,
+      nodeIntegration: false,
+      contextIsolation: true,
     },
   };
 
