@@ -9,7 +9,7 @@
     "build": "qwebpack build ./electron.webpack.js"
   },
   "dependencies": {
-    "qiao-ui": "^3.2.3",
+    "qiao-ui": "^3.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
