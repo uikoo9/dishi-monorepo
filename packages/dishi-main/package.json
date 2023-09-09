@@ -1,7 +1,7 @@
 {
   "name": "dishi",
   "private": true,
-  "version": "2.1.9",
+  "version": "2.2.2",
   "description": "2.1.9, new qiao-sqlite",
   "main": "index.js",
   "module": "src/index.js",
