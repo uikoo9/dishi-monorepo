@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "qiao-json": "^3.1.2",
-    "qiao-sqlite": "^3.4.8",
+    "qiao-sqlite": "^3.5.0",
     "qiao-x-menu": "^3.4.6",
     "qiao-x-window": "^3.4.3"
   },
