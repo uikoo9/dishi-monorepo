@@ -3,9 +3,9 @@
   "private": true,
   "version": "2.2.2",
   "devDependencies": {
-    "electron": "^26.2.0",
+    "electron": "^26.2.3",
     "electron-icns": "^3.5.0",
-    "qiao-electron-cli": "^3.5.0",
+    "qiao-electron-cli": "^3.5.1",
     "qiao-file": "^3.2.4"
   },
   "scripts": {
