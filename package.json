@@ -15,28 +15,22 @@
     "graph": "nx graph",
     "check": "ncu && lerna exec ncu --concurrency=1",
     "update": "ncu -u && lerna exec 'ncu -u' --concurrency=1",
-    "pkg": "qlerna pkg ./packages",
-    "dpkg": "qlerna pkg ./packages dev",
+    "pkg": "qpro pkg ./packages",
+    "dpkg": "qpro pkg ./packages dev",
     "build": "lerna run build  --verbose",
     "start": "npm run build && npm run start -w dishi-electron"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.1",
+    "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
-    "@rollup/plugin-commonjs": "^25.0.4",
-    "@rollup/plugin-json": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^15.2.1",
     "ava": "^5.3.1",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "husky": "^8.0.3",
     "lerna": "^7.3.0",
     "lint-staged": "^14.0.1",
-    "nx": "^16.9.1",
-    "qiao-lerna": "^3.6.8",
-    "qiao-project": "^3.6.7",
-    "qiao-webpack": "^3.6.7",
-    "rollup": "^3.29.4",
-    "rollup-plugin-copy": "^3.5.0"
+    "nx": "^16.10.0",
+    "qiao-project": "^4.1.4",
+    "qiao-webpack": "^4.1.1"
   }
 }

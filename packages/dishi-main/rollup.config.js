@@ -1,14 +1,14 @@
+// copy
+const { rollupPluginCopy } = require('qiao-project');
+
 // json
-const json = require('@rollup/plugin-json');
+const { rollupPluginJson } = require('qiao-project');
 
 // commonjs
-const commonjs = require('@rollup/plugin-commonjs');
+const { rollupPluginCommonjs } = require('qiao-project');
 
 // node
-const { nodeResolve } = require('@rollup/plugin-node-resolve');
-
-// copy
-const copy = require('rollup-plugin-copy');
+const { rollupPluginNodeResolve } = require('qiao-project');
 
 // external
 const external = [
@@ -39,15 +39,15 @@ module.exports = [
     },
     external: external,
     plugins: [
-      json(),
-      commonjs(),
-      nodeResolve({
+      rollupPluginJson(),
+      rollupPluginCommonjs(),
+      rollupPluginNodeResolve({
         preferBuiltins: false,
         resolveOnly: (m) => {
           return m !== 'sqlite3';
         },
       }),
-      copy({
+      rollupPluginCopy({
         targets: [{ src: 'package_bak.json', dest: '../dishi-electron/dist', rename: 'package.json' }],
       }),
     ],
@@ -59,6 +59,6 @@ module.exports = [
       format: 'cjs',
     },
     external: external,
-    plugins: [commonjs(), nodeResolve()],
+    plugins: [rollupPluginCommonjs(), rollupPluginNodeResolve()],
   },
 ];

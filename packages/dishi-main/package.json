@@ -10,13 +10,13 @@
     "src"
   ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "qpro rollup ./rollup.config.js"
   },
   "dependencies": {
-    "qiao-json": "^3.1.2",
-    "qiao-sqlite": "^3.5.0",
-    "qiao-x-menu": "^3.4.6",
-    "qiao-x-window": "^3.4.3"
+    "qiao-json": "^3.5.7",
+    "qiao-sqlite": "^3.5.3",
+    "qiao-x-menu": "^3.5.3",
+    "qiao-x-window": "^3.5.3"
   },
   "nx": {
     "namedInputs": {
